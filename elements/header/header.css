@@ -1,0 +1,15 @@
+header .lang-select li {
+    cursor: pointer;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    color: #ffe69c;
+}
+
+@media screen and (min-width: 769px) {
+    header .lang-select button span:nth-child(2) {
+        display: none;
+    }
+}
