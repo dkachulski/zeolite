@@ -80,6 +80,9 @@ iframe {
             rgba(255, 255, 255, 0.75)
         ),
         url('../images/img1.webp');
+
+    background-position: center;
+    background-size: cover;
 }
 
 .contact {

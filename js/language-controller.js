@@ -36,7 +36,6 @@ class LanguageController {
 
         // // add spans inside button
         const btn = element.querySelector('.lang-select-button');
-        console.log(btn);
 
         btn.textContent = '';
         btn.innerHTML = element.querySelector(`[data-lang="${this.currentLanguage}"]`).innerHTML;
