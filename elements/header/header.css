@@ -5,7 +5,7 @@ header .lang-select li {
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
-    color: #ffe69c;
+    color: var(--bs-primary);
 }
 
 @media screen and (min-width: 769px) {
