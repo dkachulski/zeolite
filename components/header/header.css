@@ -13,3 +13,11 @@ header .lang-select li {
         display: none;
     }
 }
+
+.header-text {
+    margin-bottom: -3px;
+}
+
+header .offcanvas-body {
+    margin-bottom: -3px;
+}

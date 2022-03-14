@@ -1,10 +1,203 @@
+/* GLOBAL */
 html,
 body {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     position: relative;
     height: 100%;
 }
+a {
+    color: var(--bs-blue);
+}
 
-.swiper {
+h2 {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 576px) {
+    .hidden-on-mobile {
+        display: none;
+    }
+}
+
+/* INTRO */
+#intro-container {
+    position: relative;
+    height: calc(100% - 56px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 56px;
+}
+
+#intro-video {
+    height: 100%;
+    min-width: 100%;
+}
+
+#intro-info-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#intro-info-container h1 {
+    font-weight: 950;
+}
+@media screen and (min-width: 576px) {
+    #intro-info-container h1 {
+        font-size: 50px;
+        font-weight: 950;
+    }
+}
+/* RIBBON */
+
+/* BANNER */
+#banner-container {
+    background-image: url('../images/popovo.jpg');
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#banner-text-container p {
+    mix-blend-mode: lighten;
+    font-size: 50px;
+    font-weight: 950;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.85);
+}
+#banner-text-container p:first-child {
+    padding-top: 90px;
+}
+#banner-text-container p:last-child {
+    padding-bottom: 90px;
+}
+
+@media screen and (max-width: 576px) {
+    #banner-text-container p {
+        font-size: 45px;
+    }
+    #banner-text-container p:first-child {
+        padding-top: 100px;
+    }
+    #banner-text-container p:last-child {
+        padding-bottom: 100px;
+    }
+}
+
+/* CARDS */
+
+#cards-container {
+    background-image: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.97),
+            rgba(255, 255, 255, 0.97)
+        ),
+        url('../images/img1.webp');
+
+    background-position: center;
+    background-size: cover;
+}
+.card {
+    position: relative;
+    cursor: pointer;
+}
+.card-body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.75));
+}
+.card-img-container {
+    overflow: hidden;
+    max-height: 250px;
+}
+
+.card img {
+    transition: transform 0.5s ease-out;
+}
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card-button {
+    cursor: pointer;
+}
+.card:hover i:first-child {
+    display: none;
+}
+.card i:nth-child(2) {
+    display: none;
+}
+.card:hover i:nth-child(2) {
+    display: inline;
+}
+
+/* FAQs */
+
+/* CONTACT & MAP */
+
+/* container */
+#contact-container {
+    background: linear-gradient(to left, #212529 50%, #fff 50%);
+}
+
+@media screen and (max-width: 992px) {
+    #contact-container {
+        padding-bottom: 0px !important;
+        background: linear-gradient(to top, #212529 25%, #fff 25%);
+    }
+}
+
+/* map */
+iframe.map {
+    border: 0;
+}
+
+/* .slider-title {
+    display: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+} */
+
+/* .info1 {
+}
+
+.info2 {
+    background-color: rgba(22, 22, 26, 0);
+}
+
+.info-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+        url('../images/img1.webp');
+
+    background-position: center;
+    background-size: cover;
+} */
+
+/* .swiper {
     width: 100%;
     height: 100%;
 }
@@ -14,7 +207,6 @@ body {
     font-size: 18px;
     background: #fff;
 
-    /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -48,8 +240,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-/* optional css fade in animation */
+} 
 iframe {
     transition: opacity 500ms ease-in-out;
     transition-delay: 250ms;
@@ -62,84 +253,4 @@ iframe {
 .slide2 {
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
         url('../images/img4.webp');
-}
-
-.products-container {
-    background-image: linear-gradient(
-            to bottom,
-            rgba(255, 255, 255, 0.75),
-            rgba(255, 255, 255, 0.75)
-        ),
-        url('../images/img1.webp');
-
-    background-position: center;
-    background-size: cover;
-}
-
-.contact {
-    background: linear-gradient(to left, #212529 50%, #fff 50%);
-}
-
-@media screen and (max-width: 992px) {
-    #contact-container {
-        padding-bottom: 0px !important;
-    }
-    .contact {
-        background: linear-gradient(to top, #212529 25%, #fff 25%);
-    }
-}
-
-iframe.map {
-    border: 0;
-}
-.card,
-.card-body {
-    overflow: hidden;
-    z-index: 1;
-}
-
-.card-body {
-    margin-top: -21px;
-}
-
-.card img {
-    transition: transform 0.5s ease-out;
-    box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
-    border-radius: 0;
-    border: 0;
-    margin-bottom: 1.5em;
-    z-index: 0;
-    /* cursor: pointer; */
-}
-.card:hover img {
-    transform: scale(1.15);
-}
-
-/* .slider-title {
-    display: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-} */
-
-/* .info1 {
-}
-
-.info2 {
-    background-color: rgba(22, 22, 26, 0);
-}
-
-.info-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-        url('../images/img1.webp');
-
-    background-position: center;
-    background-size: cover;
 } */

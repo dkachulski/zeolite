@@ -2,7 +2,7 @@
 
 languageController.subscribeElement('header .lang-select');
 
-// chnage position of dropdown depending on width of screen (so it looks nice, but it does not come off screen)
+// change position of dropdown depending on width of screen (so it looks nice, but it does not come off screen)
 const resizeObserver = new ResizeObserver(entries => {
     for (let entry of entries) {
         const width = entry.contentBoxSize[0].inlineSize;

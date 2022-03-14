@@ -1,5 +1,7 @@
+// Loads different components into the page
+
 // Container selector + paths for html, css, js
-async function loadElement(container, html, css, js) {
+async function loadComponent(container, html, css, js) {
     // Fetch all
     const [htmlTxt, cssTxt, jsTxt] = await Promise.all([
         fetch(html).then(resp => resp.text()),
@@ -7,7 +9,7 @@ async function loadElement(container, html, css, js) {
         js && fetch(js).then(resp => resp.text()),
     ]);
 
-    // append elements
+    // append component
     const div = document.createElement('div');
     div.innerHTML = htmlTxt;
     document.querySelector(container).appendChild(div);
