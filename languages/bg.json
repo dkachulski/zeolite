@@ -1,26 +1,36 @@
 {
     "bg": {
-        "page-title": "Зеолит",
-        "slide1-heading": "ТРАСИНЖЕНЕРИНГ",
-        "slide1-text": "Добив и доставка на естествен Зеолит | Поцолан | Трас като добавка за производството на цимент и бетон",
-        "slide1-btn": "Продукти",
-        "nav-home": "Начало",
-        "cards-container-heading": "ИНФОРМАЦИЯ",
-        "nav-products": "Продукти",
-        "nav-contact": "Контакти",
-        "nav-short-description": "Зеолит | Поцолан | Трас",
-        "banner-bold": "Някакъв текст",
-        "banner-text": "Въпрос еу меи модо дицам  ддоминг еам цу, нам натум?",
-        "FAQ-heading": "Често Задавани Въпроси",
-        "contact-info-heading": "Контакти",
-        "address": "Адрес:",
-        "phone": "Телефон:",
-        "email": "Емайл:",
-        "information-heading": "ИНФОРМАЦИЯ",
-        "information-text1": "ЗЕОЛИТ",
-        "information-text2": "ПОЦОЛАН ",
-        "information-text3": "ТРАС",
-        "products-heading": "Продукти",
-        "products-text": "Лорем ипсум долор сит амет, еу меи модо дицам доминг, малис глориатур цонсецтетуер цу яуи. Хас ат диам нуллам маи."
+        "navigation-home": "Начало",
+        "navigation-products": "Продукти",
+        "navigation-customer-support": "Обслужване На Клиенти",
+        "navigation-quarry-site": "Добивна Площадка",
+        "navigation-contact": "Контакти",
+
+        "video-title": "ТРАСИНЖЕНЕРИНГ",
+        "video-text": "Добив на естествен Зеолит | Поцолан | Трас като добавка за производството на цимент и бетон.",
+        "video-button": "Информация",
+
+        "ribbon-bold": "Ние предлагаме",
+        "ribbon-text": "Добив и транспорт на зеолит / трас като поцолан за нуждите на строителната индустрия.",
+
+        "banner-text-1": "Фракция,",
+        "banner-text-2": "нужди",
+        "banner-text-3": "и т.н.",
+
+        "cards-container-title": "ИНФОРМАЦИЯ",
+
+        "card-1-title": "Транспорт и Логистика",
+        "card-2-title": "Производствен Капацитет",
+        "card-3-title": "Транспорт и Логистика",
+
+        "faq-container-title": "ЧЕСТО ЗАДАВАНИ ВЪПРОСИ",
+
+        "contact-container-title": "КОНТАКТИ",
+        "contact-address-title": "Адрес",
+        "contact-address-text": "Комплекс Еделвайс 1, ул. Даскал Стоян Попандреев вход Б, ет. 1, ап. 2, квартал Бояна, София 1616",
+        "contact-email-title": "Имейл",
+        "contact-email-text": "contact@zeolite.bg",
+        "contact-telephone-title": "Телефон",
+        "contact-telephone-text": "+359 882927373 (Viber, WhatsApp)"
     }
 }
