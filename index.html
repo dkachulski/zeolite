@@ -28,7 +28,7 @@
         <!-- Language Scrips -->
         <script src="./js/language-controller.js"></script>
         <script src="./js/load-components.js"></script>
-        <script src="./js/cards-expand.js" defer></script>
+        <script src="./js/cards-expand-box.js" defer></script>
         <script src="./js/map.js" defer></script>
     </head>
 
@@ -519,9 +519,9 @@
             </section>
 
             <!-- CONTACT -->
-            <section class="py-5 px-3" id="contact-container">
+            <section class="" id="contact-container">
                 <div class="container">
-                    <div class="row g-5">
+                    <div class="row">
                         <div class="col-lg-5 mb-5 mb-lg-1">
                             <h2 class="text-center mb-4" data-key="contact-info-heading">
                                 Contact Info
@@ -547,18 +547,25 @@
                         </div>
                         <!-- Map -->
                         <div class="col-lg-7 map-container">
-                            <div class="ratio" style="--bs-aspect-ratio: 66%">
+                            <div class="ratio" style="--bs-aspect-ratio: 62%">
                                 <div class="map map-whole"></div>
                                 <div class="map map-part1"></div>
                                 <div class="map map-part2"></div>
                                 <!-- pins -->
-                                <span class="map-pin map-pin1">
-                                    <i class="fs-3 bi bi-geo-alt text-warning"></i>
-                                    <i class="fill fs-3 bi bi-geo-alt-fill text-warning"></i>
+                                <span class="map-pin map-pin1" data-map="map-part1">
+                                    <i class="pin-icon fs-3 bi bi-geo-alt text-warning"></i>
+                                </span>
+                                <span class="map-pin map-pin1 fill" data-map="map-part1">
+                                    <i class="pin-icon fs-3 bi bi-geo-alt-fill text-warning"></i>
                                 </span>
                                 <span class="map-pin map-pin2">
-                                    <i class="fs-3 bi bi-geo-alt text-warning"></i>
-                                    <i class="fill fs-3 bi bi-geo-alt-fill text-warning"></i>
+                                    <i
+                                        class="pin-icon fs-3 bi bi-geo-alt text-warning"
+                                        data-map="map-part2"
+                                    ></i>
+                                </span>
+                                <span class="map-pin map-pin2 fill" data-map="map-part2">
+                                    <i class="pin-icon fs-3 bi bi-geo-alt-fill text-warning"></i>
                                 </span>
                             </div>
                         </div>

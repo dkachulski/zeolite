@@ -260,6 +260,7 @@ h2 {
 
 #contact-container {
     background: linear-gradient(to left, #fff 50%, #fff 50%);
+    overflow: hidden;
 }
 
 @media screen and (max-width: 992px) {
@@ -271,7 +272,13 @@ h2 {
 
 /* Map */
 .map-container {
-    transform: scale(1.4) translateY(-50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-container > div {
+    transform: scale(1.4);
     position: relative;
 }
 .map {
@@ -286,7 +293,7 @@ h2 {
 }
 .map-part1 {
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-        url('../images/kurdzhali-border.png');
+        url('../images/sofia-border.png');
 
     background-position: center;
     background-size: cover;
@@ -294,32 +301,50 @@ h2 {
 }
 .map-part2 {
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-        url('../images/sofia-border.png');
+        url('../images/kurdzhali-border.png');
 
     background-position: center;
     background-size: cover;
     opacity: 0;
+    transform: translateY(-2px);
+}
+
+.map-part1.highlighted,
+.map-part2.highlighted,
+.map-part1.clicked,
+.map-part2.clicked {
+    opacity: 1;
 }
 
 /* Map Pins */
-.map-pin1 i {
+.map-pin {
     position: absolute;
-    top: 44%;
-    left: 30%;
+    position: absolute;
+    /* background-color: red; */
+    width: 15%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.map-pin2 i {
-    position: absolute;
-    top: 63%;
-    left: 48%;
+.map-pin1 {
+    top: 43%;
+    left: 27%;
 }
 
-.map-pin .fill {
+.map-pin2 {
+    top: 61%;
+    left: 43%;
+}
+
+.map-pin.fill i {
     opacity: 0;
     transition: all 0.4s ease;
 }
-.map-pin i:hover .fill,
-.map-pin i .fill.clicked {
+.map-pin.fill:hover i,
+.map-pin.highlighted i,
+.map-pin.clicked i {
     opacity: 1;
 }
 
