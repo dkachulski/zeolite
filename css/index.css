@@ -18,6 +18,14 @@ h2 {
         display: none;
     }
 }
+@keyframes fade-out-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 /* INTRO */
 #intro-container {
@@ -110,6 +118,12 @@ h2 {
     background-position: center;
     background-size: cover;
 }
+@media screen and (max-width: 768px) {
+    #cards-container {
+        display: none;
+    }
+}
+
 .individual-card-container {
     display: flex;
     align-items: center;
@@ -124,6 +138,10 @@ h2 {
 
 .card h5 {
     font-weight: bold;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .card-body {
@@ -158,13 +176,15 @@ h2 {
 .card-button {
     cursor: pointer;
 }
-.card:hover i:first-child {
+/* .card:hover i:first-child, */
+.card.card-opened i:first-child {
     display: none;
 }
 .card i:nth-child(2) {
     display: none;
 }
-.card:hover i:nth-child(2) {
+/* .card:hover i:nth-child(2), */
+.card.card-opened i:nth-child(2) {
     display: inline;
 }
 
@@ -187,25 +207,124 @@ h2 {
     }
 }
 
+.card-content-body {
+    animation-name: fade-out-in;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+}
+
+.card-content-body.card-content-hidden {
+    display: none;
+}
+
+.card.card-opened .card-body,
+#cards-container-mobile .card:not(.collapsed) .card-body {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
+}
+/* .card.card-opened h5,
+#cards-container-mobile .card:not(.collapsed) h5 {
+    opacity: 0.9;
+} */
+.card.card-opened img,
+#cards-container-mobile .card:not(.collapsed) img {
+    transform: scale(1.1);
+}
+
+/* CARDS MOBILE */
+#cards-container-mobile .accordion-item {
+    border: none;
+}
+@media screen and (min-width: 768.99px) {
+    #cards-container-mobile {
+        display: none;
+    }
+}
+
+/* #cards-container-mobile .card:hover i:first-child, */
+#cards-container-mobile .card:not(.collapsed) i:first-child {
+    display: none;
+}
+
+/* #cards-container-mobile.card:hover i:nth-child(2), */
+#cards-container-mobile .card:not(.collapsed) i:nth-child(2) {
+    display: inline;
+}
+
+#cards-container-mobile .card:hover img {
+    transform: scale(1);
+}
+
 /* FAQs */
 
 /* CONTACT & MAP */
 
-/* container */
 #contact-container {
-    background: linear-gradient(to left, #212529 50%, #fff 50%);
+    background: linear-gradient(to left, #fff 50%, #fff 50%);
 }
 
 @media screen and (max-width: 992px) {
     #contact-container {
         padding-bottom: 0px !important;
-        background: linear-gradient(to top, #212529 25%, #fff 25%);
+        background: linear-gradient(to top, #fff 25%, #fff 25%);
     }
 }
 
-/* map */
-iframe.map {
-    border: 0;
+/* Map */
+.map-container {
+    transform: scale(1.4) translateY(-50px);
+    position: relative;
+}
+.map {
+    transition: all 0.5s ease;
+}
+.map-whole {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+        url('../images/bg-border.png');
+
+    background-position: center;
+    background-size: cover;
+}
+.map-part1 {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+        url('../images/kurdzhali-border.png');
+
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+}
+.map-part2 {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+        url('../images/sofia-border.png');
+
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+}
+
+/* Map Pins */
+.map-pin1 {
+    position: absolute;
+    top: 44%;
+    left: 30%;
+}
+
+.map-pin2 {
+    position: absolute;
+    top: 63%;
+    left: 48%;
+}
+
+.map-pin .fill {
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+.map-pin:hover .fill,
+.map-pin:hover .fill.clicked {
+    opacity: 1;
+}
+
+.map-pin:hover .map {
+    opacity: 1;
 }
 
 /* .slider-title {
@@ -293,4 +412,4 @@ iframe {
 .slide2 {
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
         url('../images/img4.webp');
-} */
+} */ ;

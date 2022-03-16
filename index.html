@@ -22,19 +22,14 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <!-- Link Swiper's CSS -->
-        <!-- <link
-            rel="stylesheet"
-            crossorigin="anonymous"
-            href="https://unpkg.com/swiper/swiper-bundle.min.css"
-        /> -->
+
         <!-- Custom Styles -->
         <link rel="stylesheet" href="./css/index.css" />
-        <!-- Language controller -->
+        <!-- Language Scrips -->
         <script src="./js/language-controller.js"></script>
-
-        <!-- Load components  -->
         <script src="./js/load-components.js"></script>
+        <script src="./js/cards-expand.js" defer></script>
+        <script src="./js/map.js" defer></script>
     </head>
 
     <body>
@@ -98,20 +93,21 @@
                 </div>
             </section>
 
-            <!-- CARDS -->
+            <!-- CARDS DESKTOP VIEW-->
             <section class="py-5 px-3" id="cards-container">
                 <div class="container-lg">
                     <!-- Cards heading -->
                     <div class="row text-center pb-5">
-                        <h2 data-key="cards-container-heading" class="text-dark mb-0">About us</h2>
+                        <h2 data-key="cards-container-heading" class="text-dark mb-0">
+                            INFORMATION
+                        </h2>
                     </div>
                     <div class="row text-center g-4">
                         <!-- Card 1 -->
                         <div class="col-md-4 individual-card-container">
                             <div
                                 class="card"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapseExample"
+                                data-cardnumber="card1"
                                 aria-expanded="false"
                                 aria-controls="collapseExample"
                                 role="button"
@@ -139,8 +135,7 @@
                         <div class="col-md-4 individual-card-container">
                             <div
                                 class="card"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapseExample"
+                                data-cardnumber="card2"
                                 aria-expanded="false"
                                 aria-controls="collapseExample"
                                 role="button"
@@ -169,8 +164,7 @@
                         <div class="col-md-4 individual-card-container">
                             <div
                                 class="card"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapseExample"
+                                data-cardnumber="card3"
                                 aria-expanded="false"
                                 aria-controls="collapseExample"
                                 role="button"
@@ -197,15 +191,192 @@
                     </div>
                 </div>
                 <!-- Card Collapse -->
-                <div class="container">
-                    <p></p>
+                <button
+                    type="button"
+                    id="cards-content-collapse-btn"
+                    class="visually-hidden"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample"
+                >
+                    Expand Content
+                </button>
+                <div class="container cards-content-container">
                     <div class="collapse" id="collapseExample">
-                        <div class="">
-                            <h2>TITLE</h2>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure maxime
-                            perferendis eum enim ipsum ducimus, dolor commodi ut culpa quibusdam
-                            tenetur tempore! Optio totam velit ipsa illo, facere necessitatibus
-                            suscipit?.
+                        <!-- Expand Content 1 -->
+                        <div class="card1-content-body card-content-body">
+                            <h2 data-target="card1-content-title">Title</h2>
+                            <p data-target="card1-content-text">
+                                1111111111111111111111111111 111111111111111111111111
+                                111111111111111111111111
+                            </p>
+                        </div>
+                        <!-- Expand Content 2 -->
+                        <div class="card2-content-body card-content-body">
+                            <h2 data-target="card2-content-title">Title</h2>
+                            <p data-target="card2-content-text">
+                                22222222222222222222222222 22222222222222222222222222222
+                                222222222222222222222222222 222222222222222222222 222222222222
+                            </p>
+                        </div>
+                        <!-- Expand Content 3 -->
+                        <div class="card3-content-body card-content-body">
+                            <h2 data-target="card3-content-title">Title</h2>
+                            <p data-target="card3-content-text">
+                                333333333333333333333 333333333333333333333333
+                                3333333333333333333333333 3333333333333333333333333333
+                                333333333333333
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CARDS MOBILE VIEW-->
+
+            <section class="py-5 px-3 container-lg" id="cards-container-mobile">
+                <!-- Cards Heading -->
+                <div>
+                    <h2 data-key="cards-container-heading" class="text-dark text-center mb-5">
+                        INFORMATION
+                    </h2>
+                </div>
+                <div class="accordion accordion-flush" id="cardAccordionFlush">
+                    <!-- Card 1 Mobile -->
+                    <div class="accordion-item mb-4">
+                        <div class="individual-card-container text-center">
+                            <div
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#card-flush-collapseOne"
+                                aria-expanded="false"
+                                aria-controls="card-flush-collapseOne"
+                                class="card"
+                                role="button"
+                            >
+                                <!-- image -->
+                                <div class="card-img-container">
+                                    <img src="./images/img5.webp" class="card-img-top" alt="..." />
+                                </div>
+                                <!-- body -->
+                                <div class="card-body text-white">
+                                    <h5 class="card-title">Химичен Състав и Структура</h5>
+                                    <div class="container card-button">
+                                        <span
+                                            type="button"
+                                            class="fs-2 text-warning px-3 card-button"
+                                        >
+                                            <i class="bi bi-arrow-down-square"></i>
+                                            <i class="bi bi-arrow-down-square-fill"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            id="card-flush-collapseOne"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne"
+                            data-bs-parent="#cardAccordionFlush"
+                        >
+                            <div class="accordion-body">
+                                Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class. This is the
+                                first item's accordion body.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 Mobile -->
+                    <div class="accordion-item mb-4">
+                        <div class="individual-card-container text-center">
+                            <div
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#card-flush-collapseTwo"
+                                aria-expanded="false"
+                                aria-controls="card-flush-collapseTwo"
+                                class="card"
+                                role="button"
+                            >
+                                <!-- image -->
+                                <div class="card-img-container">
+                                    <img src="./images/img5.webp" class="card-img-top" alt="..." />
+                                </div>
+                                <!-- body -->
+                                <div class="card-body text-white">
+                                    <h5 class="card-title">Химичен Състав и Структура</h5>
+                                    <div class="container card-button">
+                                        <span
+                                            type="button"
+                                            class="fs-2 text-warning px-3 card-button"
+                                        >
+                                            <i class="bi bi-arrow-down-square"></i>
+                                            <i class="bi bi-arrow-down-square-fill"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            id="card-flush-collapseTwo"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo"
+                            data-bs-parent="#cardAccordionFlush"
+                        >
+                            <div class="accordion-body">
+                                Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class. This is the
+                                second item's accordion body. Let's imagine this being filled with
+                                some actual content.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 Mobile -->
+                    <div class="accordion-item mb-4">
+                        <div class="individual-card-container text-center">
+                            <div
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#card-flush-collapseThree"
+                                aria-expanded="false"
+                                aria-controls="card-flush-collapseThree"
+                                class="card"
+                                role="button"
+                            >
+                                <!-- image -->
+                                <div class="card-img-container">
+                                    <img src="./images/img5.webp" class="card-img-top" alt="..." />
+                                </div>
+                                <!-- body -->
+                                <div class="card-body text-white">
+                                    <h5 class="card-title">Химичен Състав и Структура</h5>
+                                    <div class="container card-button">
+                                        <span
+                                            type="button"
+                                            class="fs-2 text-warning px-3 card-button"
+                                        >
+                                            <i class="bi bi-arrow-down-square"></i>
+                                            <i class="bi bi-arrow-down-square-fill"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            id="card-flush-collapseThree"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree"
+                            data-bs-parent="#cardAccordionFlush"
+                        >
+                            <div class="accordion-body">
+                                Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class. This is the
+                                third item's accordion body. Nothing more exciting happening here in
+                                terms of content, but just filling up the space to make it look, at
+                                least at first glance, a bit more representative of how this would
+                                look in a real-world application.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -213,11 +384,14 @@
 
             <!-- FAQs -->
 
-            <section class="bg-white py-5 px-3 container-lg" id="faq-container">
+            <section id="accordion-container" class="container-lg py-5 px-3">
                 <div>
-                    <h2>Често задавани въпроси</h2>
+                    <h2 data-key="cards-container-heading" class="text-dark text-center mb-5">
+                        FREQUENTLY ASKED QUESTIONS
+                    </h2>
                 </div>
-                <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion accordion-flush container-lg" id="FAQAccordionFlush">
+                    <!-- Item 1 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingOne">
                             <button
@@ -235,7 +409,7 @@
                             id="flush-collapseOne"
                             class="accordion-collapse collapse"
                             aria-labelledby="flush-headingOne"
-                            data-bs-parent="#accordionFlushExample"
+                            data-bs-parent="#FAQAccordionFlush"
                         >
                             <div class="accordion-body">
                                 Placeholder content for this accordion, which is intended to
@@ -244,6 +418,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Item 2 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingTwo">
                             <button
@@ -261,7 +436,7 @@
                             id="flush-collapseTwo"
                             class="accordion-collapse collapse"
                             aria-labelledby="flush-headingTwo"
-                            data-bs-parent="#accordionFlushExample"
+                            data-bs-parent="#FAQAccordionFlush"
                         >
                             <div class="accordion-body">
                                 Placeholder content for this accordion, which is intended to
@@ -271,6 +446,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Item 3 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingThree">
                             <button
@@ -288,7 +464,37 @@
                             id="flush-collapseThree"
                             class="accordion-collapse collapse"
                             aria-labelledby="flush-headingThree"
-                            data-bs-parent="#accordionFlushExample"
+                            data-bs-parent="#FAQAccordionFlush"
+                        >
+                            <div class="accordion-body">
+                                Placeholder content for this accordion, which is intended to
+                                demonstrate the <code>.accordion-flush</code> class. This is the
+                                third item's accordion body. Nothing more exciting happening here in
+                                terms of content, but just filling up the space to make it look, at
+                                least at first glance, a bit more representative of how this would
+                                look in a real-world application.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFour"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseFour"
+                            >
+                                Accordion Item #3
+                            </button>
+                        </h2>
+                        <div
+                            id="flush-collapseFour"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingFour"
+                            data-bs-parent="#FAQAccordionFlush"
                         >
                             <div class="accordion-body">
                                 Placeholder content for this accordion, which is intended to
@@ -307,7 +513,7 @@
             <section class="py-5 px-3" id="contact-container">
                 <div class="container">
                     <div class="row g-5">
-                        <div class="col-lg-5">
+                        <div class="col-lg-5 mb-5 mb-lg-1">
                             <h2 class="text-center mb-4" data-key="contact-info-heading">
                                 Contact Info
                             </h2>
@@ -330,14 +536,21 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-lg-7">
+                        <!-- Map -->
+                        <div class="col-lg-7 map-container">
                             <div class="ratio" style="--bs-aspect-ratio: 66%">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2477.721792294766!2d-0.2469743840645513!3d51.6099859796522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487616da7d6f5a51%3A0x29c8ede8debbdb1e!2sMill%20Hill%20Music%20Complex!5e0!3m2!1sen!2suk!4v1629772438756!5m2!1sen!2suk"
-                                    allowfullscreen=""
-                                    loading="lazy"
-                                    class="map"
-                                ></iframe>
+                                <div class="map map-whole"></div>
+                                <div class="map map-part1"></div>
+                                <div class="map map-part2"></div>
+                                <!-- pins -->
+                                <div class="map-pin map-pin1">
+                                    <i class="fs-3 bi bi-geo-alt text-warning"></i>
+                                    <i class="fill fs-3 bi bi-geo-alt-fill text-warning"></i>
+                                </div>
+                                <div class="map-pin map-pin2">
+                                    <i class="fs-3 bi bi-geo-alt text-warning"></i>
+                                    <i class="fill fs-3 bi bi-geo-alt-fill text-warning"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
