@@ -58,14 +58,12 @@
             </section>
 
             <!-- RIBBON -->
-            <section class="text-dark text-center m-5">
-                <div class="container-lg bg-warning p-4 rounded shadow">
-                    <h6>
-                        <strong data-key="ribbon-bold">.......................</strong>:&nbsp;<span
-                            data-key="ribbon-text"
-                            >........................</span
-                        >
-                    </h6>
+            <section class="text-center m-5" id="ribbon-container">
+                <div class="container-fluid bg-warning p-5 rounded">
+                    <span class="fs-6">
+                        <strong class="fs-4 text-dark" data-key="ribbon-bold">.......................</strong>
+                    </span>
+                    <span data-key="ribbon-text" class="fs-5 text-dark">........................</span>
                 </div>
             </section>
 
@@ -190,7 +188,7 @@
                                 Nobis est aut suscipit rerum, minus rem aliquid impedit quae dolorem sapiente culpa
                                 cumque ullam corporis, dolore optio.
                             </p>
-                        </div>
+                        </div> 
                         <!-- Expand Content 2 -->
                         <div class="card2-content-body card-content-body">
                             <h2 data-target="card2-content-title">Title2</h2>
@@ -487,21 +485,23 @@
                             <h2 class="text-center mb-4" data-key="contact-container-title">CONTACT INFO</h2>
                             <ul class="list-group list-group-flush lead fs-6">
                                 <li class="list-group-item bg-transparent">
-                                    <span class="fw-bold" data-key="address">Address:</span>&nbsp;123 Main Road,
-                                    Simitli, Bulgaria
+                                        <span class="fw-bold" data-key="contact-address-title"></span><span  data-key="contact-address-text">Address
                                 </li>
                                 <li class="list-group-item bg-transparent">
-                                    <span class="fw-bold" data-key="email">Email Address:</span>&nbsp;<a
-                                        href="mailto:enroll@frontendbc.test"
-                                        >contact@rocks.bg</a
+                                        <span class="fw-bold" data-key="contact-email-title"></span>
+                                        <a
+                                        href="mailto:contact@zeolite.bg"data-key="contact-email-text" class="link-dark"
+                                        >contact@zeolite.bg</a
                                     >
                                 </li>
                                 <li class="list-group-item bg-transparent">
-                                    <span class="fw-bold" data-key="phone">Telephone:</span>&nbsp;<a
-                                        href="tel: 0123456789"
-                                        >0123456789</a
-                                    >
+                                        <span class="fw-bold" data-key="contact-telephone-title"></span>
+                                        <span ></span><a class="link-dark" data-key="contact-telephone-text"
+                                        href="tel: +359 882927373"
+                                        >+359 882927373</a
+                                    ><span data-key="contact-telephone-details"></span></li></span>
                                 </li>
+                       
                             </ul>
                         </div>
                         <!-- Map -->
@@ -525,7 +525,21 @@
                                 </span>
                             </div>
                         </div>
+
                     </div>
+                    <p>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-bs-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+  </div>
+</div>
                 </div>
             </section>
         </main>

@@ -1,14 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document
-        .querySelectorAll('.map-pin.fill')
-        .forEach(pin => pin.addEventListener('mouseenter', mapHighlight));
-    document
-        .querySelectorAll('.map-pin.fill')
-        .forEach(pin => pin.addEventListener('mouseleave', removeMapHighlight));
+    document.querySelectorAll('.map-pin.fill').forEach(pin => pin.addEventListener('mouseenter', mapHighlight));
+    document.querySelectorAll('.map-pin.fill').forEach(pin => pin.addEventListener('mouseleave', removeMapHighlight));
 
     document.addEventListener('click', clickMapHightlight);
 });
 
+// MAP DECORATIONS
 function mapHighlight(ev) {
     const map = ev.target.dataset.map;
     document.querySelector(`.${map}`).classList.add('highlighted');
@@ -37,3 +34,5 @@ function clickMapHightlight(ev) {
         ev.stopPropagation();
     }
 }
+
+// DROP DOWN MENU

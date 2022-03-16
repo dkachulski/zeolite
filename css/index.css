@@ -68,6 +68,9 @@ h2 {
 }
 /* RIBBON */
 
+#ribbon-container > div {
+}
+
 /* BANNER */
 #banner-container {
     background-image: url('../images/popovo.jpg');
