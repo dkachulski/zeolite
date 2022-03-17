@@ -35,8 +35,16 @@ header .offcanvas-body {
     margin-bottom: -3px;
 }
 
-@media screen and (max-width: 1200px) and (min-width: 992px) {
+@media screen and (max-width: 1200px) and (min-width: 768px) {
     .offcanvas-end {
         width: 100vw !important;
+    }
+}
+@media screen and (max-width: 1200px) and (min-width: 905px) {
+    #site-logo {
+        position: relative;
+        bottom: -22px;
+        right: -5px;
+        font-size: 1.4rem;
     }
 }
