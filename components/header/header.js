@@ -13,7 +13,7 @@ const resizeObserver = new ResizeObserver(entries => {
     // }
     for (let entry of entries) {
         const width = entry.contentBoxSize[0].inlineSize;
-        if (width < 992 || width < 1400)
+        if (width > 992 && width < 1800)
             document.querySelector('header .dropdown-menu').classList.add('dropdown-menu-end');
         else document.querySelector('header .dropdown-menu').classList.remove('dropdown-menu-end');
     }
