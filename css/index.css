@@ -111,17 +111,18 @@ h2 {
     }
 }
 
-/* CARDS */
+/* PRODUCTS */
 
-#cards-container {
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.96)),
+#products {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
         url('../images/img1.webp');
 
     background-position: center;
     background-size: cover;
 }
 @media screen and (max-width: 768px) {
-    #cards-container {
+    #products-container-desktop,
+    #products-container-desktop-dropdown {
         display: none;
     }
 }
@@ -178,14 +179,12 @@ h2 {
 .card-button {
     cursor: pointer;
 }
-/* .card:hover i:first-child, */
 .card.card-opened i:first-child {
     display: none;
 }
 .card i:nth-child(2) {
     display: none;
 }
-/* .card:hover i:nth-child(2), */
 .card.card-opened i:nth-child(2) {
     display: inline;
 }
@@ -220,39 +219,34 @@ h2 {
 }
 
 .card.card-opened .card-body,
-#cards-container-mobile .card:not(.collapsed) .card-body {
+#products-container-mobile .card:not(.collapsed) .card-body {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
 }
-/* .card.card-opened h5,
-#cards-container-mobile .card:not(.collapsed) h5 {
-    opacity: 0.9;
-} */
+
 .card.card-opened img,
-#cards-container-mobile .card:not(.collapsed) img {
+#products-container-mobile .card:not(.collapsed) img {
     transform: scale(1.1);
 }
 
-/* CARDS MOBILE */
-#cards-container-mobile .accordion-item {
+/* PRODUCTS MOBILE */
+#products-container-mobile .accordion-item {
     border: none;
 }
 @media screen and (min-width: 768.99px) {
-    #cards-container-mobile {
+    #products-container-mobile {
         display: none;
     }
 }
 
-/* #cards-container-mobile .card:hover i:first-child, */
-#cards-container-mobile .card:not(.collapsed) i:first-child {
+#products-container-mobile .card:not(.collapsed) i:first-child {
     display: none;
 }
 
-/* #cards-container-mobile.card:hover i:nth-child(2), */
-#cards-container-mobile .card:not(.collapsed) i:nth-child(2) {
+#products-container-mobile .card:not(.collapsed) i:nth-child(2) {
     display: inline;
 }
 
-#cards-container-mobile .card:hover img {
+#products-container-mobile .card:hover img {
     transform: scale(1);
 }
 
@@ -260,13 +254,13 @@ h2 {
 
 /* CONTACT & MAP */
 
-#contact-and-map-container {
+#contact {
     background: linear-gradient(to left, #fff 50%, #fff 50%);
     overflow: hidden;
 }
 
 @media screen and (max-width: 992px) {
-    #contact-and-map-container {
+    #contact {
         padding-bottom: 0px !important;
         background: linear-gradient(to top, #fff 25%, #fff 25%);
     }
@@ -382,90 +376,3 @@ h2 {
 .map-content-hidden {
     display: none;
 }
-
-/* .slider-title {
-    display: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-} */
-
-/* .info1 {
-}
-
-.info2 {
-    background-color: rgba(22, 22, 26, 0);
-}
-
-.info-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-        url('../images/img1.webp');
-
-    background-position: center;
-    background-size: cover;
-} */
-
-/* .swiper {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    flex-direction: column;
-
-    background-position: center;
-    background-size: cover;
-    min-height: calc(100vh - 40px);
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    color: var(--bs-primary);
-}
-
-.swiper-pagination-bullet-active {
-    background-color: var(--bs-primary);
-}
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} 
-iframe {
-    transition: opacity 500ms ease-in-out;
-    transition-delay: 250ms;
-}
-
-.slide1 {
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-        url('../images/img4.webp');
-}
-.slide2 {
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-        url('../images/img4.webp');
-} */ ;

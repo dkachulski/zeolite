@@ -53,7 +53,9 @@
                     <p class="text-white fs-5 text-center" data-key="video-text">
                         ....................................
                     </p>
-                    <button type="button" class="btn btn-warning mt-3" data-key="video-button">Information</button>
+                    <a href="#information-container" type="button" class="btn btn-warning mt-3" data-key="video-button"
+                        >Information</a
+                    >
                 </div>
             </section>
 
@@ -81,20 +83,42 @@
             </section>
 
             <!-- INFORMATION -->
-            <section>
-                <div>
-                    <div class="row text-center pb-5">
-                        <h2 data-key="products-information-title" class="text-dark mb-0">INFORMATION</h2>
+            <section class="py-5 px-3" id="information">
+                <div class="container-lg">
+                    <div class="row text-center">
+                        <h2 class="text-dark">
+                            <a
+                                data-key="information-container-title"
+                                class="text-decoration-none link-dark"
+                                href="#information"
+                                >INFORMATION</a
+                            >
+                        </h2>
+                        <p class="mt-5">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus reiciendis vitae omnis hic
+                            ratione consequatur necessitatibus eum placeat similique dolore? Ex nobis exercitationem,
+                            delectus repudiandae sunt eveniet temporibus culpa corrupti.Lorem ipsum dolor, sit amet
+                            consectetur adipisicing elit. Minus reiciendis vitae omnis hic ratione consequatur
+                            necessitatibus eum placeat similique dolore? Ex nobis exercitationem, delectus repudiandae
+                            sunt eveniet temporibus culpa corrupti.
+                        </p>
                     </div>
                 </div>
             </section>
-
-            <!-- PRODUCTS DESKTOP VIEW-->
-            <section class="py-5 px-3" id="cards-container">
-                <div class="container-lg">
+            <!-- PRODUCTS -->
+            <section class="py-5 px-3" id="products">
+                <!-- PRODUCTS DESKTOP VIEW-->
+                <div class="container-lg" id="products-container-desktop">
                     <!-- Cards heading -->
                     <div class="row text-center pb-5">
-                        <h2 data-key="products-container-title" class="text-dark mb-0">INFORMATION</h2>
+                        <h2 class="text-dark mb-0">
+                            <a
+                                data-key="products-container-title"
+                                class="text-decoration-none link-dark"
+                                href="#products"
+                                >PRODUCTS</a
+                            >
+                        </h2>
                     </div>
                     <div class="row text-center g-4">
                         <!-- Card 1 -->
@@ -178,188 +202,196 @@
                     </div>
                 </div>
                 <!-- Card Collapse -->
-                <button
-                    type="button"
-                    id="cards-content-collapse-btn"
-                    class="visually-hidden"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#products"
-                >
-                    Expand Content
-                </button>
-                <div class="container cards-content-container py-5">
-                    <div class="collapse" id="products">
-                        <!-- Expand Content 1 -->
-                        <div class="card1-content-body card-content-body">
-                            <h3 data-key="product-1-title">Chemical Contents and Composition</h3>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, sit. Doloribus, non.
-                                Nobis est aut suscipit rerum, minus rem aliquid impedit quae dolorem sapiente culpa
-                                cumque ullam corporis, dolore optio.
-                            </p>
-                        </div>
-                        <!-- Expand Content 2 -->
-                        <div class="card2-content-body card-content-body">
-                            <h3 data-key="product-2-title">Production Capacity</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae fuga, nulla quidem in
-                                veniam at tempore maxime, aliquid sunt accusantium consequatur nesciunt ipsa dolorem
-                                incidunt, iste totam illo excepturi architecto? Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Beatae fuga, nulla quidem in veniam at tempore maxime, aliquid sunt
-                                accusantium consequatur nesciunt ipsa dolorem incidunt, iste totam illo excepturi
-                                architecto?
-                            </p>
-                        </div>
-                        <!-- Expand Content 3 -->
-                        <div class="card3-content-body card-content-body">
-                            <h3 data-key="product-3-title">Transport and Logistics</h3>
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius modi ipsum maiores
-                                aspernatur nostrum earum minima nam id, commodi libero, n veniam at tempore maxime,
-                                aliquid sunt accusantium consequatur nesciunt ipsa dolorem incidunt, iste totam illo
-                                excepturi architecto?
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- PRODUCTS MOBILE VIEW-->
-
-            <section class="py-5 px-4 container-lg" id="cards-container-mobile">
-                <!-- Cards Heading -->
-                <div>
-                    <h2 data-key="products-container-title" class="text-dark text-center mb-5">INFORMATION</h2>
-                </div>
-                <div class="accordion accordion-flush" id="cardAccordionFlush">
-                    <!-- Card 1 Mobile -->
-                    <div class="accordion-item mb-4">
-                        <div class="individual-card-container text-center">
-                            <div
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#card-flush-collapseOne"
-                                aria-expanded="false"
-                                aria-controls="card-flush-collapseOne"
-                                class="card"
-                                role="button"
-                            >
-                                <!-- image -->
-                                <div class="card-img-container">
-                                    <img src="./images/img5.webp" class="card-img-top" alt="..." />
-                                </div>
-                                <!-- body -->
-                                <div class="card-body text-white">
-                                    <h5 class="card-title" data-key="product-1-title">
-                                        Chemical Contents and Composition
-                                    </h5>
-                                    <div class="container card-button">
-                                        <span type="button" class="fs-2 text-warning px-3 card-button">
-                                            <i class="bi bi-arrow-down-square"></i>
-                                            <i class="bi bi-arrow-down-square-fill"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            id="card-flush-collapseOne"
-                            class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingOne"
-                            data-bs-parent="#cardAccordionFlush"
-                        >
-                            <div class="accordion-body">
+                <div id="products-container-desktop-dropdown">
+                    <button
+                        type="button"
+                        id="cards-content-collapse-btn"
+                        class="visually-hidden"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#products"
+                    >
+                        Expand Content
+                    </button>
+                    <div class="container cards-content-container py-5">
+                        <div class="collapse" id="products">
+                            <!-- Expand Content 1 -->
+                            <div class="card1-content-body card-content-body">
                                 <h3 data-key="product-1-title">Chemical Contents and Composition</h3>
-                                Placeholder content for this accordion, which is intended to demonstrate the
-                                <code>.accordion-flush</code> class. This is the first item's accordion body.
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, sit. Doloribus,
+                                    non. Nobis est aut suscipit rerum, minus rem aliquid impedit quae dolorem sapiente
+                                    culpa cumque ullam corporis, dolore optio.
+                                </p>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 Mobile -->
-                    <div class="accordion-item mb-4">
-                        <div class="individual-card-container text-center">
-                            <div
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#card-flush-collapseTwo"
-                                aria-expanded="false"
-                                aria-controls="card-flush-collapseTwo"
-                                class="card"
-                                role="button"
-                            >
-                                <!-- image -->
-                                <div class="card-img-container">
-                                    <img src="./images/img5.webp" class="card-img-top" alt="..." />
-                                </div>
-                                <!-- body -->
-                                <div class="card-body text-white">
-                                    <h5 class="card-title" data-key="product-2-title">Production Capacity</h5>
-                                    <div class="container card-button">
-                                        <span type="button" class="fs-2 text-warning px-3 card-button">
-                                            <i class="bi bi-arrow-down-square"></i>
-                                            <i class="bi bi-arrow-down-square-fill"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            id="card-flush-collapseTwo"
-                            class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingTwo"
-                            data-bs-parent="#cardAccordionFlush"
-                        >
-                            <div class="accordion-body">
+                            <!-- Expand Content 2 -->
+                            <div class="card2-content-body card-content-body">
                                 <h3 data-key="product-2-title">Production Capacity</h3>
-                                Placeholder content for this accordion, which is intended to demonstrate the
-                                <code>.accordion-flush</code> class. This is the second item's accordion body. Let's
-                                imagine this being filled with some actual content.
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae fuga, nulla quidem
+                                    in veniam at tempore maxime, aliquid sunt accusantium consequatur nesciunt ipsa
+                                    dolorem incidunt, iste totam illo excepturi architecto? Lorem ipsum dolor sit amet
+                                    consectetur, adipisicing elit. Beatae fuga, nulla quidem in veniam at tempore
+                                    maxime, aliquid sunt accusantium consequatur nesciunt ipsa dolorem incidunt, iste
+                                    totam illo excepturi architecto?
+                                </p>
+                            </div>
+                            <!-- Expand Content 3 -->
+                            <div class="card3-content-body card-content-body">
+                                <h3 data-key="product-3-title">Transport and Logistics</h3>
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius modi ipsum maiores
+                                    aspernatur nostrum earum minima nam id, commodi libero, n veniam at tempore maxime,
+                                    aliquid sunt accusantium consequatur nesciunt ipsa dolorem incidunt, iste totam illo
+                                    excepturi architecto?
+                                </p>
                             </div>
                         </div>
                     </div>
+                </div>
+                <!-- PRODUCTS MOBILE VIEW-->
 
-                    <!-- Card 3 Mobile -->
-                    <div class="accordion-item mb-4">
-                        <div class="individual-card-container text-center">
-                            <div
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#card-flush-collapseThree"
-                                aria-expanded="false"
-                                aria-controls="card-flush-collapseThree"
-                                class="card"
-                                role="button"
+                <!-- Cards Heading -->
+                <div class="py-5 px-4 container-lg" id="products-container-mobile">
+                    <div>
+                        <h2 class="text-dark text-center mb-5">
+                            <a
+                                data-key="products-container-title"
+                                class="text-decoration-none link-dark"
+                                href="#products"
+                                >PRODUCTS</a
                             >
-                                <!-- image -->
-                                <div class="card-img-container">
-                                    <img src="./images/img5.webp" class="card-img-top" alt="..." />
-                                </div>
-                                <!-- body -->
-                                <div class="card-body text-white">
-                                    <h5 class="card-title" data-key="product-3-title">Transport and Logistics</h5>
-                                    <div class="container card-button">
-                                        <span type="button" class="fs-2 text-warning px-3 card-button">
-                                            <i class="bi bi-arrow-down-square"></i>
-                                            <i class="bi bi-arrow-down-square-fill"></i>
-                                        </span>
+                        </h2>
+                    </div>
+                    <div class="accordion accordion-flush" id="cardAccordionFlush">
+                        <!-- Card 1 Mobile -->
+                        <div class="accordion-item mb-4">
+                            <div class="individual-card-container text-center">
+                                <div
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#card-flush-collapseOne"
+                                    aria-expanded="false"
+                                    aria-controls="card-flush-collapseOne"
+                                    class="card"
+                                    role="button"
+                                >
+                                    <!-- image -->
+                                    <div class="card-img-container">
+                                        <img src="./images/img5.webp" class="card-img-top" alt="..." />
+                                    </div>
+                                    <!-- body -->
+                                    <div class="card-body text-white">
+                                        <h5 class="card-title" data-key="product-1-title">
+                                            Chemical Contents and Composition
+                                        </h5>
+                                        <div class="container card-button">
+                                            <span type="button" class="fs-2 text-warning px-3 card-button">
+                                                <i class="bi bi-arrow-down-square"></i>
+                                                <i class="bi bi-arrow-down-square-fill"></i>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div
+                                id="card-flush-collapseOne"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne"
+                                data-bs-parent="#cardAccordionFlush"
+                            >
+                                <div class="accordion-body">
+                                    <h3 data-key="product-1-title">Chemical Contents and Composition</h3>
+                                    Placeholder content for this accordion, which is intended to demonstrate the
+                                    <code>.accordion-flush</code> class. This is the first item's accordion body.
+                                </div>
+                            </div>
                         </div>
-                        <div
-                            id="card-flush-collapseThree"
-                            class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingThree"
-                            data-bs-parent="#cardAccordionFlush"
-                        >
-                            <div class="accordion-body">
-                                <h3 data-key="product-3-title">Transport and Logistics</h3>
-                                Placeholder content for this accordion, which is intended to demonstrate the
-                                <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing
-                                more exciting happening here in terms of content, but just filling up the space to make
-                                it look, at least at first glance, a bit more representative of how this would look in a
-                                real-world application.
+
+                        <!-- Card 2 Mobile -->
+                        <div class="accordion-item mb-4">
+                            <div class="individual-card-container text-center">
+                                <div
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#card-flush-collapseTwo"
+                                    aria-expanded="false"
+                                    aria-controls="card-flush-collapseTwo"
+                                    class="card"
+                                    role="button"
+                                >
+                                    <!-- image -->
+                                    <div class="card-img-container">
+                                        <img src="./images/img5.webp" class="card-img-top" alt="..." />
+                                    </div>
+                                    <!-- body -->
+                                    <div class="card-body text-white">
+                                        <h5 class="card-title" data-key="product-2-title">Production Capacity</h5>
+                                        <div class="container card-button">
+                                            <span type="button" class="fs-2 text-warning px-3 card-button">
+                                                <i class="bi bi-arrow-down-square"></i>
+                                                <i class="bi bi-arrow-down-square-fill"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                id="card-flush-collapseTwo"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo"
+                                data-bs-parent="#cardAccordionFlush"
+                            >
+                                <div class="accordion-body">
+                                    <h3 data-key="product-2-title">Production Capacity</h3>
+                                    Placeholder content for this accordion, which is intended to demonstrate the
+                                    <code>.accordion-flush</code> class. This is the second item's accordion body. Let's
+                                    imagine this being filled with some actual content.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 Mobile -->
+                        <div class="accordion-item mb-4">
+                            <div class="individual-card-container text-center">
+                                <div
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#card-flush-collapseThree"
+                                    aria-expanded="false"
+                                    aria-controls="card-flush-collapseThree"
+                                    class="card"
+                                    role="button"
+                                >
+                                    <!-- image -->
+                                    <div class="card-img-container">
+                                        <img src="./images/img5.webp" class="card-img-top" alt="..." />
+                                    </div>
+                                    <!-- body -->
+                                    <div class="card-body text-white">
+                                        <h5 class="card-title" data-key="product-3-title">Transport and Logistics</h5>
+                                        <div class="container card-button">
+                                            <span type="button" class="fs-2 text-warning px-3 card-button">
+                                                <i class="bi bi-arrow-down-square"></i>
+                                                <i class="bi bi-arrow-down-square-fill"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                id="card-flush-collapseThree"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree"
+                                data-bs-parent="#cardAccordionFlush"
+                            >
+                                <div class="accordion-body">
+                                    <h3 data-key="product-3-title">Transport and Logistics</h3>
+                                    Placeholder content for this accordion, which is intended to demonstrate the
+                                    <code>.accordion-flush</code> class. This is the third item's accordion body.
+                                    Nothing more exciting happening here in terms of content, but just filling up the
+                                    space to make it look, at least at first glance, a bit more representative of how
+                                    this would look in a real-world application.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -368,10 +400,12 @@
 
             <!-- FAQs -->
 
-            <section id="accordion-container" class="container-lg py-5 px-3">
+            <section id="FAQ" class="container-lg py-5 px-3">
                 <div>
-                    <h2 data-key="faq-container-title" class="text-dark text-center mb-5">
-                        FREQUENTLY ASKED QUESTIONS
+                    <h2 class="text-dark text-center mb-5">
+                        <a data-key="faq-container-title" class="text-decoration-none link-dark" href="#FAQ"
+                            >FREQUENTLY ASKED QUESTIONS</a
+                        >
                     </h2>
                 </div>
                 <div class="accordion accordion-flush container-lg" id="FAQAccordionFlush">
@@ -490,11 +524,18 @@
             </section>
 
             <!-- CONTACT -->
-            <section class="" id="contact-and-map-container">
+            <section class="" id="contact">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-5 mb-5 mb-lg-1" id="contact-container">
-                            <h2 class="text-center mb-4" data-key="contact-container-title">CONTACT INFO</h2>
+                            <h2 class="text-center mb-4">
+                                <a
+                                    data-key="contact-container-title"
+                                    class="text-decoration-none link-dark"
+                                    href="#contact"
+                                    >CONTACT</a
+                                >
+                            </h2>
                             <ul class="list-group list-group-flush lead fs-6">
                                 <li class="list-group-item bg-transparent">
                                     <span class="fw-bold" data-key="contact-address-title"></span>
