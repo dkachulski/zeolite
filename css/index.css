@@ -5,6 +5,10 @@ body {
     position: relative;
     height: 100%;
 }
+
+main {
+    overflow-x: hidden;
+}
 a {
     color: var(--bs-blue);
 }
@@ -256,16 +260,21 @@ h2 {
 
 /* CONTACT & MAP */
 
-#contact-container {
+#contact-and-map-container {
     background: linear-gradient(to left, #fff 50%, #fff 50%);
     overflow: hidden;
 }
 
 @media screen and (max-width: 992px) {
-    #contact-container {
+    #contact-and-map-container {
         padding-bottom: 0px !important;
         background: linear-gradient(to top, #fff 25%, #fff 25%);
     }
+}
+
+/* Contact */
+#contact-container {
+    z-index: 1;
 }
 
 /* Map */
@@ -273,11 +282,13 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 0;
 }
 
 .map-container > div {
     transform: scale(1.4);
     position: relative;
+    --bs-aspect-ratio: 62%;
 }
 .map {
     transition: all 0.5s ease;
@@ -308,7 +319,10 @@ h2 {
 }
 
 .map-part1.highlighted,
-.map-part2.highlighted,
+.map-part2.highlighted {
+    opacity: 0.75;
+}
+
 .map-part1.clicked,
 .map-part2.clicked {
     opacity: 1;
@@ -349,6 +363,24 @@ h2 {
 
 .map-pin:hover .map {
     opacity: 1;
+}
+
+/* MAP DROPDOWN CONTAINER */
+.map-dropdown-container {
+    position: relative;
+}
+
+.map-content-body {
+}
+
+.map-content {
+    animation-name: fade-out-in;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+}
+
+.map-content-hidden {
+    display: none;
 }
 
 /* .slider-title {

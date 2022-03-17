@@ -58,12 +58,12 @@
             </section>
 
             <!-- RIBBON -->
-            <section class="text-center m-5" id="ribbon-container">
+            <section class="text-center px-4 py-5 p-sm-5 bg-light" id="ribbon-container">
                 <div class="container-lg bg-warning p-4 rounded">
                     <span class="fs-6">
                         <strong class="text-dark" data-key="ribbon-bold">.......................</strong>
                     </span>
-                    <span data-key="ribbon-text" class=" text-dark">........................</span>
+                    <span data-key="ribbon-text" class="text-dark">........................</span>
                 </div>
             </section>
 
@@ -82,9 +82,11 @@
 
             <!-- INFORMATION -->
             <section>
-                <div>   <div class="row text-center pb-5">
-                        <h2 data-key="cards-information-title" class="text-dark mb-0">INFORMATION</h2>
-                    </div></div>
+                <div>
+                    <div class="row text-center pb-5">
+                        <h2 data-key="products-information-title" class="text-dark mb-0">INFORMATION</h2>
+                    </div>
+                </div>
             </section>
 
             <!-- PRODUCTS DESKTOP VIEW-->
@@ -92,7 +94,7 @@
                 <div class="container-lg">
                     <!-- Cards heading -->
                     <div class="row text-center pb-5">
-                        <h2 data-key="cards-container-title" class="text-dark mb-0">INFORMATION</h2>
+                        <h2 data-key="products-container-title" class="text-dark mb-0">INFORMATION</h2>
                     </div>
                     <div class="row text-center g-4">
                         <!-- Card 1 -->
@@ -101,7 +103,7 @@
                                 class="card"
                                 data-cardnumber="card1"
                                 aria-expanded="false"
-                                aria-controls="collapseExample"
+                                aria-controls="products"
                                 role="button"
                             >
                                 <!-- image -->
@@ -110,7 +112,7 @@
                                 </div>
                                 <!-- body -->
                                 <div class="card-body text-white">
-                                    <h5 class="card-title" data-key="card-1-title">
+                                    <h5 class="card-title" data-key="product-1-title">
                                         Chemical Contents and Composition
                                     </h5>
                                     <div class="container card-button">
@@ -128,7 +130,7 @@
                                 class="card"
                                 data-cardnumber="card2"
                                 aria-expanded="false"
-                                aria-controls="collapseExample"
+                                aria-controls="products"
                                 role="button"
                             >
                                 <!-- image -->
@@ -137,7 +139,7 @@
                                 </div>
                                 <!-- body -->
                                 <div class="card-body text-white">
-                                    <h5 class="card-title">Production Capacity</h5>
+                                    <h5 data-key="product-2-title" class="card-title">Production Capacity</h5>
                                     <div class="container card-button">
                                         <span type="button" class="fs-2 text-warning px-3 card-button">
                                             <i class="bi bi-arrow-down-square"></i>
@@ -154,7 +156,7 @@
                                 class="card"
                                 data-cardnumber="card3"
                                 aria-expanded="false"
-                                aria-controls="collapseExample"
+                                aria-controls="products"
                                 role="button"
                             >
                                 <!-- image -->
@@ -163,7 +165,7 @@
                                 </div>
                                 <!-- body -->
                                 <div class="card-body text-white">
-                                    <h5 class="card-title">Transport and Logistics</h5>
+                                    <h5 class="card-title" data-key="product-3-title">Transport and Logistics</h5>
                                     <div class="container card-button">
                                         <span type="button" class="fs-2 text-warning px-3 card-button">
                                             <i class="bi bi-arrow-down-square"></i>
@@ -181,25 +183,25 @@
                     id="cards-content-collapse-btn"
                     class="visually-hidden"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseExample"
+                    data-bs-target="#products"
                 >
                     Expand Content
                 </button>
-                <div class="container cards-content-container">
-                    <div class="collapse" id="collapseExample">
+                <div class="container cards-content-container py-5">
+                    <div class="collapse" id="products">
                         <!-- Expand Content 1 -->
                         <div class="card1-content-body card-content-body">
-                            <h2 data-target="card1-content-title">Title1</h2>
-                            <p data-target="card1-content-text">
+                            <h3 data-key="product-1-title">Chemical Contents and Composition</h3>
+                            <p>
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, sit. Doloribus, non.
                                 Nobis est aut suscipit rerum, minus rem aliquid impedit quae dolorem sapiente culpa
                                 cumque ullam corporis, dolore optio.
                             </p>
-                        </div> 
+                        </div>
                         <!-- Expand Content 2 -->
                         <div class="card2-content-body card-content-body">
-                            <h2 data-target="card2-content-title">Title2</h2>
-                            <p data-target="card2-content-text">
+                            <h3 data-key="product-2-title">Production Capacity</h3>
+                            <p>
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae fuga, nulla quidem in
                                 veniam at tempore maxime, aliquid sunt accusantium consequatur nesciunt ipsa dolorem
                                 incidunt, iste totam illo excepturi architecto? Lorem ipsum dolor sit amet consectetur,
@@ -210,8 +212,8 @@
                         </div>
                         <!-- Expand Content 3 -->
                         <div class="card3-content-body card-content-body">
-                            <h2 data-target="card3-content-title">Title3</h2>
-                            <p data-target="card3-content-text">
+                            <h3 data-key="product-3-title">Transport and Logistics</h3>
+                            <p>
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius modi ipsum maiores
                                 aspernatur nostrum earum minima nam id, commodi libero, n veniam at tempore maxime,
                                 aliquid sunt accusantium consequatur nesciunt ipsa dolorem incidunt, iste totam illo
@@ -224,10 +226,10 @@
 
             <!-- PRODUCTS MOBILE VIEW-->
 
-            <section class="py-5 px-3 container-lg" id="cards-container-mobile">
+            <section class="py-5 px-4 container-lg" id="cards-container-mobile">
                 <!-- Cards Heading -->
                 <div>
-                    <h2 data-key="cards-container-title" class="text-dark text-center mb-5">INFORMATION</h2>
+                    <h2 data-key="products-container-title" class="text-dark text-center mb-5">INFORMATION</h2>
                 </div>
                 <div class="accordion accordion-flush" id="cardAccordionFlush">
                     <!-- Card 1 Mobile -->
@@ -248,7 +250,7 @@
                                 </div>
                                 <!-- body -->
                                 <div class="card-body text-white">
-                                    <h5 class="card-title" data-key="card-1-title">
+                                    <h5 class="card-title" data-key="product-1-title">
                                         Chemical Contents and Composition
                                     </h5>
                                     <div class="container card-button">
@@ -267,6 +269,7 @@
                             data-bs-parent="#cardAccordionFlush"
                         >
                             <div class="accordion-body">
+                                <h3 data-key="product-1-title">Chemical Contents and Composition</h3>
                                 Placeholder content for this accordion, which is intended to demonstrate the
                                 <code>.accordion-flush</code> class. This is the first item's accordion body.
                             </div>
@@ -291,7 +294,7 @@
                                 </div>
                                 <!-- body -->
                                 <div class="card-body text-white">
-                                    <h5 class="card-title" data-key="card-2-title">Production Capacity</h5>
+                                    <h5 class="card-title" data-key="product-2-title">Production Capacity</h5>
                                     <div class="container card-button">
                                         <span type="button" class="fs-2 text-warning px-3 card-button">
                                             <i class="bi bi-arrow-down-square"></i>
@@ -308,6 +311,7 @@
                             data-bs-parent="#cardAccordionFlush"
                         >
                             <div class="accordion-body">
+                                <h3 data-key="product-2-title">Production Capacity</h3>
                                 Placeholder content for this accordion, which is intended to demonstrate the
                                 <code>.accordion-flush</code> class. This is the second item's accordion body. Let's
                                 imagine this being filled with some actual content.
@@ -333,7 +337,7 @@
                                 </div>
                                 <!-- body -->
                                 <div class="card-body text-white">
-                                    <h5 class="card-title" data-key="card-3-title">Transport and Logistics</h5>
+                                    <h5 class="card-title" data-key="product-3-title">Transport and Logistics</h5>
                                     <div class="container card-button">
                                         <span type="button" class="fs-2 text-warning px-3 card-button">
                                             <i class="bi bi-arrow-down-square"></i>
@@ -350,6 +354,7 @@
                             data-bs-parent="#cardAccordionFlush"
                         >
                             <div class="accordion-body">
+                                <h3 data-key="product-3-title">Transport and Logistics</h3>
                                 Placeholder content for this accordion, which is intended to demonstrate the
                                 <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing
                                 more exciting happening here in terms of content, but just filling up the space to make
@@ -485,35 +490,41 @@
             </section>
 
             <!-- CONTACT -->
-            <section class="" id="contact-container">
+            <section class="" id="contact-and-map-container">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-5 mb-5 mb-lg-1">
+                        <div class="col-lg-5 mb-5 mb-lg-1" id="contact-container">
                             <h2 class="text-center mb-4" data-key="contact-container-title">CONTACT INFO</h2>
                             <ul class="list-group list-group-flush lead fs-6">
                                 <li class="list-group-item bg-transparent">
-                                        <span class="fw-bold" data-key="contact-address-title"></span><span  data-key="contact-address-text">Address
+                                    <span class="fw-bold" data-key="contact-address-title"></span>
+                                    <span data-key="contact-address-text">Address</span>
                                 </li>
                                 <li class="list-group-item bg-transparent">
-                                        <span class="fw-bold" data-key="contact-email-title"></span>
-                                        <a
-                                        href="mailto:contact@zeolite.bg"data-key="contact-email-text" class="link-dark"
-                                        >contact@zeolite.bg</a
-                                    >
+                                    <span class="fw-bold" data-key="contact-email-title"></span>
+                                    <a
+                                        href="mailto:contact@zeolite.bg"
+                                        title="Send email"
+                                        data-key="contact-email-text"
+                                        class="link-dark"
+                                        >contact@zeolite.bg
+                                    </a>
                                 </li>
                                 <li class="list-group-item bg-transparent">
-                                        <span class="fw-bold" data-key="contact-telephone-title"></span>
-                                        <span ></span><a class="link-dark" data-key="contact-telephone-text"
+                                    <span class="fw-bold" data-key="contact-telephone-title"></span>
+                                    <a
+                                        class="link-dark"
+                                        title="Call"
+                                        data-key="contact-telephone-text"
                                         href="tel: +359 882927373"
                                         >+359 882927373</a
-                                    ><span data-key="contact-telephone-details"></span></li></span>
+                                    ><span data-key="contact-telephone-details"></span>
                                 </li>
-                       
                             </ul>
                         </div>
                         <!-- Map -->
                         <div class="col-lg-7 map-container">
-                            <div class="ratio" style="--bs-aspect-ratio: 62%">
+                            <div class="ratio">
                                 <div class="map map-whole"></div>
                                 <div class="map map-part1"></div>
                                 <div class="map map-part2"></div>
@@ -532,21 +543,47 @@
                                 </span>
                             </div>
                         </div>
-
                     </div>
+                </div>
+            </section>
+            <section id="map-dropdown-container">
+                <div class="container-lg p-5">
                     <p>
-  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-    Link with href
-  </a>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Button with data-bs-target
-  </button>
-</p>
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-  </div>
-</div>
+                        <button
+                            class="btn btn-primary visually-hidden"
+                            id="map-dropdown-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#map-dropdown"
+                            aria-expanded="false"
+                            aria-controls="map-dropdown"
+                        >
+                            Button with data-bs-target
+                        </button>
+                    </p>
+                    <div class="collapse map-content-body" id="map-dropdown">
+                        <div class="container">
+                            <div class="map-content map-content-hidden content-map-part1">
+                                <h2>Heading 1</h2>
+                                Some placeholder content for the collapse component. This panel is hidden by default but
+                                revealed when the user activates the relevant trigger. Some placeholder content for the
+                                collapse component. This panel is hidden by default but revealed when the user activates
+                                the relevant trigger. Some placeholder content for the collapse component. This panel is
+                                hidden by default but revealed when the user activates the relevant trigger.
+                            </div>
+                            <div class="map-content map-content-hidden content-map-part2">
+                                <h2>Heading 2</h2>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A vero quia cum consectetur
+                                ratione, asperiores at vitae quisquam molestiae inventore possimus error eligendi, culpa
+                                ducimus quo cupiditate ad? Quia, consequuntur. Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. A vero quia cum consectetur ratione, asperiores at vitae quisquam
+                                molestiae inventore possimus error eligendi, culpa ducimus quo cupiditate ad? Quia,
+                                consequuntur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A vero quia cum
+                                consectetur ratione, asperiores at vitae quisquam molestiae inventore possimus error
+                                eligendi, culpa ducimus quo cupiditate ad? Quia, consequuntur.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

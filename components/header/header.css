@@ -8,6 +8,11 @@ header .lang-select li {
     color: var(--bs-primary);
 }
 
+#header-navigation {
+    max-width: 1700px;
+    margin: auto;
+}
+
 @media screen and (max-width: 768px) {
     /* #header-social-desktop {
         display: none;
@@ -28,4 +33,10 @@ header .lang-select li {
 
 header .offcanvas-body {
     margin-bottom: -3px;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+    .offcanvas-end {
+        width: 100vw !important;
+    }
 }

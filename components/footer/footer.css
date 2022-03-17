@@ -7,11 +7,31 @@ footer hr {
     opacity: 0.5;
 }
 
-@media screen and (max-width: 768px) {
+footer .company-name {
+    font-weight: bold;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media screen and (max-width: 576px) {
+    #footer-social {
+        font-size: 1.2rem !important;
+    }
+}
+@media screen and (max-width: 1200px) and (min-width: 992px) {
     footer .lang-select button span:nth-child(2) {
         display: none;
     }
-    footer hr {
-        opacity: 0;
+}
+@media screen and (max-width: 992px) {
+    footer .lang-select {
+        position: relative;
+        left: -12px;
+        box-shadow: none;
+    }
+    footer .company-name {
+        display: none;
     }
 }

@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function cardsExpandController(ev) {
     const elem = ev.currentTarget;
 
-    if (document.querySelector('.card-opened') && elem !== document.querySelector('.card-opened'))
-        changeContent(elem);
+    if (document.querySelector('.card-opened') && elem !== document.querySelector('.card-opened')) changeContent(elem);
     else if (!elem.classList.contains('card-opened')) showContent(elem);
     else if (elem.classList.contains('card-opened')) closeContent(elem);
 
@@ -17,14 +16,10 @@ function cardsExpandController(ev) {
         elem.classList.add('card-opened');
 
         // hide all visible content from before
-        document
-            .querySelectorAll('.card-content-body')
-            .forEach(box => box.classList.add('card-content-hidden'));
+        document.querySelectorAll('.card-content-body').forEach(box => box.classList.add('card-content-hidden'));
 
         // make content inside box visisble
-        document
-            .querySelector(`.${elem.dataset.cardnumber}-content-body`)
-            .classList.remove('card-content-hidden');
+        document.querySelector(`.${elem.dataset.cardnumber}-content-body`).classList.remove('card-content-hidden');
 
         // show content box
         document.querySelector('#cards-content-collapse-btn').click();
@@ -44,12 +39,8 @@ function cardsExpandController(ev) {
         elem.classList.add('card-opened');
 
         // swap content inside box
-        document
-            .querySelectorAll('.card-content-body')
-            .forEach(box => box.classList.add('card-content-hidden'));
+        document.querySelectorAll('.card-content-body').forEach(box => box.classList.add('card-content-hidden'));
 
-        document
-            .querySelector(`.${elem.dataset.cardnumber}-content-body`)
-            .classList.remove('card-content-hidden');
+        document.querySelector(`.${elem.dataset.cardnumber}-content-body`).classList.remove('card-content-hidden');
     }
 }
