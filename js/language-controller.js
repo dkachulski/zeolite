@@ -1,8 +1,7 @@
 class LanguageController {
     constructor() {
         this.langElements = [];
-        this.currentLanguage =
-            localStorage.getItem('preferred-language') || navigator.language.substring(0, 2);
+        this.currentLanguage = localStorage.getItem('preferred-language') || navigator.language.substring(0, 2);
 
         // applyLangToPage page upon loading all elements
         document.addEventListener('DOMContentLoaded', () => {
@@ -30,9 +29,7 @@ class LanguageController {
 
     subscribeElement(selector) {
         const element = document.querySelector(selector);
-        element
-            .querySelectorAll('li')
-            .forEach(li => li.addEventListener('click', ev => this.changeLanguage(ev)));
+        element.querySelectorAll('li').forEach(li => li.addEventListener('click', ev => this.changeLanguage(ev)));
 
         // // add spans inside button
         const btn = element.querySelector('.lang-select-button');
@@ -52,8 +49,7 @@ class LanguageController {
         ev.preventDefault();
 
         this.langElements.forEach(
-            elem =>
-                (elem.querySelector('.lang-select-button').innerHTML = ev.currentTarget.innerHTML)
+            elem => (elem.querySelector('.lang-select-button').innerHTML = ev.currentTarget.innerHTML)
         );
     }
 }
