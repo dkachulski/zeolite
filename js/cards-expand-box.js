@@ -27,6 +27,7 @@ function cardsExpandController(ev) {
 
     function closeContent(elem) {
         // mark card as closed
+        console.log(elem);
         elem.classList.remove('card-opened');
 
         // hide content box
