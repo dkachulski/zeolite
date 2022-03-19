@@ -13,19 +13,31 @@ header .lang-select li {
     margin: auto;
 }
 
-@media screen and (max-width: 768px) {
-    /* #header-social-desktop {
-        display: none;
-    } */
+/* offcanvas size on mobile */
+@media screen and (max-width: 768.1px) {
+    header .lang-select button span {
+        position: relative;
+        left: 5px;
+    }
+    .offcanvas-end {
+        width: 425x;
+    }
 }
+@media screen and (max-width: 578px) {
+    .offcanvas-end {
+        width: 100%;
+        min-width: 250px;
+    }
+    /* Nav menu on mobile position above social buttons */
+    #logo-container {
+        width: 100%;
+    }
+}
+
 @media screen and (min-width: 768.1px) {
     header .lang-select button span:nth-child(2) {
         display: none;
     }
-
-    /* #header-social-mobile {
-        display: none;
-    } */
 }
 .header-text {
     margin-bottom: -3px;

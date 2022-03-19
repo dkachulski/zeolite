@@ -4,9 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Click on map or outside map
     document.querySelectorAll('.map-pin.fill').forEach(pin => pin.addEventListener('click', mapExpandController));
-
-    // One dropdown on map clicks
-    // document.querySelectorAll('.map-pin.fill').forEach(pin => pin.addEventListener('click', showContent));
 });
 
 // MAP DECORATIONS
@@ -21,26 +18,10 @@ function removeMapHighlight(ev) {
     ev.target.classList.remove('highlighted');
 }
 
-// function clickMapHightlight(ev) {
-//     // Remove all hightlighting
-//     document.querySelector('.map-pin.highlighted')?.classList.remove('highlighted');
-//     document.querySelector('.map-pin.clicked')?.classList.remove('clicked');
-//     document.querySelector('.map.highlighted')?.classList.remove('highlighted');
-//     document.querySelector('.map.clicked')?.classList.remove('clicked');
-
-//     // if area is clicked hightlight it + the pin
-//     if (ev.target.classList.contains('map-pin') || ev.target.classList.contains('pin-icon')) {
-//         // make sure the span is selected not the pin inside
-//         const elem = ev.target.dataset.map ? ev.target : ev.target.parentElement;
-
-//         elem.classList.add('clicked');
-//         document.querySelector(`.${elem.dataset.map}`).classList.add('clicked');
-//         ev.stopPropagation();
-//     }
-// }
 function mapExpandController(ev) {
     // select the <span> (not the <i>)
     const span = ev.target.dataset.map ? ev.target : ev.target.parentElement;
+    const hash = span.dataset.hash;
 
     // If button opened and different from button clicked - swap the contents
     if (document.querySelector('.map-pin.clicked') && document.querySelector('.map-pin.clicked') !== span)
@@ -61,6 +42,9 @@ function mapExpandController(ev) {
         // Show content
         document.querySelector(`.map-content.content-${map}`).classList.remove('map-content-hidden');
         document.getElementById('map-dropdown-button').click();
+        // Scroll page down
+
+        adjustMapView(hash);
     }
 
     function closeMapContents(span) {
@@ -87,5 +71,13 @@ function mapExpandController(ev) {
         document.querySelectorAll(`.map-content`).forEach(box => box.classList.add('map-content-hidden'));
         // Show new content
         document.querySelector(`.map-content.content-${map}`).classList.remove('map-content-hidden');
+        // scroll page down
+        adjustMapView(hash);
+    }
+    // If map is not scrolled low enough to see the contents below, scroll it
+    function adjustMapView(hash) {
+        if (document.querySelector('.map-container > div').getBoundingClientRect().top > 200) {
+            location.hash = hash;
+        }
     }
 }

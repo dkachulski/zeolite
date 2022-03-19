@@ -22,25 +22,163 @@
 
         <!-- Custom Styles -->
         <link rel="stylesheet" href="./css/index.css" />
+        <link rel="stylesheet" href="./css/header.css" />
+        <link rel="stylesheet" href="./css/footer.css" />
         <!-- Language Scrips -->
         <script src="./js/language-controller.js"></script>
-        <script src="./js/load-components.js"></script>
         <script src="./js/cards-expand-box.js" defer></script>
+        <script src="./js/header.js" defer></script>
+        <script src="./js/footer.js" defer></script>
         <script src="./js/map.js" defer></script>
     </head>
 
     <body>
         <!-- HEADER -->
-        <div class="header-container">
-            <script>
-                loadComponent(
-                    '.header-container',
-                    './components/header/header.html',
-                    './components/header/header.css',
-                    './components/header/header.js'
-                );
-            </script>
-        </div>
+        <header class="bg-light">
+            <nav class="navbar navbar-expand-md bg-light navbar-light" id="header-navigation">
+                <div class="container-fluid d-flex flex-md-column flex-xl-row px-xxl-5 just">
+                    <!-- Logo -->
+                    <div
+                        class="d-flex align-self-stretch justify-content-md-between flex-column flex-md-row align-items-md-center"
+                        id="logo-container"
+                    >
+                        <div class="d-flex justify-content-between">
+                            <a
+                                href=""
+                                id="site-logo"
+                                class="navbar-brand ms-3 ms-xl-2 me-md-0 me-xl-2 text-primary fw-bold"
+                                >ZEOLITE.BG</a
+                            >
+                            <!-- Navigation Button -->
+                            <div id="nav-button-container-small-mobile"></div>
+                        </div>
+                        <div
+                            class="header-text text-faded text-secondary ms-1 ms-lg-2 my-2 my-md-0 fs-6"
+                            id="header-social-desktop"
+                        >
+                            <a
+                                href="#"
+                                title="Instagram"
+                                target="_blank"
+                                class="link-secondary p-2 px-xxl-2 m-2 mx-xxl-2"
+                                ><i class="bi bi-instagram"></i
+                            ></a>
+                            <a
+                                href="#"
+                                title="Twitter"
+                                target="_blank"
+                                class="link-secondary p-2 px-xxl-2 m-2 mx-xl-1 mx-xxl-2"
+                                ><i class="bi bi-twitter"></i
+                            ></a>
+                            <a
+                                href="#"
+                                title="Facebook"
+                                target="_blank"
+                                class="link-secondary p-2 px-xxl-2 m-2 mx-xxl-2"
+                                ><i class="bi bi-facebook"></i
+                            ></a>
+                            <a
+                                href="#"
+                                title="LinkedIn"
+                                target="_blank"
+                                class="link-secondary p-2 px-xxl-2 m-2 mx-xxl-2"
+                                ><i class="bi bi-linkedin"></i
+                            ></a>
+                            <a href="#" title="Email" target="_blank" class="link-secondary p-2 px-xxl-2 m-2 mx-xxl-2"
+                                ><i class="bi bi-envelope"></i
+                            ></a>
+                            <a
+                                href="#"
+                                title="Telephone"
+                                target="_blank"
+                                class="link-secondary p-2 px-xxl-2 m-2 mx-xxl-2"
+                                ><i class="bi bi-telephone"></i
+                            ></a>
+                        </div>
+                    </div>
+                    <!-- Navigation Button -->
+                    <div id="nav-button-container-above-small-mobile">
+                        <button
+                            class="navbar-toggler mx-2 mx-sm-1 mt-2 mt-sm-2"
+                            id="offcanvas-navigation-button"
+                            type="button"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <!-- Navigation Menu -->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="navmenu" data-bs-scroll="true">
+                        <div class="offcanvas-header">
+                            <h4 class="offcanvas-title" id="offcanvasNavbarLabel">
+                                <a href="" class="navbar-brand ms-2 text-primary fw-bold">ZEOLITE.BG</a>
+                            </h4>
+                            <button
+                                id="offcanvas-navigation-close-button"
+                                type="button"
+                                class="btn-close text-reset"
+                                data-bs-dismiss="offcanvas"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="offcanvas-body justify-content-end">
+                            <!-- Navigation -->
+                            <ul class="navbar-nav ms-3 m">
+                                <li class="nav-item me-md-3">
+                                    <a href="#products" class="nav-link fs-6" data-key="navigation-products"
+                                        >Products</a
+                                    >
+                                </li>
+                                <li class="nav-item me-md-3">
+                                    <a
+                                        href="#customer-support"
+                                        class="nav-link fs-6 link-to-map"
+                                        data-key="navigation-customer-support"
+                                        data-map-area="1"
+                                        >Customer Support</a
+                                    >
+                                </li>
+                                <li class="nav-item me-md-3">
+                                    <a
+                                        href="#quarry"
+                                        class="nav-link fs-6 link-to-map"
+                                        data-map-area="2"
+                                        data-key="navigation-quarry-site"
+                                        >Quarry Site</a
+                                    >
+                                </li>
+                                <li class="nav-item me-md-3">
+                                    <a href="#contact" class="nav-link fs-6" data-key="navigation-contact">Contact</a>
+                                </li>
+                            </ul>
+                            <hr />
+
+                            <div class="btn-group lang-select">
+                                <button
+                                    aria-label="select language"
+                                    type="button"
+                                    class="btn dropdown-toggle lang-select-button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    Language
+                                </button>
+                                <ul class="dropdown-menu lang-select-ul">
+                                    <li class="dropdown-item" data-lang="en">
+                                        <span class="flag-icon flag-icon-gb"></span><span> English</span>
+                                    </li>
+                                    <li class="dropdown-item" data-lang="bg">
+                                        <span class="flag-icon flag-icon-bg"></span><span> Български</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
         <main>
             <!-- VIDEO -->
             <section class="container-fluid m-0 p-0" id="video-container">
@@ -53,7 +191,7 @@
                     <p class="text-white fs-5 text-center" data-key="video-text">
                         ....................................
                     </p>
-                    <a href="#information-container" type="button" class="btn btn-warning mt-3" data-key="video-button"
+                    <a href="#information" type="button" class="btn btn-warning mt-3" data-key="video-button"
                         >Information</a
                     >
                 </div>
@@ -524,7 +662,7 @@
             </section>
 
             <!-- CONTACT -->
-            <section class="" id="contact">
+            <section class="pt-5 px-3" id="contact">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-5 mb-5 mb-lg-1" id="contact-container">
@@ -566,20 +704,21 @@
                         <!-- Map -->
                         <div class="col-lg-7 map-container">
                             <div class="ratio">
+                                <!-- <div id="map"></div> -->
                                 <div class="map map-whole"></div>
                                 <div class="map map-part1"></div>
                                 <div class="map map-part2"></div>
                                 <!-- pins -->
-                                <span class="map-pin map-pin1" data-map="map-part1">
+                                <span class="map-pin map-pin1">
                                     <i class="pin-icon fs-3 bi bi-geo-alt text-warning"></i>
                                 </span>
-                                <span class="map-pin map-pin1 fill" data-map="map-part1">
+                                <span class="map-pin map-pin1 fill" data-map="map-part1" data-hash="customer-support">
                                     <i class="pin-icon fs-3 bi bi-geo-alt-fill text-warning"></i>
                                 </span>
                                 <span class="map-pin map-pin2">
-                                    <i class="pin-icon fs-3 bi bi-geo-alt text-warning" data-map="map-part2"></i>
+                                    <i class="pin-icon fs-3 bi bi-geo-alt text-warning"></i>
                                 </span>
-                                <span class="map-pin map-pin2 fill" data-map="map-part2">
+                                <span class="map-pin map-pin2 fill" data-map="map-part2" data-hash="quarry">
                                     <i class="pin-icon fs-3 bi bi-geo-alt-fill text-warning"></i>
                                 </span>
                             </div>
@@ -588,7 +727,7 @@
                 </div>
             </section>
             <section id="map-dropdown-container">
-                <div class="container-lg p-5">
+                <div class="container-lg pt-5 px-3">
                     <p>
                         <button
                             class="btn btn-primary visually-hidden"
@@ -604,16 +743,18 @@
                     </p>
                     <div class="collapse map-content-body" id="map-dropdown">
                         <div class="container">
-                            <div class="map-content map-content-hidden content-map-part1">
-                                <h2>Heading 1</h2>
+                            <div class="map-content map-content-hidden content-map-part1" id="customer-support">
+                                <h2>
+                                    <a href="#customer-support" class="text-decoration-none link-dark">Heading 1</a>
+                                </h2>
                                 Some placeholder content for the collapse component. This panel is hidden by default but
                                 revealed when the user activates the relevant trigger. Some placeholder content for the
                                 collapse component. This panel is hidden by default but revealed when the user activates
                                 the relevant trigger. Some placeholder content for the collapse component. This panel is
                                 hidden by default but revealed when the user activates the relevant trigger.
                             </div>
-                            <div class="map-content map-content-hidden content-map-part2">
-                                <h2>Heading 2</h2>
+                            <div class="map-content map-content-hidden content-map-part2" id="quarry">
+                                <h2><a href="#quarry" class="text-decoration-none link-dark">Heading 2</a></h2>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A vero quia cum consectetur
                                 ratione, asperiores at vitae quisquam molestiae inventore possimus error eligendi, culpa
                                 ducimus quo cupiditate ad? Quia, consequuntur. Lorem ipsum dolor sit amet, consectetur
@@ -630,16 +771,90 @@
         </main>
 
         <!-- FOOTER -->
-        <div class="footer-container">
-            <script>
-                loadComponent(
-                    '.footer-container',
-                    './components/footer/footer.html',
-                    './components/footer/footer.css',
-                    './components/footer/footer.js'
-                );
-            </script>
-        </div>
+        <!-- Footer -->
+        <footer class="px-3 px-md-5 pt-5 pb-3 bg-dark text-white text-center position-relative">
+            <div class="container">
+                <hr class="bg-warning m-1" />
+                <ul
+                    class="nav fs-6 justify-content-around flex-column flex-md-row align-items-start align-items-lg-center"
+                >
+                    <li class="nav-item">
+                        <a href="#products" class="nav-link text-light" data-key="navigation-products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="#customer-support"
+                            class="nav-link text-light link-to-map link-to-map"
+                            data-key="navigation-customer-support"
+                            data-map-area="1"
+                            >Customer Support</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="#quarry"
+                            class="nav-link text-light link-to-map link-to-map"
+                            data-key="navigation-quarry-site"
+                            data-map-area="2"
+                            >Quarry Site</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link text-light" data-key="navigation-contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group lang-select text-warning mt-2 mx-3">
+                            <button
+                                aria-label="select language"
+                                type="button"
+                                class="btn btn-dark dropdown-toggle lang-select-button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Language
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark lang-select-ul">
+                                <li class="dropdown-item" data-lang="en">
+                                    <span class="flag-icon flag-icon-gb"></span><span> English</span>
+                                </li>
+                                <li class="dropdown-item" data-lang="bg">
+                                    <span class="flag-icon flag-icon-bg"></span><span> Български</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div
+                    class="d-flex justify-content-start justify-content-md-center justify-content-lg-between mt-5 mx-0 mx-md-2 align-items-end"
+                >
+                    <p class="fw-light text-warning opacity-25 company-name mb-1">@ zeolite.bg</p>
+                    <div class="header-text text-faded text-light fs-5 mb-1" id="footer-social">
+                        <a href="#" title="Instagram" target="_blank" class="link-secondary p-2 m-1 p-sm-2 m-sm-2"
+                            ><i class="bi bi-instagram"></i
+                        ></a>
+                        <a href="#" title="Twitter" target="_blank" class="link-secondary p-2 m-1 p-sm-2 m-sm-2"
+                            ><i class="bi bi-twitter"></i
+                        ></a>
+                        <a href="#" title="Facebook" target="_blank" class="link-secondary p-2 m-1 p-sm-2 m-sm-2"
+                            ><i class="bi bi-facebook"></i
+                        ></a>
+                        <a href="#" title="LinkedIn" target="_blank" class="link-secondary p-2 m-1 p-sm-2 m-sm-2"
+                            ><i class="bi bi-linkedin"></i
+                        ></a>
+                        <a href="#" title="Email" target="_blank" class="link-secondary p-2 m-1 p-sm-2 m-sm-2"
+                            ><i class="bi bi-envelope"></i
+                        ></a>
+                        <a href="#" title="Telephone" target="_blank" class="link-secondary p-2 m-1 p-sm-2 m-sm-2"
+                            ><i class="bi bi-telephone"></i
+                        ></a>
+                    </div>
+                    <div></div>
+                </div>
+                <a href="#" class="position-absolute bottom-0 end-0 p-4">
+                    <i class="bi bi-arrow-up-square h2 text-warning"></i>
+                </a>
+            </div>
+        </footer>
 
         <!-- SCRIPTS -->
 

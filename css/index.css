@@ -268,7 +268,7 @@ h2 {
 
 /* Contact */
 #contact-container {
-    z-index: 1;
+    z-index: 100;
 }
 
 /* Map */
@@ -284,6 +284,13 @@ h2 {
     position: relative;
     --bs-aspect-ratio: 62%;
 }
+/* map anchor used for scrolling the page */
+/* #map {
+    margin-top: 50px;
+
+    z-index: 0;
+} */
+
 .map {
     transition: all 0.5s ease;
 }
@@ -333,6 +340,7 @@ h2 {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    z-index: 10;
 }
 
 .map-pin1 {
@@ -362,9 +370,6 @@ h2 {
 /* MAP DROPDOWN CONTAINER */
 .map-dropdown-container {
     position: relative;
-}
-
-.map-content-body {
 }
 
 .map-content {
