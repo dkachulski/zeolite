@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // move navigation button on mobile in a different position not to clash with social buttons
             const button = document.getElementById('offcanvas-navigation-button');
-            if (width < 568) {
+            if (width < 576) {
                 const smParent = document.getElementById('nav-button-container-small-mobile');
                 if (button.parentElement !== smParent) smParent.appendChild(button);
             } else {

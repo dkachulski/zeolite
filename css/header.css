@@ -23,7 +23,7 @@ header .lang-select li {
         width: 425x;
     }
 }
-@media screen and (max-width: 578px) {
+@media screen and (max-width: 576px) {
     .offcanvas-end {
         width: 100%;
         min-width: 250px;
