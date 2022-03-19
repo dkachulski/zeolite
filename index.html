@@ -94,16 +94,79 @@
                                 class="link-secondary p-2 px-xxl-2 m-2 mx-xxl-2"
                                 ><i class="bi bi-linkedin"></i
                             ></a>
-                            <a href="#" title="Email" target="_blank" class="link-secondary p-2 px-xxl-2 m-2 mx-xxl-2"
-                                ><i class="bi bi-envelope"></i
-                            ></a>
-                            <a
-                                href="#"
-                                title="Telephone"
-                                target="_blank"
-                                class="link-secondary p-2 px-xxl-2 m-2 mx-xxl-2"
-                                ><i class="bi bi-telephone"></i
-                            ></a>
+
+                            <!-- Email -->
+                            <span class="dropdown p-0 m-0">
+                                <a
+                                    class="link-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
+                                    id="dropdownMenuPhone"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                    type="button"
+                                >
+                                    <i class="bi bi-envelope"></i>
+                                </a>
+
+                                <ul
+                                    class="dropdown-menu dropdown-menu-end dropdown-menu-xl-start"
+                                    aria-labelledby="dropdownMenuPhone"
+                                    style="z-index: 2000"
+                                >
+                                    <li class="mx-3 d-flex align-items-center">
+                                        <a
+                                            class="link-primary"
+                                            style="white-space: nowrap"
+                                            title="Send email"
+                                            data-key="contact-email-text"
+                                            href="mailto:contact@zeolite.bg"
+                                            >contact@zeolite.bg</a
+                                        >
+                                        <button
+                                            type="button"
+                                            onclick="navigator.clipboard.writeText('contact@zeolite.bg')"
+                                            class="btn btn-white ms-3 p-0 text-secondary"
+                                            data-key="copy"
+                                        >
+                                            copy
+                                        </button>
+                                    </li>
+                                </ul>
+                            </span>
+                            <!-- Telephone -->
+                            <span class="dropdown p-0 m-0">
+                                <a
+                                    class="link-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
+                                    id="dropdownMenuPhone"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                    type="button"
+                                >
+                                    <i class="bi bi-telephone"></i>
+                                </a>
+                                <ul
+                                    class="dropdown-menu dropdown-menu-end dropdown-menu-xl-start"
+                                    aria-labelledby="dropdownMenuPhone"
+                                    style="z-index: 2000"
+                                >
+                                    <li class="mx-3 d-flex align-items-center">
+                                        <a
+                                            class="link-primary"
+                                            style="white-space: nowrap"
+                                            title="Call"
+                                            href="tel: +359 882927373"
+                                            >+359 882927373</a
+                                        >
+                                        <button
+                                            type="button"
+                                            onclick="navigator.clipboard.writeText('+359 882927373')"
+                                            class="btn btn-white ms-3 p-0 text-secondary"
+                                            data-key="copy"
+                                        >
+                                            copy
+                                        </button>
+                                    </li>
+                                </ul>
+                            </span>
                         </div>
                     </div>
                     <!-- Navigation Button -->
@@ -841,14 +904,75 @@
                         <a href="#" title="LinkedIn" target="_blank" class="link-secondary p-2 m-1 p-sm-2 m-sm-2"
                             ><i class="bi bi-linkedin"></i
                         ></a>
-                        <a href="#" title="Email" target="_blank" class="link-secondary p-2 m-1 p-sm-2 m-sm-2"
-                            ><i class="bi bi-envelope"></i
-                        ></a>
-                        <a href="#" title="Telephone" target="_blank" class="link-secondary p-2 m-1 p-sm-2 m-sm-2"
-                            ><i class="bi bi-telephone"></i
-                        ></a>
+                        <!-- Email -->
+                        <span class="dropdown p-0 m-0">
+                            <a
+                                class="link-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
+                                id="dropdownMenuPhone"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                type="button"
+                            >
+                                <i class="bi bi-envelope"></i>
+                            </a>
+
+                            <ul
+                                class="dropdown-menu dropdown-menu-end dropdown-menu-xl-start"
+                                aria-labelledby="dropdownMenuPhone"
+                                style="z-index: 2000"
+                            >
+                                <li class="mx-3 d-flex align-items-center">
+                                    <a
+                                        class="link-primary"
+                                        style="white-space: nowrap"
+                                        title="Send email"
+                                        data-key="contact-email-text"
+                                        href="mailto:contact@zeolite.bg"
+                                        >contact@zeolite.bg</a
+                                    >
+                                    <button
+                                        type="button"
+                                        onclick="navigator.clipboard.writeText('contact@zeolite.bg')"
+                                        class="btn btn-white ms-3 p-0 text-secondary"
+                                        data-key="copy"
+                                    >
+                                        copy
+                                    </button>
+                                </li>
+                            </ul>
+                        </span>
+                        <!-- Telephone -->
+                        <span class="dropdown p-0 m-0">
+                            <a
+                                class="link-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
+                                id="dropdownMenuPhone"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                type="button"
+                            >
+                                <i class="bi bi-telephone"></i>
+                            </a>
+                            <ul
+                                class="dropdown-menu dropdown-menu-end dropdown-menu-xl-start"
+                                aria-labelledby="dropdownMenuPhone"
+                                style="z-index: 2000"
+                            >
+                                <li class="mx-3 d-flex align-items-center">
+                                    <a class="" style="white-space: nowrap" title="Call" href="tel: +359 882927373"
+                                        >+359 882927373</a
+                                    >
+                                    <button
+                                        type="button"
+                                        onclick="navigator.clipboard.writeText('+359 882927373')"
+                                        class="btn btn-white ms-3 p-0 text-secondary"
+                                        data-key="copy"
+                                    >
+                                        copy
+                                    </button>
+                                </li>
+                            </ul>
+                        </span>
                     </div>
-                    <div></div>
                 </div>
                 <a href="#" class="position-absolute bottom-0 end-0 p-4">
                     <i class="bi bi-arrow-up-square h2 text-warning"></i>

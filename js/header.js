@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const resizeObserver = new ResizeObserver(entries => {
         for (let entry of entries) {
             const width = entry.contentBoxSize[0].inlineSize;
-            if (width > 992 && width < 1800)
-                document.querySelector('header .dropdown-menu').classList.add('dropdown-menu-end');
-            else document.querySelector('header .dropdown-menu').classList.remove('dropdown-menu-end');
+            if (width > 992 && width < 1920)
+                document.querySelector('header .lang-select .dropdown-menu').classList.add('dropdown-menu-end');
+            else document.querySelector('header .lang-select .dropdown-menu').classList.remove('dropdown-menu-end');
 
             // move navigation button on mobile in a different position not to clash with social buttons
             const button = document.getElementById('offcanvas-navigation-button');
