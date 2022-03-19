@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clearTimeout(timer);
             timer = setTimeout(() => {
                 document.getElementById('offcanvas-navigation-close-button').click();
-            }, 650);
+            }, 600);
             timer();
         });
     });
