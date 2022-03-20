@@ -30,13 +30,11 @@ class LanguageController {
     subscribeElement(selector) {
         const element = document.querySelector(selector);
         element.querySelectorAll('li').forEach(li => li.addEventListener('click', ev => this.changeLanguage(ev)));
-
-        // // add spans inside button
+        // add spans inside button
         const btn = element.querySelector('.lang-select-button');
-
+        // Set the inner HTML of the button to match the dropdown button (corresponding to the default language)
         btn.textContent = '';
         btn.innerHTML = element.querySelector(`[data-lang="${this.currentLanguage}"]`).innerHTML;
-        // spans2.forEach(span => btn.appendChild(span));
         this.langElements.push(element);
     }
     changeLanguage(ev) {

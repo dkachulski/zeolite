@@ -1,5 +1,6 @@
 {
     "bg": {
+        "page-title": "Зеолите БГ",
         "navigation-home": "Начало",
         "navigation-products": "Продукти",
         "navigation-customer-support": "Обслужване На Клиенти",
@@ -14,19 +15,38 @@
         "ribbon-bold": "Ние предлагаме: ",
         "ribbon-text": "Добив и транспорт на зеолит / трас като поцолан за нуждите на строителната индустрия.",
 
-        "banner-text-1": "ЗЕОЛИТ",
-        "banner-text-2": "ПОЦОЛАН",
-        "banner-text-3": "ТРАС",
+        "information-text-1": "ЗЕОЛИТ",
+        "information-text-2": "ПОЦОЛАН",
+        "information-text-3": "ТРАС",
+        "information-button": "Повече",
 
-        "information-container-title": "ИНФОРМАЦИЯ",
+        "statistics-container-title": "СТАТИСТИКА",
+        "statistics-text-1": "зърнометричен състав под 80 мм",
+        "statistics-text-2": "фракция 0-50 мм",
+        "statistics-text-3": "8% естествена влага",
+        "statistics-text-4": "56-65% активност",
+        "statistics-text-5": "тона на година",
+        "statistics-text-6": "тона на ден",
+        "statistics-buttton": "Повече",
 
         "products-container-title": "ПРОДУКТИ",
 
         "product-1-title": "Химичен Състав и Структура",
         "product-2-title": "Производствен Капацитет",
         "product-3-title": "Транспорт и Логистика",
+        "product-1-text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quae accusamus, mollitia",
+        "product-2-text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quae accusamus, mollitia",
+        "product-3-text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quae accusamus, mollitia",
 
         "faq-container-title": "ЧЕСТО ЗАДАВАНИ ВЪПРОСИ",
+        "faq-question-1": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quae accusamus, mollitia",
+        "faq-question-2": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quae accusamus, mollitia",
+        "faq-question-3": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quae accusamus, mollitia",
+        "faq-question-4": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quae accusamus, mollitia",
+        "faq-answer-1": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quae accusamus, mollitiaLorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quae accusamus, mollitia",
+        "faq-answer-2": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quae accusamus, mollitiaLorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quae accusamus, mollitia",
+        "faq-answer-3": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quae accusamus, mollitiaLorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quae accusamus, mollitia",
+        "faq-answer-4": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quae accusamus, mollitiaLorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quae accusamus, mollitia",
 
         "contact-container-title": "КОНТАКТИ",
         "contact-address-title": "Адрес: ",
@@ -35,6 +55,12 @@
         "contact-email-text": "contact@zeolite.bg",
         "contact-telephone-title": "Телефон: ",
         "contact-telephone-text": "+359 882927373",
-        "contact-telephone-details": " (Viber, WhatsApp)"
+        "contact-telephone-details": " (Viber, WhatsApp)",
+
+        "customer-support-title": "Обслужване на Клиенти",
+        "customer-support-text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quae accusamus, mollitia",
+
+        "quarry-site-title": "Добивна Площадка",
+        "quarry-site-text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quae accusamus, mollitia"
     }
 }

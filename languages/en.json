@@ -1,22 +1,40 @@
 {
-    "en": {
-        "page-title": "Zeolite",
-        "nav-home": "Home",
-        "nav-products": "Products",
-        "nav-contact": "Contact Us",
-        "nav-short-description": "Zeolite I Pozzolan I Trass Supplies",
-        "contact-info-heading": "Contact Information",
-        "slide1-heading": "ZEOLITE.BG",
-        "slide1-text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea quam totam ab? Voluptatibus sequi doloremque in blan",
-        "banner-bold": "Some question",
-        "banner-text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea quam totam ab?",
-        "FAQ-heading": "Frequently Asked Questions",
-        "address": "Address:",
-        "phone": "Telephone:",
-        "email": "Email:",
-        "information-heading": "Information",
-        "information-text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea quam totam ab? Vi tempore earum  elit. Ea quam totam ab? Voluptatibus sequi doloremque in blanditiis inventore temporibus dolore, delectus beatae optio adipisci tempore earum voluptatum expedita ipsam sint. consectetur adipisicing elit. Ea quam totam ab? Voluptatibus sequi doloremque in blanditiis inventore temporibus dolore, delectus beatae optio adipisci tempore earum voluptatum expedita ipsam sint.",
-        "products-heading": "Products",
-        "products-text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea quam totam ab? Voluptatibus sequi doloremque in blanditiis inventore temporibus dolore, delectus beatae optio adipisci tempore earum voluptatum expedita ipsam sint. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea quam totam ab? Voluptatibus sequi doloremque in blanditiis inventore temporibus dolore, delectus beatae optio adipisci tempore earum voluptatum expedita ipsam sint. consectetur adipisicing elit. Ea quam totam ab? Voluptatibus sequi doloremque in blanditiis inventore temporibus dolore, delectus beatae optio adipisci tempore earum voluptatum expedita ipsam sint."
+    "bg": {
+        "navigation-home": "Начало",
+        "navigation-products": "Продукти",
+        "navigation-customer-support": "Обслужване На Клиенти",
+        "navigation-quarry-site": "Добивна Площадка",
+        "navigation-contact": "Контакти",
+        "copy": "копирай",
+
+        "video-title": "ТРАСИНЖЕНЕРИНГ",
+        "video-text": "Добив на естествен Зеолит | Поцолан | Трас като добавка за производството на цимент и бетон.",
+        "video-button": "Информация",
+
+        "ribbon-bold": "Ние предлагаме: ",
+        "ribbon-text": "Добив и транспорт на зеолит / трас като поцолан за нуждите на строителната индустрия.",
+
+        "banner-text-1": "ЗЕОЛИТ",
+        "banner-text-2": "ПОЦОЛАН",
+        "banner-text-3": "ТРАС",
+
+        "information-container-title": "ИНФОРМАЦИЯ",
+
+        "products-container-title": "ПРОДУКТИ",
+
+        "product-1-title": "Химичен Състав и Структура",
+        "product-2-title": "Производствен Капацитет",
+        "product-3-title": "Транспорт и Логистика",
+
+        "faq-container-title": "ЧЕСТО ЗАДАВАНИ ВЪПРОСИ",
+
+        "contact-container-title": "КОНТАКТИ",
+        "contact-address-title": "Адрес: ",
+        "contact-address-text": "Комплекс Еделвайс 1, ул. Даскал Стоян Попандреев вход Б, ет. 1, ап. 2, квартал Бояна, София 1616",
+        "contact-email-title": "Имейл: ",
+        "contact-email-text": "contact@zeolite.bg",
+        "contact-telephone-title": "Телефон: ",
+        "contact-telephone-text": "+359 882927373",
+        "contact-telephone-details": " (Viber, WhatsApp)"
     }
 }

@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title data-key="page-title">Zeolite</title>
+        <title data-key="page-title">Zeolite.BG</title>
         <link rel="icon" href="./images/logo.webp" type="image/x-icon" />
 
         <!-- Bootstrap -->
@@ -30,11 +30,12 @@
         <script src="./js/header.js" defer></script>
         <script src="./js/footer.js" defer></script>
         <script src="./js/map.js" defer></script>
+        <!-- <script src="./js/counter.js" defer></script> -->
     </head>
 
     <body>
         <!-- HEADER -->
-        <header class="bg-light">
+        <header class="bg-warning">
             <nav class="navbar navbar-expand-md bg-light navbar-light" id="header-navigation">
                 <div class="container-fluid d-flex flex-md-column flex-xl-row px-xxl-5 just">
                     <!-- Logo -->
@@ -46,8 +47,9 @@
                             <a
                                 href=""
                                 id="site-logo"
-                                class="navbar-brand ms-3 ms-xl-2 me-md-0 me-xl-2 text-primary fw-bold"
-                                >ZEOLITE.BG</a
+                                class="navbar-brand ms-3 ms-xl-2 me-md-0 me-xl-2 text-warning fw-bold"
+                                ><span class="font-shadow">ZEOLITE.</span
+                                ><span class="text-secondary font-shadow">BG</span></a
                             >
                             <!-- Navigation Button -->
                             <div id="nav-button-container-small-mobile">
@@ -63,7 +65,7 @@
                             </div>
                         </div>
                         <div
-                            class="header-text text-faded text-secondary ms-1 ms-lg-2 my-2 my-md-0 fs-6"
+                            class="header-text text-faded text-secondary ms-1 ms-lg-2 m-x-2 my-0 fs-6"
                             id="header-social-desktop"
                         >
                             <a
@@ -175,7 +177,10 @@
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="navmenu" data-bs-scroll="true">
                         <div class="offcanvas-header">
                             <h4 class="offcanvas-title" id="offcanvasNavbarLabel">
-                                <a href="" class="navbar-brand ms-2 text-primary fw-bold">ZEOLITE.BG</a>
+                                <a href="" class="navbar-brand ms-3 fw-bold"
+                                    ><span class="font-shadow text-warning">ZEOLITE.</span
+                                    ><span class="text-secondary font-shadow">BG</span></a
+                                >
                             </h4>
                             <button
                                 id="offcanvas-navigation-close-button"
@@ -246,73 +251,111 @@
             <!-- VIDEO -->
             <section class="container-fluid m-0 p-0" id="video-container">
                 <video class="" autoplay muted loop id="video-video">
-                    <source src="./videos/rain.mp4" type="video/mp4" />
+                    <source src="./videos/quarry.webm" type="video/mp4" />
                     <img src="./images/img1.webp" alt="Your browser does not support HTML5 video." />
                 </video>
                 <div class="p-5" id="video-info-container">
-                    <h1 class="text-white fw-bold" data-key="video-title">..............</h1>
-                    <p class="text-white fs-5 text-center" data-key="video-text">
-                        ....................................
-                    </p>
-                    <a href="#information" type="button" class="btn btn-warning mt-3" data-key="video-button"
-                        >Information</a
-                    >
+                    <h1 class="text-white fw-bold" data-key="video-title"></h1>
+                    <p class="text-white fs-4 text-center" data-key="video-text"></p>
+                    <a href="#offer" type="button" class="btn btn-warning mt-3" data-key="video-button"></a>
                 </div>
             </section>
 
-            <!-- RIBBON -->
-            <section class="text-center px-4 py-5 p-sm-5 bg-light" id="ribbon-container">
+            <!-- OFFER -->
+            <section class="text-center px-4 py-5 p-sm-5 bg-light" id="offer">
                 <div class="container-lg bg-warning p-4 rounded">
-                    <span class="fs-6">
-                        <strong class="text-dark" data-key="ribbon-bold">.......................</strong>
+                    <span class="">
+                        <strong class="text-dark" data-key="ribbon-bold"></strong>
                     </span>
-                    <span data-key="ribbon-text" class="text-dark">........................</span>
+                    <span data-key="ribbon-text" class="text-dark"></span>
                 </div>
             </section>
 
-            <!-- BANNER -->
-            <section class="text-center overflow-hidden" id="banner-container">
-                <div class="container-fluid m-0 p-0 h-100">
-                    <div class="row h-100">
-                        <div class="col-12 col-md-5 d-flex flex-column h-100" id="banner-text-container">
-                            <p class="fs-bold w-100 m-0" data-key="banner-text-1"></p>
-                            <p class="fs-bold w-100 m-0" data-key="banner-text-2"></p>
-                            <p class="fs-bold w-100 m-0" data-key="banner-text-3"></p>
+            <div class="m-0 mp-0" id="fixed-photo-wrapper">
+                <!-- INFORMATION -->
+                <section class="text-center overflow-hidden" id="information-container">
+                    <div class="container-fluid m-0 p-0 h-100">
+                        <div class="row h-100">
+                            <div
+                                class="col-12 col-md-6 mx-0 px-0 d-flex flex-column h-100"
+                                id="information-text-container"
+                            >
+                                <p class="fs-bold w-100 m-0" data-key="information-text-1"></p>
+                                <p class="fs-bold w-100 m-0" data-key="information-text-2"></p>
+                                <p class="fs-bold w-100 m-0" data-key="information-text-3"></p>
+                            </div>
+                            <div class="col d-flex flex-column align-items-center justify-content-center mx-0 px-0 p-5">
+                                <div
+                                    class="col mx-0 d-flex flex-column text-light fs-4 align-items-center justify-content-center py-5 px-3 px-md-5 stats-half-small"
+                                >
+                                    <p class="fs-bold px-3">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut iste aliquam, fugit
+                                        esse odio tempora et at ab dolore
+                                    </p>
+
+                                    <a
+                                        href="#statistics"
+                                        type="button"
+                                        class="btn btn-warning mt-3"
+                                        data-key="information-button"
+                                        >More</a
+                                    >
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- INFORMATION -->
-            <section class="py-5 px-3" id="information">
-                <div class="container-lg">
-                    <div class="row text-center">
-                        <h2 class="text-dark">
-                            <a
-                                data-key="information-container-title"
-                                class="text-decoration-none link-dark"
-                                href="#information"
-                                >INFORMATION</a
-                            >
-                        </h2>
-                        <p class="mt-5">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus reiciendis vitae omnis hic
-                            ratione consequatur necessitatibus eum placeat similique dolore? Ex nobis exercitationem,
-                            delectus repudiandae sunt eveniet temporibus culpa corrupti.Lorem ipsum dolor, sit amet
-                            consectetur adipisicing elit. Minus reiciendis vitae omnis hic ratione consequatur
-                            necessitatibus eum placeat similique dolore? Ex nobis exercitationem, delectus repudiandae
-                            sunt eveniet temporibus culpa corrupti.
-                        </p>
+                <!-- STATISTICS -->
+                <section class="" id="statistics">
+                    <h2 class="text-dark text-center pb-5 pt-5 bg-white mb-0 fs-1">
+                        <a
+                            class="text-decoration-none link-dark fw-bold pt-3"
+                            href="#statistics"
+                            data-key="statistics-container-title"
+                        ></a>
+                    </h2>
+                    <div class="container-fluid mt-0" id="statistics-container">
+                        <div class="row text-center">
+                            <div class="container-fluid w-100 m-0 p-0">
+                                <div class="d-flex flex-column-reverse flex-md-row">
+                                    <div
+                                        class="mx-0 d-flex flex-column stats-half stats-half-small text-light fs-4 align-items-center justify-content-center px-3 py-5"
+                                    >
+                                        <p class="fs-bold my-1" data-key="statistics-text-1"></p>
+                                        <p class="fs-bold my-1" data-key="statistics-text-2"></p>
+                                        <p class="fs-bold my-1" data-key="statistics-text-3"></p>
+                                        <p class="fs-bold my-1" data-key="statistics-text-4"></p>
+                                        <a
+                                            href="#products"
+                                            type="button"
+                                            class="btn btn-warning mt-3"
+                                            data-key="statistics-buttton"
+                                            >More</a
+                                        >
+                                    </div>
+                                    <div class="d-flex flex-column stats-half h-100" id="statistics-text-container">
+                                        <p class="fs-bold m-0 px-3">
+                                            <span id="counter-1">375000</span>
+                                            <span data-key="statistics-text-5"></span>
+                                        </p>
+                                        <p class="fs-bold m-0 px-3">
+                                            <span id="counter-1">1200</span> <span data-key="statistics-text-6"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
             <!-- PRODUCTS -->
             <section class="py-5 px-3" id="products">
                 <!-- PRODUCTS DESKTOP VIEW-->
                 <div class="container-lg" id="products-container-desktop">
                     <!-- Cards heading -->
                     <div class="row text-center pb-5">
-                        <h2 class="text-dark mb-0">
+                        <h2 class="text-dark mb-0 fs-1">
                             <a
                                 data-key="products-container-title"
                                 class="text-decoration-none link-dark"
@@ -325,7 +368,7 @@
                         <!-- Card 1 -->
                         <div class="col-md-4 individual-card-container">
                             <div
-                                class="card"
+                                class="card w-100"
                                 data-cardnumber="card1"
                                 aria-expanded="false"
                                 aria-controls="products"
@@ -333,7 +376,7 @@
                             >
                                 <!-- image -->
                                 <div class="card-img-container">
-                                    <img src="./images/img5.webp" class="card-img-top" alt="..." />
+                                    <img src="./images/img12.webp" class="card-img-top" alt="..." />
                                 </div>
                                 <!-- body -->
                                 <div class="card-body text-white">
@@ -352,7 +395,7 @@
                         <!-- Card 2 -->
                         <div class="col-md-4 individual-card-container">
                             <div
-                                class="card"
+                                class="card w-100"
                                 data-cardnumber="card2"
                                 aria-expanded="false"
                                 aria-controls="products"
@@ -360,7 +403,7 @@
                             >
                                 <!-- image -->
                                 <div class="card-img-container">
-                                    <img src="./images/img5.webp" class="card-img-top" alt="..." />
+                                    <img src="./images/img13.webp" class="card-img-top" alt="..." />
                                 </div>
                                 <!-- body -->
                                 <div class="card-body text-white">
@@ -378,7 +421,7 @@
 
                         <div class="col-md-4 individual-card-container">
                             <div
-                                class="card"
+                                class="card w-100"
                                 data-cardnumber="card3"
                                 aria-expanded="false"
                                 aria-controls="products"
@@ -386,7 +429,7 @@
                             >
                                 <!-- image -->
                                 <div class="card-img-container">
-                                    <img src="./images/img5.webp" class="card-img-top" alt="..." />
+                                    <img src="./images/img14.webp" class="card-img-top" alt="..." />
                                 </div>
                                 <!-- body -->
                                 <div class="card-body text-white">
@@ -413,48 +456,32 @@
                     >
                         Expand Content
                     </button>
-                    <div class="container cards-content-container py-5">
+                    <div class="container cards-content-container pt-5">
                         <div class="collapse" id="products-content">
                             <!-- Expand Content 1 -->
                             <div class="card1-content-body card-content-body">
-                                <h3 data-key="product-1-title">Chemical Contents and Composition</h3>
-                                <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, sit. Doloribus,
-                                    non. Nobis est aut suscipit rerum, minus rem aliquid impedit quae dolorem sapiente
-                                    culpa cumque ullam corporis, dolore optio.
-                                </p>
+                                <h4 class="fw-bold" data-key="product-1-title">Chemical Contents and Composition</h4>
+                                <p data-key="product-1-text"></p>
                             </div>
                             <!-- Expand Content 2 -->
                             <div class="card2-content-body card-content-body">
-                                <h3 data-key="product-2-title">Production Capacity</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae fuga, nulla quidem
-                                    in veniam at tempore maxime, aliquid sunt accusantium consequatur nesciunt ipsa
-                                    dolorem incidunt, iste totam illo excepturi architecto? Lorem ipsum dolor sit amet
-                                    consectetur, adipisicing elit. Beatae fuga, nulla quidem in veniam at tempore
-                                    maxime, aliquid sunt accusantium consequatur nesciunt ipsa dolorem incidunt, iste
-                                    totam illo excepturi architecto?
-                                </p>
+                                <h4 class="fw-bold" data-key="product-2-title">Production Capacity</h4>
+                                <p data-key="product-2-text"></p>
                             </div>
                             <!-- Expand Content 3 -->
                             <div class="card3-content-body card-content-body">
-                                <h3 data-key="product-3-title">Transport and Logistics</h3>
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius modi ipsum maiores
-                                    aspernatur nostrum earum minima nam id, commodi libero, n veniam at tempore maxime,
-                                    aliquid sunt accusantium consequatur nesciunt ipsa dolorem incidunt, iste totam illo
-                                    excepturi architecto?
-                                </p>
+                                <h4 class="fw-bold" data-key="product-3-title">Transport and Logistics</h4>
+                                <p data-key="product-3-text"></p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- PRODUCTS MOBILE VIEW-->
 
+                <!-- PRODUCTS MOBILE VIEW-->
                 <!-- Cards Heading -->
-                <div class="py-5 px-4 container-lg" id="products-container-mobile">
+                <div class="px-4 container-lg" id="products-container-mobile">
                     <div>
-                        <h2 class="text-dark text-center mb-5">
+                        <h2 class="text-dark text-center mb-5 fs-1">
                             <a
                                 data-key="products-container-title"
                                 class="text-decoration-none link-dark"
@@ -473,12 +500,12 @@
                                     data-bs-target="#card-flush-collapseOne"
                                     aria-expanded="false"
                                     aria-controls="card-flush-collapseOne"
-                                    class="card"
+                                    class="card w-100"
                                     role="button"
                                 >
                                     <!-- image -->
                                     <div class="card-img-container">
-                                        <img src="./images/img5.webp" class="card-img-top" alt="..." />
+                                        <img src="./images/img12.webp" class="card-img-top w-100" alt="..." />
                                     </div>
                                     <!-- body -->
                                     <div class="card-body text-white">
@@ -502,8 +529,7 @@
                             >
                                 <div class="accordion-body">
                                     <h3 data-key="product-1-title">Chemical Contents and Composition</h3>
-                                    Placeholder content for this accordion, which is intended to demonstrate the
-                                    <code>.accordion-flush</code> class. This is the first item's accordion body.
+                                    <p data-key="faq-answer-1"></p>
                                 </div>
                             </div>
                         </div>
@@ -517,12 +543,12 @@
                                     data-bs-target="#card-flush-collapseTwo"
                                     aria-expanded="false"
                                     aria-controls="card-flush-collapseTwo"
-                                    class="card"
+                                    class="card w-100"
                                     role="button"
                                 >
                                     <!-- image -->
                                     <div class="card-img-container">
-                                        <img src="./images/img5.webp" class="card-img-top" alt="..." />
+                                        <img src="./images/img13.webp" class="card-img-top w-100" alt="..." />
                                     </div>
                                     <!-- body -->
                                     <div class="card-body text-white">
@@ -544,9 +570,7 @@
                             >
                                 <div class="accordion-body">
                                     <h3 data-key="product-2-title">Production Capacity</h3>
-                                    Placeholder content for this accordion, which is intended to demonstrate the
-                                    <code>.accordion-flush</code> class. This is the second item's accordion body. Let's
-                                    imagine this being filled with some actual content.
+                                    <p data-key="faq-answer-2"></p>
                                 </div>
                             </div>
                         </div>
@@ -560,12 +584,12 @@
                                     data-bs-target="#card-flush-collapseThree"
                                     aria-expanded="false"
                                     aria-controls="card-flush-collapseThree"
-                                    class="card"
+                                    class="card w-100"
                                     role="button"
                                 >
                                     <!-- image -->
                                     <div class="card-img-container">
-                                        <img src="./images/img5.webp" class="card-img-top" alt="..." />
+                                        <img src="./images/img14.webp" class="card-img-top w-100" alt="..." />
                                     </div>
                                     <!-- body -->
                                     <div class="card-body text-white">
@@ -587,11 +611,7 @@
                             >
                                 <div class="accordion-body">
                                     <h3 data-key="product-3-title">Transport and Logistics</h3>
-                                    Placeholder content for this accordion, which is intended to demonstrate the
-                                    <code>.accordion-flush</code> class. This is the third item's accordion body.
-                                    Nothing more exciting happening here in terms of content, but just filling up the
-                                    space to make it look, at least at first glance, a bit more representative of how
-                                    this would look in a real-world application.
+                                    <p data-key="faq-answer-3"></p>
                                 </div>
                             </div>
                         </div>
@@ -600,124 +620,108 @@
             </section>
 
             <!-- FAQs -->
-
-            <section id="FAQ" class="container-lg py-5 px-3">
-                <div>
-                    <h2 class="text-dark text-center mb-5">
+            <section id="FAQ" class="container-fluid mx-0 px-0 bg-light-2 py-5">
+                <div class="pb-4 px-3">
+                    <h2 class="text-dark text-center fs-1">
                         <a data-key="faq-container-title" class="text-decoration-none link-dark" href="#FAQ"
                             >FREQUENTLY ASKED QUESTIONS</a
                         >
                     </h2>
                 </div>
-                <div class="accordion accordion-flush container-lg" id="FAQAccordionFlush">
+                <div class="accordion accordion-flush container-lg bg-light-2 px-3 px-md-5" id="FAQAccordionFlush">
                     <!-- Item 1 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingOne">
+                    <div class="accordion-item bg-light-2">
+                        <h2 class="accordion-header bg-light-2" id="flush-headingOne">
                             <button
-                                class="accordion-button collapsed"
+                                class="accordion-button collapsed bg-light-2 fw-bold"
                                 type="button"
                                 data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapseOne"
                                 aria-expanded="false"
                                 aria-controls="flush-collapseOne"
-                            >
-                                Accordion Item #1
-                            </button>
+                                data-key="faq-question-1"
+                            ></button>
                         </h2>
                         <div
                             id="flush-collapseOne"
-                            class="accordion-collapse collapse"
+                            class="accordion-collapse collapse bg-light-2"
                             aria-labelledby="flush-headingOne"
                             data-bs-parent="#FAQAccordionFlush"
                         >
                             <div class="accordion-body">
-                                Placeholder content for this accordion, which is intended to demonstrate the
-                                <code>.accordion-flush</code> class. This is the first item's accordion body.
+                                <p data-key="faq-answer-1"></p>
                             </div>
                         </div>
                     </div>
                     <!-- Item 2 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingTwo">
+                    <div class="accordion-item bg-light-2">
+                        <h2 class="accordion-header bg-light-2" id="flush-headingTwo">
                             <button
-                                class="accordion-button collapsed"
+                                class="accordion-button collapsed bg-light-2 fw-bold"
                                 type="button"
                                 data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapseTwo"
                                 aria-expanded="false"
                                 aria-controls="flush-collapseTwo"
-                            >
-                                Accordion Item #2
-                            </button>
+                                data-key="faq-question-2"
+                            ></button>
                         </h2>
                         <div
                             id="flush-collapseTwo"
-                            class="accordion-collapse collapse"
+                            class="accordion-collapse collapse bg-light-2"
                             aria-labelledby="flush-headingTwo"
                             data-bs-parent="#FAQAccordionFlush"
                         >
                             <div class="accordion-body">
-                                Placeholder content for this accordion, which is intended to demonstrate the
-                                <code>.accordion-flush</code> class. This is the second item's accordion body. Let's
-                                imagine this being filled with some actual content.
+                                <p data-key="faq-answer-2"></p>
                             </div>
                         </div>
                     </div>
                     <!-- Item 3 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingThree">
+                    <div class="accordion-item bg-light-2">
+                        <h2 class="accordion-header bg-light-2" id="flush-headingThree">
                             <button
-                                class="accordion-button collapsed"
+                                class="accordion-button collapsed bg-light-2 fw-bold"
                                 type="button"
                                 data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapseThree"
                                 aria-expanded="false"
                                 aria-controls="flush-collapseThree"
-                            >
-                                Accordion Item #3
-                            </button>
+                                data-key="faq-question-3"
+                            ></button>
                         </h2>
                         <div
                             id="flush-collapseThree"
-                            class="accordion-collapse collapse"
+                            class="accordion-collapse collapse bg-light-2"
                             aria-labelledby="flush-headingThree"
                             data-bs-parent="#FAQAccordionFlush"
                         >
                             <div class="accordion-body">
-                                Placeholder content for this accordion, which is intended to demonstrate the
-                                <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing
-                                more exciting happening here in terms of content, but just filling up the space to make
-                                it look, at least at first glance, a bit more representative of how this would look in a
-                                real-world application.
+                                <p data-key="faq-answer-3"></p>
                             </div>
                         </div>
                     </div>
                     <!-- Item 4 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingFour">
+                    <div class="accordion-item bg-light-2">
+                        <h2 class="accordion-header bg-light-2 bg-light-2" id="flush-headingFour">
                             <button
-                                class="accordion-button collapsed"
+                                class="accordion-button collapsed bg-light-2 fw-bold"
                                 type="button"
                                 data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapseFour"
                                 aria-expanded="false"
                                 aria-controls="flush-collapseFour"
-                            >
-                                Accordion Item #4
-                            </button>
+                                data-key="faq-question-4"
+                            ></button>
                         </h2>
                         <div
                             id="flush-collapseFour"
-                            class="accordion-collapse collapse"
+                            class="accordion-collapse collapse bg-light-2"
                             aria-labelledby="flush-headingFour"
                             data-bs-parent="#FAQAccordionFlush"
                         >
-                            <div class="accordion-body">
-                                Placeholder content for this accordion, which is intended to demonstrate the
-                                <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing
-                                more exciting happening here in terms of content, but just filling up the space to make
-                                it look, at least at first glance, a bit more representative of how this would look in a
-                                real-world application.
+                            <div class="accordion-body bg-light-2">
+                                <p data-key="faq-answer-4"></p>
                             </div>
                         </div>
                     </div>
@@ -726,10 +730,10 @@
 
             <!-- CONTACT -->
             <section class="pt-5 px-3" id="contact">
-                <div class="container">
+                <div class="container-lg">
                     <div class="row">
                         <div class="col-lg-5 mb-5 mb-lg-1" id="contact-container">
-                            <h2 class="text-center mb-4">
+                            <h2 class="text-center mb-4 fs-1">
                                 <a
                                     data-key="contact-container-title"
                                     class="text-decoration-none link-dark"
@@ -789,8 +793,10 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Map Dropdown -->
             <section id="map-dropdown-container">
-                <div class="container-lg pt-5 px-3">
+                <div class="container-lg pb-5 px-3">
                     <p>
                         <button
                             class="btn btn-primary visually-hidden"
@@ -800,32 +806,29 @@
                             data-bs-target="#map-dropdown"
                             aria-expanded="false"
                             aria-controls="map-dropdown"
-                        >
-                            Button with data-bs-target
-                        </button>
+                        ></button>
                     </p>
                     <div class="collapse map-content-body" id="map-dropdown">
                         <div class="container">
                             <div class="map-content map-content-hidden content-map-part1" id="customer-support">
-                                <h2>
-                                    <a href="#customer-support" class="text-decoration-none link-dark">Heading 1</a>
-                                </h2>
-                                Some placeholder content for the collapse component. This panel is hidden by default but
-                                revealed when the user activates the relevant trigger. Some placeholder content for the
-                                collapse component. This panel is hidden by default but revealed when the user activates
-                                the relevant trigger. Some placeholder content for the collapse component. This panel is
-                                hidden by default but revealed when the user activates the relevant trigger.
+                                <h4 class="fw-bold">
+                                    <a
+                                        href="#customer-support"
+                                        class="text-decoration-none link-dark"
+                                        data-key="customer-support-title"
+                                    ></a>
+                                </h4>
+                                <p data-key="customer-support-text"></p>
                             </div>
                             <div class="map-content map-content-hidden content-map-part2" id="quarry">
-                                <h2><a href="#quarry" class="text-decoration-none link-dark">Heading 2</a></h2>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A vero quia cum consectetur
-                                ratione, asperiores at vitae quisquam molestiae inventore possimus error eligendi, culpa
-                                ducimus quo cupiditate ad? Quia, consequuntur. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. A vero quia cum consectetur ratione, asperiores at vitae quisquam
-                                molestiae inventore possimus error eligendi, culpa ducimus quo cupiditate ad? Quia,
-                                consequuntur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A vero quia cum
-                                consectetur ratione, asperiores at vitae quisquam molestiae inventore possimus error
-                                eligendi, culpa ducimus quo cupiditate ad? Quia, consequuntur.
+                                <h4 class="fw-bold">
+                                    <a
+                                        href="#quarry"
+                                        class="text-decoration-none link-dark"
+                                        data-key="quarry-site-title"
+                                    ></a>
+                                </h4>
+                                <p data-key="quarry-site-text"></p>
                             </div>
                         </div>
                     </div>
@@ -834,7 +837,6 @@
         </main>
 
         <!-- FOOTER -->
-        <!-- Footer -->
         <footer class="px-3 px-md-5 pt-5 pb-3 bg-dark text-white text-center position-relative">
             <div class="container">
                 <hr class="bg-warning m-1" />
