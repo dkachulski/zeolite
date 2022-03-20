@@ -29,9 +29,6 @@ header .lang-select li {
         min-width: 250px;
     }
     /* Nav menu on mobile position above social buttons */
-    #logo-container {
-        width: 100%;
-    }
 }
 
 @media screen and (min-width: 768.1px) {

@@ -12,12 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // move navigation button on mobile in a different position not to clash with social buttons
             const button = document.getElementById('offcanvas-navigation-button');
-            if (width < 576) {
+            if (width <= 576) {
                 const smParent = document.getElementById('nav-button-container-small-mobile');
                 if (button.parentElement !== smParent) smParent.appendChild(button);
+                document.getElementById('logo-container').style.width = '100%';
             } else {
                 const lgParent = document.getElementById('nav-button-container-above-small-mobile');
                 if (button.parentElement !== lgParent) lgParent.appendChild(button);
+                document.getElementById('logo-container').style.width = 'unset';
             }
         }
     });
