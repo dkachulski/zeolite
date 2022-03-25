@@ -295,10 +295,7 @@
                                 <div
                                     class="col mx-0 d-flex flex-column text-light fs-4 align-items-center justify-content-center py-5 px-3 px-md-5 stats-half-small"
                                 >
-                                    <p class="fs-bold px-3">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut iste aliquam, fugit
-                                        esse odio tempora et at ab dolore
-                                    </p>
+                                    <p class="fs-bold px-3" data-key="information-text-long"></p>
 
                                     <a
                                         href="#statistics"
@@ -329,10 +326,14 @@
                                     <div
                                         class="mx-0 d-flex flex-column stats-half stats-half-small text-light fs-4 align-items-center justify-content-center px-3 py-5"
                                     >
-                                        <p class="fs-bold my-1" data-key="statistics-text-1"></p>
-                                        <p class="fs-bold my-1" data-key="statistics-text-2"></p>
-                                        <p class="fs-bold my-1" data-key="statistics-text-3"></p>
-                                        <p class="fs-bold my-1" data-key="statistics-text-4"></p>
+                                        <ul>
+                                            <li class="fs-bold my-1" data-key="statistics-text-3"></li>
+                                            <li class="fs-bold my-1" data-key="statistics-text-4"></li>
+                                            <li class="fs-bold my-1" data-key="statistics-text-5"></li>
+                                            <li class="fs-bold my-1" data-key="statistics-text-6"></li>
+                                            <li class="fs-bold my-1" data-key="statistics-text-7"></li>
+                                        </ul>
+
                                         <a
                                             href="#products"
                                             type="button"
@@ -344,10 +345,10 @@
                                     <div class="d-flex flex-column stats-half h-100" id="statistics-text-container">
                                         <p class="fs-bold m-0 px-3">
                                             <span id="counter-1"></span>
-                                            <span data-key="statistics-text-5"></span>
+                                            <span data-key="statistics-text-1"></span>
                                         </p>
                                         <p class="fs-bold m-0 px-3">
-                                            <span id="counter-2"></span> <span data-key="statistics-text-6"></span>
+                                            <span id="counter-2"></span> <span data-key="statistics-text-2"></span>
                                         </p>
                                     </div>
                                 </div>
@@ -732,6 +733,30 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Item 5 -->
+                    <div class="accordion-item bg-light-2">
+                        <h2 class="accordion-header bg-light-2 bg-light-2" id="flush-headingFive">
+                            <button
+                                class="accordion-button collapsed bg-light-2 fw-bold"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFive"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseFive"
+                                data-key="faq-question-5"
+                            ></button>
+                        </h2>
+                        <div
+                            id="flush-collapseFive"
+                            class="accordion-collapse collapse bg-light-2"
+                            aria-labelledby="flush-headingFive"
+                            data-bs-parent="#FAQAccordionFlush"
+                        >
+                            <div class="accordion-body bg-light-2">
+                                <p data-key="faq-answer-5"></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -835,7 +860,9 @@
                                         data-key="quarry-site-title"
                                     ></a>
                                 </h4>
-                                <p data-key="quarry-site-text"></p>
+                                <p data-key="quarry-site-text-1"></p>
+
+                                <p data-key="quarry-site-text-2"></p>
                             </div>
                         </div>
                     </div>
