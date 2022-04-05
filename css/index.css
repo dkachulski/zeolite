@@ -1,7 +1,7 @@
 /* GLOBAL */
 html,
 body {
-  font-family: 'Roboto', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica Neue, Helvetica, Arial, sans-serif;
   position: relative;
   height: 100%;
 }
@@ -103,7 +103,7 @@ h2 {
       rgba(0, 0, 0, 0.1),
       rgba(0, 0, 0, 0.1)
     ),
-    url('../images/Kurdzhali.webp');
+    url("../images/Kurdzhali.webp");
 
   background-attachment: fixed;
   background-position: center;
@@ -351,15 +351,66 @@ h2 {
   transform: scale(1.1);
 }
 
-.product-desktop-collapse {
+/* .product-desktop-collapse {
   width: 90%;
   max-width: 856px;
+
+
+
+
+
+
+
+
+
+
+
+} */
+
+.products-desktop-collapse-img {
+  width: 55%;
 }
-.product-desktop-collapse img {
-  width: 33%;
-  min-width: 300px;
-  max-width: 400px;
+
+.products-desktop-collapse-img.img-1 {
+  background-image: url("../images/Composition 2.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+.products-desktop-collapse-img.img-2 {
+  background-image: url("../images/Production\ Capacity\ 2.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.products-desktop-collapse-img.img-3 {
+  background-image: url("../images/Delivery\ 2.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.products-desktop-collapse-body {
+  position: relative;
+  left: 85%;
+  max-width: 98%;
+}
+
+/*   
+  max-height: 60;
+  width: 50%;
+ 
+}
+.products-desktop-collapse-img-2 {
+  height: 400px;
+  width: 50%;
+ 
+}
+.products-desktop-collapse-img-3 {
+  height: 400px;
+  width: 50%;
+
+} */
 
 /* PRODUCTS MOBILE */
 
@@ -391,7 +442,7 @@ h2 {
       rgba(248, 249, 250, 0),
       rgba(248, 249, 250, 0)
     ),
-    url('../images/QandA.webp');
+    url("../images/QandA.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -404,11 +455,11 @@ h2 {
 #FAQAccordionFlush {
   max-width: 856px;
   width: 90%;
-  background-color: rgba(248, 249, 250, 0.94);
+  background-color: rgba(248, 249, 250, 0.85);
   transition: all 0.3s ease-in;
 }
 #FAQAccordionFlush:hover {
-  background-color: rgba(248, 249, 250, 1);
+  background-color: rgba(248, 249, 250, 0.97);
 }
 
 /* CONTACT & MAP */
@@ -453,7 +504,7 @@ h2 {
       rgba(255, 255, 255, 0.35),
       rgba(255, 255, 255, 0.35)
     ),
-    url('../images/bg-border.webp');
+    url("../images/bg-border.webp");
 
   background-position: center;
   background-size: cover;
@@ -464,7 +515,7 @@ h2 {
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
     ),
-    url('../images/sofia-border.webp');
+    url("../images/sofia-border.webp");
 
   background-position: center;
   background-size: cover;
@@ -476,7 +527,7 @@ h2 {
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
     ),
-    url('../images/kurdzhali-border.webp');
+    url("../images/kurdzhali-border.webp");
 
   background-position: center;
   background-size: cover;
