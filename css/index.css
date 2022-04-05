@@ -140,7 +140,7 @@ h2 {
   font-size: 50px;
   font-weight: 950;
   color: rgb(0, 0, 0);
-  background-color: rgba(248, 247, 255, 0.88);
+  background-color: rgba(248, 249, 250, 0.88);
 }
 
 @media screen and (max-width: 576px) {
@@ -184,7 +184,7 @@ h2 {
   font-size: 45px;
   font-weight: 950;
   color: rgb(0, 0, 0);
-  background-color: rgba(248, 247, 255, 0.88);
+  background-color: rgba(248, 249, 250, 0.88);
 }
 
 @media screen and (max-width: 576px) {
@@ -548,12 +548,13 @@ h2 {
 }
 
 #map-dropdown > div {
-  max-width: 856px;
+  max-width: 1200px;
   width: 90%;
 }
 
-.map-dropdown-container img {
-  width: 33%;
-  min-width: 300px;
-  max-width: 400px;
+#map-dropdown-container .side-img,
+#map-dropdown-container .two-img-container {
+  width: 40%;
+  min-width: 225px;
+  max-width: 700px;
 }
