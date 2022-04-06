@@ -1,59 +1,58 @@
 header .lang-select li {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
-    color: var(--bs-primary);
+  color: var(--bs-primary);
 }
 
 #header-navigation {
-    max-width: 1700px;
-    margin: auto;
+  max-width: 1700px;
+  margin: auto;
 }
 
 /* offcanvas size on mobile */
 @media screen and (max-width: 768.1px) {
-    header .lang-select button span {
-        position: relative;
-        left: 5px;
-    }
-    .offcanvas-end {
-        width: 425x;
-    }
+  header .lang-select button span {
+    position: relative;
+    left: 5px;
+  }
+  .offcanvas-end {
+    width: 425x;
+  }
 }
 @media screen and (max-width: 576px) {
-    .offcanvas-end {
-        width: 100%;
-        min-width: 250px;
-    }
-    /* Nav menu on mobile position above social buttons */
+  .offcanvas-end {
+    width: 100%;
+    min-width: 250px;
+  }
 }
 
 @media screen and (min-width: 768.1px) {
-    header .lang-select button span:nth-child(2) {
-        display: none;
-    }
+  header .lang-select button span:nth-child(2) {
+    display: none;
+  }
 }
 .header-text {
-    margin-bottom: -3px;
+  margin-bottom: -3px;
 }
 
 header .offcanvas-body {
-    margin-bottom: -3px;
+  margin-bottom: -3px;
 }
 
 @media screen and (max-width: 1200px) and (min-width: 768px) {
-    .offcanvas-end {
-        width: 100vw !important;
-    }
+  .offcanvas-end {
+    width: 100vw !important;
+  }
 }
 @media screen and (max-width: 1200px) and (min-width: 905px) {
-    #site-logo {
-        position: relative;
-        bottom: -22px;
-        right: -5px;
-        font-size: 1.4rem;
-    }
+  #site-logo {
+    position: relative;
+    bottom: -22px;
+    right: -5px;
+    font-size: 1.4rem;
+  }
 }
