@@ -1,3 +1,4 @@
+// Controls the padding size in Information and Statistics sections for better design
 document.addEventListener("DOMContentLoaded", () => {
   const resizeObserver = new ResizeObserver(entries => {
     const infoP1 = document.querySelector(

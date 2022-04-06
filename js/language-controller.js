@@ -1,3 +1,6 @@
+// Fetches and adds content to the website based on default or preferred language
+// Keeps language buttons in sync
+
 class LanguageController {
   constructor() {
     this.langElements = [];

@@ -1,4 +1,4 @@
-/* GLOBAL */
+/* -------- GLOBAL -------- */
 html,
 body {
   font-family: "Roboto", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -60,7 +60,7 @@ h2 {
   text-shadow: 0.4px 0.4px 0.4px var(--bs-secondary);
 }
 
-/* VIDEO */
+/* -------- VIDEO -------- */
 #video-container {
   position: relative;
   height: calc(100vh - 56px);
@@ -120,13 +120,13 @@ h2 {
 #video-info-container p {
   text-shadow: 1px 1px 1px var(--bs-dark);
 }
-/* OFFER */
+/* -------- OFFER -------- */
 
 #offer {
   font-size: 17px;
 }
 
-/* INFORMATION AND STATISTICS */
+/* -------- INFORMATION AND STATISTICS -------- */
 #fixed-photo-wrapper {
   background-image: linear-gradient(
       to bottom,
@@ -140,8 +140,17 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
 }
+#information-text-container-2,
+#statistics-text-container-2 {
+  transition: all 0.4s ease-in-out;
+}
+#information-text-container-2:hover,
+#statistics-text-container-2:hover {
+  background: rgba(0, 0, 0, 0.55);
+  transition: all 0.4s ease-in-out;
+}
 
-/* INFORMATION */
+/* -------- INFORMATION -------- */
 #information {
   background-image: linear-gradient(
     to bottom,
@@ -184,18 +193,7 @@ h2 {
   }
 }
 
-/* INFORMATION & STATISTICS */
-#information-text-container-2,
-#statistics-text-container-2 {
-  transition: all 0.4s ease-in-out;
-}
-#information-text-container-2:hover,
-#statistics-text-container-2:hover {
-  background: rgba(0, 0, 0, 0.55);
-  transition: all 0.4s ease-in-out;
-}
-
-/* STATISTICS */
+/* -------- STATISTICS -------- */
 #statistics {
   overflow: hidden;
 }
@@ -246,7 +244,7 @@ h2 {
   list-style-type: none;
 }
 
-/* PRODUCTS */
+/* -------- PRODUCTS -------- */
 
 #products {
   min-height: 400px;
@@ -410,7 +408,7 @@ h2 {
   max-width: 98%;
 }
 
-/* PRODUCTS MOBILE */
+/* -------- PRODUCTS MOBILE -------- */
 
 #products .accordion-body {
   max-width: 450px;
@@ -438,7 +436,7 @@ h2 {
   transform: scale(1);
 }
 
-/* FAQs */
+/* -------- FAQs -------- */
 #FAQ {
   background-image: linear-gradient(
       to bottom,
@@ -465,7 +463,7 @@ h2 {
   background-color: rgba(248, 249, 250, 0.97);
 }
 
-/* CONTACT & MAP */
+/* -------- CONTACT & MAP -------- */
 
 #contact {
   background: linear-gradient(to left, #fff 50%, #fff 50%);
@@ -603,7 +601,7 @@ h2 {
   opacity: 1;
 }
 
-/* MAP DROPDOWN */
+/* -------- MAP DROPDOWN -------- */
 .map-dropdown-container {
   position: relative;
 }

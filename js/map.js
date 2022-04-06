@@ -1,3 +1,4 @@
+// Controls the color change of the map and the collapsing conent underneath
 document.addEventListener("DOMContentLoaded", () => {
   document
     .querySelectorAll(".map-pin.fill")
