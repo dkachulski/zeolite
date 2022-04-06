@@ -56,14 +56,15 @@
 
     "contact-container-title": "КОНТАКТИ",
     "contact-address-title": "Адрес: ",
+    "contact-address-button": "Адрес: ",
     "contact-address-text": "ул. Даскал Стоян Попандреев 20А, вход А, ет. 1, ап. 3, Комплекс Еделвайс 1, квартал Бояна, София 1616",
 
     "contact-email-title": "Имейл:",
-    "contact-show-email": "Имейл",
+    "contact-email-button": "Имейл",
     "contact-email-text": "contact@zeolite.bg",
 
     "contact-telephone-title": "Телефон:",
-    "contact-show-telephone": "Телефон",
+    "contact-telephone-button": "Телефон",
     "contact-telephone-text": "+359 882 92 73",
     "contact-telephone-details": " (Viber, WhatsApp)",
 

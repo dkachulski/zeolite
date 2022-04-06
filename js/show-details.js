@@ -1,9 +1,41 @@
 // show contact details on click
 document.addEventListener("DOMContentLoaded", () => {
-  // show telephone in contact section
+  // Show address in contact section
+  document.querySelector("#show-address button ").onclick = function (ev) {
+    ev.preventDefault();
+    ev.target.style.position = "absolute";
+    ev.target.style.top = "-4000px";
+
+    const title =
+      languageController.content[languageController.currentLanguage][
+        "contact-address-title"
+      ];
+    const address =
+      languageController.content[languageController.currentLanguage][
+        "contact-address-text"
+      ];
+    // Description
+    const span = document.createElement("span");
+    span.classList.add("fw-bold", "me-2");
+    span.dataset.key = "contact-address-title";
+    span.textContent = title;
+
+    // Span
+    const span2 = document.createElement("span");
+    const text =
+      languageController.content[languageController.currentLanguage][
+        "contact-address-text"
+      ];
+    span2.dataset.key = "contact-address-title";
+    span2.textContent = text;
+    ev.target.parentElement.appendChild(span);
+    ev.target.parentElement.appendChild(span2);
+  };
+  // Show telephone in contact section
   document.querySelector("#show-telephone button ").onclick = function (ev) {
     ev.preventDefault();
-    ev.target.style.display = "none";
+    ev.target.style.position = "absolute";
+    ev.target.style.top = "-4000px";
 
     const title =
       languageController.content[languageController.currentLanguage][
@@ -32,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const span2 = document.createElement("span");
     const text =
       languageController.content[languageController.currentLanguage][
-        "contact-telephone-details"
+        "contact-telephone-title"
       ];
     span2.dataset.key = "contact-telephone-details";
     span2.textContent = text;
@@ -41,10 +73,11 @@ document.addEventListener("DOMContentLoaded", () => {
     ev.target.parentElement.appendChild(span2);
   };
 
-  // show email in contact section
+  // Show email in contact section
   document.querySelector("#show-email button ").onclick = function (ev) {
     ev.preventDefault();
-    ev.target.style.display = "none";
+    ev.target.style.position = "absolute";
+    ev.target.style.top = "-4000px";
 
     const email =
       languageController.content[languageController.currentLanguage][
@@ -84,6 +117,8 @@ document.addEventListener("DOMContentLoaded", () => {
       a.href = `mailto:${a.textContent}`;
     });
   }
+
+  // Attach href listeners
   document
     .querySelectorAll(".telephone-dropdown")
     .forEach(elem => elem.addEventListener("click", telephoneToHref));
