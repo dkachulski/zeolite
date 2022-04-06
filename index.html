@@ -540,7 +540,7 @@
             </div>
           </div>
         </div>
-        <!-- Card Collapse -->
+        <!-- CARDS COLLAPSE-->
         <div id="products-container-desktop-dropdown">
           <button
             type="button"
@@ -563,13 +563,13 @@
                 <div class="d-flex align-items-center justify-content-start">
                   <!-- Image -->
                   <div
-                    class="products-desktop-collapse-img img-1 py-5 rounded border"
+                    class="products-desktop-collapse-img img-1 py-4 rounded border"
                   >
                     <!-- Text -->
                     <div
                       class="products-desktop-collapse-body bg-light rounded shadow border p-5 my-3"
                     >
-                      <h4 class="fw-bold mb-4" data-key="product-1-title"></h4>
+                      <h4 class="mb-4" data-key="product-1-title"></h4>
 
                       <p class="" data-key="product-1-text"></p>
                     </div>
@@ -587,7 +587,7 @@
                     <div
                       class="products-desktop-collapse-body bg-light rounded shadow border p-5 my-3"
                     >
-                      <h4 class="fw-bold mb-4" data-key="product-2-title"></h4>
+                      <h4 class="mb-4" data-key="product-2-title"></h4>
 
                       <p class="" data-key="product-2-text"></p>
                     </div>
@@ -605,7 +605,7 @@
                     <div
                       class="products-desktop-collapse-body bg-light rounded shadow border p-5 my-3"
                     >
-                      <h4 class="fw-bold mb-4" data-key="product-3-title"></h4>
+                      <h4 class="mb-4" data-key="product-3-title"></h4>
 
                       <p class="" data-key="product-3-text"></p>
                     </div>
@@ -1018,8 +1018,8 @@
       </section>
 
       <!-- Map Dropdown -->
-      <section id="map-dropdown-container">
-        <div class="container-lg pb-5 px-3">
+      <section id="map-dropdown-container px-0">
+        <div class="container-fluid pb-5 px-0">
           <p>
             <button
               class="btn btn-primary visually-hidden"
@@ -1032,61 +1032,66 @@
             ></button>
           </p>
           <div class="collapse map-content-body" id="map-dropdown">
+            <!-- Sofia -->
             <div
-              class="container bg-light p-4 p-md-5 rounded shadow border m-auto clearfix"
+              class="container map-content map-content-hidden content-map-part1 px-3"
+              id="customer-support"
             >
-              <!-- Sofia -->
-              <div
-                class="map-content map-content-hidden content-map-part1"
-                id="customer-support"
-              >
-                <h4 class="fw-bold mb-3">
-                  <a
-                    href="#customer-support"
-                    class="text-decoration-none link-dark"
-                    data-key="customer-support-title"
-                  ></a>
-                </h4>
-
-                <img
-                  class="side-img float-end ms-4 mb-4 rounded"
-                  src="./images/Sofia Office.webp"
-                  alt="customer-support"
-                />
-                <p data-key="customer-support-text"></p>
-              </div>
-              <!-- Kurdzhali -->
-              <div
-                class="map-content map-content-hidden content-map-part2"
-                id="quarry"
-              >
-                <img
-                  class="hidden-on-mobile w-100 rounded"
-                  src="./images/Kurdzhali 1.webp"
-                  alt="quarry"
-                />
-                <h4 class="fw-bold mt-4 mt-lg-5 mb-3">
-                  <a
-                    href="#quarry"
-                    class="text-decoration-none link-dark"
-                    data-key="quarry-site-title"
-                  ></a>
-                </h4>
-                <div class="two-img-container float-end d-flex flex-column">
-                  <img
-                    class="ms-4 mb-4 rounded"
-                    src="./images/Kurdzhali 3.webp"
-                    alt="quarry"
-                  />
-                  <img
-                    class="ms-4 mb-4 rounded"
-                    src="./images/Kurdzhali 2.webp"
-                    alt="quarry"
-                  />
+              <!-- Image -->
+              <div class="map-collapse-img-sofia py-4 rounded border">
+                <!-- Text -->
+                <div
+                  class="map-collapse-body-sofia bg-light rounded shadow border p-5 my-3"
+                >
+                  <h4 class="mb-4">
+                    <a
+                      href="#customer-support"
+                      class="text-decoration-none link-dark"
+                      data-key="customer-support-title"
+                    ></a>
+                  </h4>
+                  <p data-key="customer-support-text"></p>
                 </div>
-                <p data-key="quarry-site-text-1"></p>
+              </div>
+            </div>
+            <!-- Kurdzhali -->
+            <div
+              class="map-content map-content-hidden content-map-part2"
+              id="quarry"
+            >
+              <!-- Section 1  -->
+              <div class="map-collapse-img-kurdzhali-1 mb-5">
+                <div class="container-lg p-5">
+                  <div
+                    class="map-collapse-body-kurdzhali-1 bg-light p-5 rounded shadow"
+                  >
+                    <h4 class="mb-4">
+                      <a
+                        href="#quarry"
+                        class="text-decoration-none link-dark"
+                        data-key="quarry-site-title"
+                      ></a>
+                    </h4>
+                    <p data-key="quarry-site-text-1"></p>
+                  </div>
+                </div>
+              </div>
+              <!-- Image -->
+              <!-- Text -->
 
-                <p data-key="quarry-site-text-2"></p>
+              <!-- Section 2 -->
+              <div class="container-lg mb-5 pt-4 m-auto">
+                <div class="d-flex flex-row px-3">
+                  <div class="map-collapse-kurdzhali-2 py-5">
+                    <div class="img-1 rounded"></div>
+                    <div class="img-2 rounded"></div>
+                    <div
+                      class="map-collapse-body-kurdzhali-2 bg-light shadow border rounded"
+                    >
+                      <p class="p-5" data-key="quarry-site-text-2"></p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1099,6 +1104,7 @@
       class="px-3 px-md-5 pt-5 pb-3 bg-dark text-white text-center position-relative"
     >
       <div class="container">
+        <div class="container-lg" data-key="footer-text"></div>
         <hr class="bg-warning m-1" />
         <ul
           class="nav fs-6 justify-content-around flex-column flex-md-row align-items-start align-items-lg-center"
