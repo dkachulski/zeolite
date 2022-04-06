@@ -44,7 +44,7 @@
     <script src="./js/banners.js" defer></script>
   </head>
 
-  <body>
+  <body class="fs-6">
     <!-- HEADER -->
     <header class="bg-light shadow">
       <nav
@@ -290,7 +290,7 @@
         </video>
         <div id="video-overlay"></div>
         <div class="p-5" id="video-info-container">
-          <h1 class="text-white fw-bolder" data-key="video-title"></h1>
+          <h1 class="text-white fw-bolder mb-3" data-key="video-title"></h1>
           <p
             class="text-warning fs-4 text-center text-warning fw-bolder"
             data-key="video-text-1"
@@ -299,7 +299,7 @@
           <a
             href="#offer"
             type="button"
-            class="btn btn-warning mt-3 shadow"
+            class="btn btn-warning mt-4 shadow"
             data-key="video-button"
           ></a>
         </div>
@@ -652,9 +652,7 @@
                   </div>
                   <!-- body -->
                   <div class="card-body text-white">
-                    <h5 class="card-title" data-key="product-1-title">
-                      Chemical Contents and Composition
-                    </h5>
+                    <h5 class="card-title" data-key="product-1-title"></h5>
                     <div class="container card-button">
                       <span
                         type="button"
@@ -674,11 +672,9 @@
                 data-bs-parent="#cardAccordionFlush"
               >
                 <div
-                  class="px-2 px-sm-4 my-3 accordion-body bg-light shadow border rounded m-5"
+                  class="p-4 my-3 accordion-body bg-light shadow border rounded"
                 >
-                  <h3 class="" data-key="product-1-title">
-                    Chemical Contents and Composition
-                  </h3>
+                  <h3 class="" data-key="product-1-title"></h3>
                   <p class="" data-key="product-1-text"></p>
                 </div>
               </div>
@@ -728,7 +724,7 @@
                 data-bs-parent="#cardAccordionFlush"
               >
                 <div
-                  class="px-2 px-sm-4 my-3 accordion-body bg-light shadow border rounded m-5"
+                  class="p-4 my-3 accordion-body bg-light shadow border rounded"
                 >
                   <h3 class="" data-key="product-2-title">
                     Production Capacity
@@ -782,7 +778,7 @@
                 data-bs-parent="#cardAccordionFlush"
               >
                 <div
-                  class="px-2 px-sm-4 my-3 accordion-body bg-light shadow border rounded m-5"
+                  class="p-4 my-3 accordion-body bg-light shadow border rounded"
                 >
                   <h3 class="" data-key="product-3-title">
                     Transport and Logistics
@@ -1034,11 +1030,14 @@
           <div class="collapse map-content-body" id="map-dropdown">
             <!-- Sofia -->
             <div
-              class="container map-content map-content-hidden content-map-part1 px-3"
+              class="container-lg map-content map-content-hidden content-map-part1"
               id="customer-support"
             >
+              <!-- Desktop View-->
               <!-- Image -->
-              <div class="map-collapse-img-sofia py-4 rounded border">
+              <div
+                class="map-collapse-img-sofia py-4 rounded border hidden-on-tablet mx-4 mb-4"
+              >
                 <!-- Text -->
                 <div
                   class="map-collapse-body-sofia bg-light rounded shadow border p-5 my-3"
@@ -1053,14 +1052,29 @@
                   <p data-key="customer-support-text"></p>
                 </div>
               </div>
+              <!-- Tablet and Phone View-->
+              <div
+                class="mx-4 mx-sm-5 p-4 p-sm-5 hidden-above-tablet bg-light rounded border"
+              >
+                <h4 class="mb-4 fs-3 fw-bold">
+                  <a
+                    href="#customer-support"
+                    class="text-decoration-none link-dark"
+                    data-key="customer-support-title"
+                  ></a>
+                </h4>
+                <p data-key="customer-support-text"></p>
+              </div>
             </div>
+
             <!-- Kurdzhali -->
             <div
               class="map-content map-content-hidden content-map-part2"
               id="quarry"
             >
+              <!-- Desktop View-->
               <!-- Section 1  -->
-              <div class="map-collapse-img-kurdzhali-1 mb-5">
+              <div class="map-collapse-img-kurdzhali-1 mb-5 hidden-on-tablet">
                 <div class="container-lg p-5">
                   <div
                     class="map-collapse-body-kurdzhali-1 bg-light p-5 rounded shadow"
@@ -1080,7 +1094,7 @@
               <!-- Text -->
 
               <!-- Section 2 -->
-              <div class="container-lg mb-5 pt-4 m-auto">
+              <div class="container-lg mb-4 pt-4 m-auto hidden-on-tablet">
                 <div class="d-flex flex-row px-3">
                   <div class="map-collapse-kurdzhali-2 py-5">
                     <div class="img-1 rounded"></div>
@@ -1093,6 +1107,20 @@
                   </div>
                 </div>
               </div>
+              <!-- Tablet and Phone View-->
+              <div
+                class="mx-4 mx-sm-5 p-4 p-sm-5 hidden-above-tablet bg-light rounded border"
+              >
+                <h4 class="mb-4 fs-3 fw-bold">
+                  <a
+                    href="#quarry-site"
+                    class="text-decoration-none link-dark"
+                    data-key="quarry-site-title"
+                  ></a>
+                </h4>
+                <p data-key="quarry-site-text-1"></p>
+                <p data-key="quarry-site-text-2"></p>
+              </div>
             </div>
           </div>
         </div>
@@ -1104,8 +1132,12 @@
       class="px-3 px-md-5 pt-5 pb-3 bg-dark text-white text-center position-relative"
     >
       <div class="container">
-        <div class="container-lg" data-key="footer-text"></div>
-        <hr class="bg-warning m-1" />
+        <div
+          class="footer-text container-lg mb-3 mb-sm-4 mb-lg-5 opacity-75 text-start text-md-center"
+        >
+          <p class="" data-key="footer-text"></p>
+        </div>
+        <hr class="bg-warning mb-3" />
         <ul
           class="nav fs-6 justify-content-around flex-column flex-md-row align-items-start align-items-lg-center"
         >
