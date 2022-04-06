@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-key="page-title">Zeolite.BG</title>
+    <title data-key="page-title">trassing.com</title>
     <link rel="icon" href="./images/logo.webp" type="image/x-icon" />
 
     <!-- Bootstrap -->
@@ -42,9 +42,10 @@
     <script src="./js/map.js" defer></script>
     <script src="./js/counter.js" defer></script>
     <script src="./js/banners.js" defer></script>
+    <script src="./js/show-details.js" defer></script>
   </head>
 
-  <body>
+  <body class="fs-6">
     <!-- HEADER -->
     <header class="bg-light shadow">
       <nav
@@ -114,9 +115,9 @@
               ></a>
 
               <!-- Email -->
-              <span class="dropdown p-0 m-0">
+              <span class="email-dropdown dropdown p-0 m-0">
                 <a
-                  class="link-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
+                  class="cursor-pointer link-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
                   id="dropdownMenuPhone"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -132,17 +133,14 @@
                 >
                   <li class="mx-3 d-flex align-items-center">
                     <a
-                      class="link-primary"
+                      class="link-primary mail-link"
                       style="white-space: nowrap"
                       title="Send email"
                       data-key="contact-email-text"
-                      href="mailto:contact@zeolite.bg"
-                      >contact@zeolite.bg</a
-                    >
+                    ></a>
                     <button
                       type="button"
-                      onclick="navigator.clipboard.writeText('contact@zeolite.bg')"
-                      class="btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
+                      class="copy-btn btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
                       data-key="copy"
                     >
                       copy
@@ -151,9 +149,9 @@
                 </ul>
               </span>
               <!-- Telephone -->
-              <span class="dropdown p-0 m-0">
+              <span class="telephone-dropdown dropdown p-0 m-0">
                 <a
-                  class="link-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
+                  class="cursor-pointer link-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
                   id="dropdownMenuPhone"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -168,16 +166,14 @@
                 >
                   <li class="mx-3 d-flex align-items-center">
                     <a
-                      class="link-primary"
+                      class="tel-link link-primary"
                       style="white-space: nowrap"
                       title="Call"
-                      href="tel: +359 882927373"
-                      >+359 882927373</a
-                    >
+                      data-key="contact-telephone-text"
+                    ></a>
                     <button
                       type="button"
-                      onclick="navigator.clipboard.writeText('+359 882927373')"
-                      class="btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
+                      class="copy-btn btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
                       data-key="copy"
                     >
                       copy
@@ -290,7 +286,7 @@
         </video>
         <div id="video-overlay"></div>
         <div class="p-5" id="video-info-container">
-          <h1 class="text-white fw-bolder" data-key="video-title"></h1>
+          <h1 class="text-white fw-bolder mb-3" data-key="video-title"></h1>
           <p
             class="text-warning fs-4 text-center text-warning fw-bolder"
             data-key="video-text-1"
@@ -299,7 +295,7 @@
           <a
             href="#offer"
             type="button"
-            class="btn btn-warning mt-3 shadow"
+            class="btn btn-warning mt-4 shadow"
             data-key="video-button"
           ></a>
         </div>
@@ -318,7 +314,7 @@
       <div class="m-0 mp-0" id="fixed-photo-wrapper">
         <!-- INFORMATION -->
         <section class="text-center overflow-hidden" id="information">
-          <h2 class="text-dark text-center pb-5 pt-2 bg-white mb-0 fs-1">
+          <h2 class="text-dark text-center pb-5 pt-2 bg-white mb-0">
             <a
               class="text-decoration-none link-dark fw-bold pt-3"
               href="#information"
@@ -359,7 +355,7 @@
 
         <!-- STATISTICS -->
         <section class="" id="statistics">
-          <h2 class="text-dark text-center py-5 bg-white mb-0 fs-1">
+          <h2 class="text-dark text-center py-5 bg-white mb-0">
             <a
               class="text-decoration-none link-dark fw-bold pt-3"
               href="#statistics"
@@ -487,7 +483,7 @@
                   <img
                     src="./images/Production Capacity.webp"
                     class="card-img-top"
-                    alt="production Capacity"
+                    alt="production capacity"
                   />
                 </div>
                 <!-- body -->
@@ -540,7 +536,7 @@
             </div>
           </div>
         </div>
-        <!-- Card Collapse -->
+        <!-- CARDS COLLAPSE-->
         <div id="products-container-desktop-dropdown">
           <button
             type="button"
@@ -551,42 +547,66 @@
           >
             Expand Content
           </button>
-          <div class="container cards-content-container pt-5">
+
+          <!-- Expand Container -->
+          <div class="container-lg cards-content-container py-5 px-3">
             <div
-              class="product-desktop-collapse collapse m-auto border bg-light shadow clearfix"
+              class="product-desktop-collapse collapse w-100 clearfix mt-3"
               id="products-content"
             >
               <!-- Expand Content 1 -->
-              <div class="card1-content-body card-content-body p-5">
-                <h4 class="fw-bold mb-4" data-key="product-1-title"></h4>
-                <img
-                  class="float-end ms-4 mb-3 rounded"
-                  src="./images/Composition 2.webp"
-                  alt="composition"
-                />
-                <p data-key="product-1-text"></p>
+              <div class="card1-content-body card-content-body">
+                <div class="d-flex align-items-center justify-content-start">
+                  <!-- Image -->
+                  <div
+                    class="products-desktop-collapse-img img-1 py-4 rounded border"
+                  >
+                    <!-- Text -->
+                    <div
+                      class="products-desktop-collapse-body bg-light rounded shadow border p-5 my-3"
+                    >
+                      <h4 class="mb-4" data-key="product-1-title"></h4>
+
+                      <p class="" data-key="product-1-text"></p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <!-- Expand Content 2 -->
-              <div class="card2-content-body card-content-body p-5">
-                <h4 class="fw-bold mb-4" data-key="product-2-title"></h4>
-                <img
-                  class="float-end ms-4 mb-3 rounded"
-                  src="./images/Production Capacity 2.webp"
-                  alt="composition"
-                />
+              <div class="card2-content-body card-content-body">
+                <div class="d-flex align-items-center justify-content-start">
+                  <!-- Image -->
+                  <div
+                    class="products-desktop-collapse-img img-2 py-5 rounded border"
+                  >
+                    <!-- Text -->
+                    <div
+                      class="products-desktop-collapse-body bg-light rounded shadow border p-5 my-3"
+                    >
+                      <h4 class="mb-4" data-key="product-2-title"></h4>
 
-                <p data-key="product-2-text"></p>
+                      <p class="" data-key="product-2-text"></p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <!-- Expand Content 3 -->
-              <div class="card3-content-body card-content-body p-5">
-                <h4 class="fw-bold mb-4" data-key="product-3-title"></h4>
-                <img
-                  class="float-end ms-4 mb-3 rounded"
-                  src="./images/Delivery 2.webp"
-                  alt="composition"
-                />
+              <div class="card3-content-body card-content-body">
+                <div class="d-flex align-items-center justify-content-start">
+                  <!-- Image -->
+                  <div
+                    class="products-desktop-collapse-img img-3 py-5 rounded border"
+                  >
+                    <!-- Text -->
+                    <div
+                      class="products-desktop-collapse-body bg-light rounded shadow border p-5 my-3"
+                    >
+                      <h4 class="mb-4" data-key="product-3-title"></h4>
 
-                <p data-key="product-3-text"></p>
+                      <p class="" data-key="product-3-text"></p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -596,7 +616,7 @@
         <!-- Cards Heading -->
         <div class="px-4 container-lg" id="products-container-mobile">
           <div>
-            <h2 class="text-dark text-center mb-5 fs-1">
+            <h2 class="text-dark text-center mb-5">
               <a
                 data-key="products-container-title"
                 class="text-decoration-none link-dark"
@@ -628,9 +648,7 @@
                   </div>
                   <!-- body -->
                   <div class="card-body text-white">
-                    <h5 class="card-title" data-key="product-1-title">
-                      Chemical Contents and Composition
-                    </h5>
+                    <h5 class="card-title" data-key="product-1-title"></h5>
                     <div class="container card-button">
                       <span
                         type="button"
@@ -650,11 +668,9 @@
                 data-bs-parent="#cardAccordionFlush"
               >
                 <div
-                  class="px-2 px-sm-4 my-3 accordion-body bg-light shadow border rounded m-5"
+                  class="p-4 my-3 accordion-body bg-light shadow border rounded"
                 >
-                  <h3 class="" data-key="product-1-title">
-                    Chemical Contents and Composition
-                  </h3>
+                  <h3 class="" data-key="product-1-title"></h3>
                   <p class="" data-key="product-1-text"></p>
                 </div>
               </div>
@@ -704,7 +720,7 @@
                 data-bs-parent="#cardAccordionFlush"
               >
                 <div
-                  class="px-2 px-sm-4 my-3 accordion-body bg-light shadow border rounded m-5"
+                  class="p-4 my-3 accordion-body bg-light shadow border rounded"
                 >
                   <h3 class="" data-key="product-2-title">
                     Production Capacity
@@ -758,7 +774,7 @@
                 data-bs-parent="#cardAccordionFlush"
               >
                 <div
-                  class="px-2 px-sm-4 my-3 accordion-body bg-light shadow border rounded m-5"
+                  class="p-4 my-3 accordion-body bg-light shadow border rounded"
                 >
                   <h3 class="" data-key="product-3-title">
                     Transport and Logistics
@@ -773,8 +789,8 @@
 
       <!-- FAQs -->
       <section id="FAQ" class="container-fluid mx-0 px-0 bg-light-2 py-5">
-        <div class="pb-4 px-3">
-          <h2 class="text-dark text-center fs-1">
+        <div class="pb-5 px-3">
+          <h2 class="text-dark text-center">
             <a
               data-key="faq-container-title"
               class="text-decoration-none link-dark"
@@ -789,7 +805,7 @@
         >
           <!-- Item 1 -->
           <div class="accordion-item bg-light-2">
-            <h2 class="accordion-header bg-light-2" id="flush-headingOne">
+            <h3 class="accordion-header bg-light-2" id="flush-headingOne">
               <button
                 class="accordion-button collapsed bg-light-2 fw-bold"
                 type="button"
@@ -799,7 +815,7 @@
                 aria-controls="flush-collapseOne"
                 data-key="faq-question-1"
               ></button>
-            </h2>
+            </h3>
             <div
               id="flush-collapseOne"
               class="accordion-collapse collapse bg-light-2"
@@ -813,7 +829,7 @@
           </div>
           <!-- Item 2 -->
           <div class="accordion-item bg-light-2">
-            <h2 class="accordion-header bg-light-2" id="flush-headingTwo">
+            <h3 class="accordion-header bg-light-2" id="flush-headingTwo">
               <button
                 class="accordion-button collapsed bg-light-2 fw-bold"
                 type="button"
@@ -823,7 +839,7 @@
                 aria-controls="flush-collapseTwo"
                 data-key="faq-question-2"
               ></button>
-            </h2>
+            </h3>
             <div
               id="flush-collapseTwo"
               class="accordion-collapse collapse bg-light-2"
@@ -837,7 +853,7 @@
           </div>
           <!-- Item 3 -->
           <div class="accordion-item bg-light-2">
-            <h2 class="accordion-header bg-light-2" id="flush-headingThree">
+            <h3 class="accordion-header bg-light-2" id="flush-headingThree">
               <button
                 class="accordion-button collapsed bg-light-2 fw-bold"
                 type="button"
@@ -847,7 +863,7 @@
                 aria-controls="flush-collapseThree"
                 data-key="faq-question-3"
               ></button>
-            </h2>
+            </h3>
             <div
               id="flush-collapseThree"
               class="accordion-collapse collapse bg-light-2"
@@ -861,7 +877,7 @@
           </div>
           <!-- Item 4 -->
           <div class="accordion-item bg-light-2">
-            <h2
+            <h3
               class="accordion-header bg-light-2 bg-light-2"
               id="flush-headingFour"
             >
@@ -874,7 +890,7 @@
                 aria-controls="flush-collapseFour"
                 data-key="faq-question-4"
               ></button>
-            </h2>
+            </h3>
             <div
               id="flush-collapseFour"
               class="accordion-collapse collapse bg-light-2"
@@ -888,7 +904,7 @@
           </div>
           <!-- Item 5 -->
           <div class="accordion-item bg-light-2">
-            <h2
+            <h3
               class="accordion-header bg-light-2 bg-light-2"
               id="flush-headingFive"
             >
@@ -901,7 +917,7 @@
                 aria-controls="flush-collapseFive"
                 data-key="faq-question-5"
               ></button>
-            </h2>
+            </h3>
             <div
               id="flush-collapseFive"
               class="accordion-collapse collapse bg-light-2"
@@ -921,7 +937,7 @@
         <div class="container-lg">
           <div class="row">
             <div class="col-lg-5 mb-5 mb-lg-1" id="contact-container">
-              <h2 class="text-center mb-4 fs-1">
+              <h2 class="text-center mb-4 pb-2">
                 <a
                   data-key="contact-container-title"
                   class="text-decoration-none link-dark"
@@ -930,32 +946,29 @@
                 >
               </h2>
               <ul class="list-group list-group-flush lead fs-6">
-                <li class="list-group-item bg-transparent">
-                  <span class="fw-bold" data-key="contact-address-title"></span>
-                  <span data-key="contact-address-text">Address</span>
-                </li>
-                <li class="list-group-item bg-transparent">
-                  <span class="fw-bold" data-key="contact-email-title"></span>
-                  <a
-                    href="mailto:contact@zeolite.bg"
-                    title="Send email"
-                    data-key="contact-email-text"
-                    class="link-dark"
-                    >contact@zeolite.bg
-                  </a>
-                </li>
-                <li class="list-group-item bg-transparent">
-                  <span
-                    class="fw-bold"
-                    data-key="contact-telephone-title"
+                <li class="list-group-item bg-transparent py-3">
+                  <span class="" id="show-address">
+                    <button
+                      class="btn btn-warning btn"
+                      data-key="contact-address-button"
+                    ></button
                   ></span>
-                  <a
-                    class="link-dark"
-                    title="Call"
-                    data-key="contact-telephone-text"
-                    href="tel: +359 882927373"
-                    >+359 882927373</a
-                  ><span data-key="contact-telephone-details"></span>
+                </li>
+                <li class="list-group-item bg-transparent py-3">
+                  <span class="" id="show-email">
+                    <button
+                      class="btn btn-warning btn"
+                      data-key="contact-email-button"
+                    ></button
+                  ></span>
+                </li>
+                <li class="list-group-item bg-transparent py-3">
+                  <span class="" id="show-telephone">
+                    <button
+                      class="btn btn-warning btn"
+                      data-key="contact-telephone-button"
+                    ></button
+                  ></span>
                 </li>
               </ul>
             </div>
@@ -994,8 +1007,8 @@
       </section>
 
       <!-- Map Dropdown -->
-      <section id="map-dropdown-container">
-        <div class="container-lg pb-5 px-3">
+      <section id="map-dropdown-container px-0">
+        <div class="container-fluid pb-5 px-0">
           <p>
             <button
               class="btn btn-primary visually-hidden"
@@ -1008,60 +1021,97 @@
             ></button>
           </p>
           <div class="collapse map-content-body" id="map-dropdown">
+            <!-- Sofia -->
             <div
-              class="container bg-light p-4 p-md-5 rounded shadow border m-auto clearfix"
+              class="container-lg map-content map-content-hidden content-map-part1"
+              id="customer-support"
             >
-              <!-- Sofia -->
+              <!-- Desktop View-->
+              <!-- Image -->
               <div
-                class="map-content map-content-hidden content-map-part1"
-                id="customer-support"
+                class="map-collapse-img-sofia py-4 rounded border hidden-on-tablet mx-4 mb-4"
               >
-                <h4 class="fw-bold mb-3">
+                <!-- Text -->
+                <div
+                  class="map-collapse-body-sofia bg-light rounded shadow border p-5 my-3"
+                >
+                  <h4 class="mb-4">
+                    <a
+                      href="#customer-support"
+                      class="text-decoration-none link-dark"
+                      data-key="customer-support-title"
+                    ></a>
+                  </h4>
+                  <p data-key="customer-support-text"></p>
+                </div>
+              </div>
+              <!-- Tablet and Phone View-->
+              <div
+                class="mx-4 mx-sm-5 p-4 p-sm-5 hidden-above-tablet bg-light rounded border"
+              >
+                <h4 class="mb-4 fs-3 fw-bold">
                   <a
                     href="#customer-support"
                     class="text-decoration-none link-dark"
                     data-key="customer-support-title"
                   ></a>
                 </h4>
-
-                <img
-                  class="side-img float-end ms-4 mb-4 rounded"
-                  src="./images/Sofia Office.webp"
-                  alt="customer-support"
-                />
                 <p data-key="customer-support-text"></p>
               </div>
-              <!-- Kurdzhali -->
+            </div>
+
+            <!-- Kurdzhali -->
+            <div
+              class="map-content map-content-hidden content-map-part2"
+              id="quarry"
+            >
+              <!-- Desktop View-->
+              <!-- Section 1  -->
+              <div class="map-collapse-img-kurdzhali-1 mb-5 hidden-on-tablet">
+                <div class="container-lg p-5">
+                  <div
+                    class="map-collapse-body-kurdzhali-1 bg-light p-5 rounded shadow"
+                  >
+                    <h4 class="mb-4">
+                      <a
+                        href="#quarry"
+                        class="text-decoration-none link-dark"
+                        data-key="quarry-site-title"
+                      ></a>
+                    </h4>
+                    <p data-key="quarry-site-text-1"></p>
+                  </div>
+                </div>
+              </div>
+              <!-- Image -->
+              <!-- Text -->
+
+              <!-- Section 2 -->
+              <div class="container-lg mb-4 pt-4 m-auto hidden-on-tablet">
+                <div class="d-flex flex-row px-3">
+                  <div class="map-collapse-kurdzhali-2 py-5">
+                    <div class="img-1 rounded"></div>
+                    <div class="img-2 rounded"></div>
+                    <div
+                      class="map-collapse-body-kurdzhali-2 bg-light shadow border rounded"
+                    >
+                      <p class="p-5" data-key="quarry-site-text-2"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Tablet and Phone View-->
               <div
-                class="map-content map-content-hidden content-map-part2"
-                id="quarry"
+                class="mx-4 mx-sm-5 p-4 p-sm-5 hidden-above-tablet bg-light rounded border"
               >
-                <img
-                  class="hidden-on-mobile w-100 rounded"
-                  src="./images/Kurdzhali 1.webp"
-                  alt="quarry"
-                />
-                <h4 class="fw-bold mt-4 mt-lg-5 mb-3">
+                <h4 class="mb-4 fs-3 fw-bold">
                   <a
-                    href="#quarry"
+                    href="#quarry-site"
                     class="text-decoration-none link-dark"
                     data-key="quarry-site-title"
                   ></a>
                 </h4>
-                <div class="two-img-container float-end d-flex flex-column">
-                  <img
-                    class="ms-4 mb-4 rounded"
-                    src="./images/Kurdzhali 3.webp"
-                    alt="quarry"
-                  />
-                  <img
-                    class="ms-4 mb-4 rounded"
-                    src="./images/Kurdzhali 2.webp"
-                    alt="quarry"
-                  />
-                </div>
                 <p data-key="quarry-site-text-1"></p>
-
                 <p data-key="quarry-site-text-2"></p>
               </div>
             </div>
@@ -1075,7 +1125,12 @@
       class="px-3 px-md-5 pt-5 pb-3 bg-dark text-white text-center position-relative"
     >
       <div class="container">
-        <hr class="bg-warning m-1" />
+        <div
+          class="footer-text container-lg mb-3 mb-sm-4 mb-lg-5 opacity-75 text-start text-md-center"
+        >
+          <p class="" data-key="footer-text"></p>
+        </div>
+        <hr class="bg-warning mb-3" />
         <ul
           class="nav fs-6 justify-content-around flex-column flex-md-row align-items-start align-items-lg-center"
         >
@@ -1141,7 +1196,7 @@
           class="d-flex justify-content-start justify-content-md-center justify-content-lg-between mt-5 mx-0 mx-md-2 align-items-end"
         >
           <p class="fw-light text-warning opacity-25 company-name mb-1">
-            @ zeolite.bg
+            @ trassing.com
           </p>
           <div
             class="header-text text-faded text-light fs-5 mb-1"
@@ -1188,23 +1243,20 @@
               </a>
 
               <ul
-                class="dropdown-menu dropdown-menu-end dropdown-menu-xl-start"
+                class="email-dropdown dropdown-menu dropdown-menu-end dropdown-menu-xl-start"
                 aria-labelledby="dropdownMenuPhone"
                 style="z-index: 2000"
               >
                 <li class="mx-3 d-flex align-items-center">
                   <a
-                    class="link-primary"
+                    class="mail-link cursor-pointer link-primary"
                     style="white-space: nowrap"
                     title="Send email"
                     data-key="contact-email-text"
-                    href="mailto:contact@zeolite.bg"
-                    >contact@zeolite.bg</a
-                  >
+                  ></a>
                   <button
                     type="button"
-                    onclick="navigator.clipboard.writeText('contact@zeolite.bg')"
-                    class="btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
+                    class="copy-btn btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
                     data-key="copy"
                   >
                     copy
@@ -1213,7 +1265,7 @@
               </ul>
             </span>
             <!-- Telephone -->
-            <span class="dropdown p-0 m-0">
+            <span class="telephone-dropdown dropdown p-0 m-0">
               <a
                 class="link-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
                 id="dropdownMenuPhone"
@@ -1230,16 +1282,14 @@
               >
                 <li class="mx-3 d-flex align-items-center">
                   <a
-                    class=""
+                    class="tel-link cursor-pointer"
                     style="white-space: nowrap"
                     title="Call"
-                    href="tel: +359 882927373"
-                    >+359 882927373</a
-                  >
+                    data-key="contact-telephone-text"
+                  ></a>
                   <button
                     type="button"
-                    onclick="navigator.clipboard.writeText('+359 882927373')"
-                    class="btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
+                    class="copy-btn btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
                     data-key="copy"
                   >
                     copy

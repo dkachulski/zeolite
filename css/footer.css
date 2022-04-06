@@ -1,37 +1,42 @@
 footer .lang-select li {
-    cursor: pointer;
+  cursor: pointer;
 }
 footer hr {
-    padding: 1px;
-    border-radius: 2px;
-    opacity: 0.5;
+  padding: 1px;
+  border-radius: 2px;
+  opacity: 0.5;
 }
 
 footer .company-name {
-    font-weight: bold;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  font-weight: bold;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 @media screen and (max-width: 576px) {
-    #footer-social {
-        font-size: 1.2rem !important;
-    }
+  #footer-social {
+    font-size: 1.2rem !important;
+  }
 }
 @media screen and (max-width: 992px) and (min-width: 768px) {
-    footer .lang-select button span:nth-child(2) {
-        display: none;
-    }
+  footer .lang-select button span:nth-child(2) {
+    display: none;
+  }
 }
 @media screen and (max-width: 992px) {
-    footer .lang-select {
-        position: relative;
-        left: -12px;
-        box-shadow: none;
-    }
-    footer .company-name {
-        display: none;
-    }
+  footer .lang-select {
+    position: relative;
+    left: -12px;
+    box-shadow: none;
+  }
+  footer .company-name {
+    display: none;
+  }
+}
+
+.footer-text {
+  max-width: 992px;
+  font-size: 1.08rem;
 }

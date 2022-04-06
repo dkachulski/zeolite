@@ -56,10 +56,15 @@
 
     "contact-container-title": "CONTACTS",
     "contact-address-title": "Address: ",
+    "contact-address-button": "Adress",
     "contact-address-text": "20А Daskal Stoyan Popandreev Str., Entrance A, 1st floor, apt. 3, Complex Edelweiss 1, Boyana district, Sofia 1616, Bulgaria",
-    "contact-email-title": "Email: ",
+
+    "contact-email-title": "Email:",
+    "contact-email-button": "Email",
     "contact-email-text": "contact@zeolite.bg",
-    "contact-telephone-title": "Telephone: ",
+
+    "contact-telephone-title": "Telephone:",
+    "contact-telephone-button": "Telephone",
     "contact-telephone-text": "+359 882 92 73",
     "contact-telephone-details": " (Viber, WhatsApp)",
 
@@ -67,7 +72,9 @@
     "customer-support-text": "Our office is located in Boyana, Sofia in Bulgaira. It is in constant contact with our production site in Kardzhali and our customers from around the world. Apart from being our Headquarters, the Sofia office also serves our customers directly. Our customer service team and Trassengineering representatives are highly qualified specialists educated in the United Kingdom. They are in constant contact with our customers from the moment of placing the order, through arranging their transport needs, up to delivery. We accept your orders via email or phone as to better understand your needs and meet your transportation requirements. We are ready to send you a sample of the product for your own assessment.",
 
     "quarry-site-title": "Production Site",
-    "quarry-site-text-1": "Trassingeneering is the only producer in Bulgaria of the active mineral additive Trass and satisfies the needs of cement plants in the production of mass and specialized brands of cement. The consession area is 524000 sq. m. The deposit is located 7 km. from the town of Kardzhali. It is located in the Easetern Rhodope Mountains, Bulgaria, on the left bank of the Studen Kladenets dam. It has access to its own railway line and excellent connections to the national and international road network.  ",
-    "quarry-site-text-2": "The production site has an area of 45500 square meters and its service facilities include: 1. Organic connection to the Zhelezni Vrata Railway Station in Kardzhali. 2. Own industrial railway track; 3. Ten covered steel-enforced concrete bunkers that hold 1000 tons in total built above the industrial railway track; 4. New 120-ton railway scales mounted on the track; 5. Haspel system for maneuvering of railway wagons; 6. Two Crushers OM 115, each with a capacity of 200 tons per hour; 7. Mining equipment (extraction by peeling), two bulldozers type Komatsu D355A1 with capacity of 1000 tons per shift each; 8. Komatsu РС290NLC Excavator (new) and two wheel loaders Fadroma L34 with capacity of 1600 tons per shift; 9. Rubber-conveyor belts that transport the finished product to the bunkers for direct loading onto railway waggons, as well as for storage for shipping during the winter period; 10. Sub-station with a capacity of 320 KWA/04 kv; 11. Own water source; 12. Modern administrative and residential building with a dining room; 13. Own terrain for technological sites for development of tools and facilities; 14. Mechanical workshop for on-site maintenance of machinery and equipment; 15. Highly-qualified executive staff, as well as access specialized repair and maintenance companies."
+    "quarry-site-text-1": " The consession area is 524000 sq. m. The deposit is located 7 km. from the town of Kardzhali. It is located in the Easetern Rhodope Mountains, Bulgaria, on the left bank of the Studen Kladenets dam. It has access to its own railway line and excellent connections to the national and international road network.  ",
+    "quarry-site-text-2": "The production site has an area of 45500 square meters and its service facilities include: 1. Organic connection to the Zhelezni Vrata Railway Station in Kardzhali. 2. Own industrial railway track; 3. Ten covered steel-enforced concrete bunkers that hold 1000 tons in total built above the industrial railway track; 4. New 120-ton railway scales mounted on the track; 5. Haspel system for maneuvering of railway wagons; 6. Two Crushers OM 115, each with a capacity of 200 tons per hour; 7. Mining equipment (extraction by peeling), two bulldozers type Komatsu D355A1 with capacity of 1000 tons per shift each; 8. Komatsu РС290NLC Excavator (new) and two wheel loaders Fadroma L34 with capacity of 1600 tons per shift; 9. Rubber-conveyor belts that transport the finished product to the bunkers for direct loading onto railway waggons, as well as for storage for shipping during the winter period; 10. Sub-station with a capacity of 320 KWA/04 kv; 11. Own water source; 12. Modern administrative and residential building with a dining room; 13. Own terrain for technological sites for development of tools and facilities; 14. Mechanical workshop for on-site maintenance of machinery and equipment; 15. Highly-qualified executive staff, as well as access specialized repair and maintenance companies.",
+
+    "footer-text": "Trassingeneering is the only producer in Bulgaria of the active mineral additive Trass and satisfies the needs of cement plants in the production of mass and specialized brands of cement."
   }
 }

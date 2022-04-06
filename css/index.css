@@ -1,7 +1,7 @@
 /* GLOBAL */
 html,
 body {
-  font-family: 'Roboto', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica Neue, Helvetica, Arial, sans-serif;
   position: relative;
   height: 100%;
 }
@@ -19,7 +19,32 @@ h2 {
 
 @media screen and (max-width: 576px) {
   .hidden-on-mobile {
-    display: none;
+    display: none !important;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.15rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hidden-on-tablet {
+    display: none !important;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.6rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hidden-above-tablet {
+    display: none !important;
+  }
+  h2 {
+    font-size: 2.8rem;
   }
 }
 @keyframes fade-out-in {
@@ -46,6 +71,10 @@ h2 {
 }
 
 #video-video {
+  background-image: url("../images/Quarry.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -80,9 +109,10 @@ h2 {
   font-weight: 950;
   text-shadow: 1px 1px 1px var(--bs-dark);
 }
+
 @media screen and (min-width: 576px) {
   #video-info-container h1 {
-    font-size: 68px;
+    font-size: 70px;
     font-weight: 900;
   }
 }
@@ -103,7 +133,7 @@ h2 {
       rgba(0, 0, 0, 0.1),
       rgba(0, 0, 0, 0.1)
     ),
-    url('../images/Kurdzhali.webp');
+    url("../images/Kurdzhali.webp");
 
   background-attachment: fixed;
   background-position: center;
@@ -351,17 +381,41 @@ h2 {
   transform: scale(1.1);
 }
 
-.product-desktop-collapse {
-  width: 90%;
-  max-width: 856px;
+.products-desktop-collapse-img {
+  width: 55%;
 }
-.product-desktop-collapse img {
-  width: 33%;
-  min-width: 300px;
-  max-width: 400px;
+
+.products-desktop-collapse-img.img-1 {
+  background-image: url("../images/Composition 2.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.products-desktop-collapse-img.img-2 {
+  background-image: url("../images/Production\ Capacity\ 2.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.products-desktop-collapse-img.img-3 {
+  background-image: url("../images/Delivery\ 2.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.products-desktop-collapse-body {
+  position: relative;
+  left: 85%;
+  max-width: 98%;
 }
 
 /* PRODUCTS MOBILE */
+
+#products .accordion-body {
+  max-width: 450px;
+  margin: auto;
+}
 
 #products-container-mobile .accordion-item {
   border: none;
@@ -391,7 +445,7 @@ h2 {
       rgba(248, 249, 250, 0),
       rgba(248, 249, 250, 0)
     ),
-    url('../images/QandA.webp');
+    url("../images/QandA.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -404,11 +458,11 @@ h2 {
 #FAQAccordionFlush {
   max-width: 856px;
   width: 90%;
-  background-color: rgba(248, 249, 250, 0.94);
+  background-color: rgba(248, 249, 250, 0.85);
   transition: all 0.3s ease-in;
 }
 #FAQAccordionFlush:hover {
-  background-color: rgba(248, 249, 250, 1);
+  background-color: rgba(248, 249, 250, 0.97);
 }
 
 /* CONTACT & MAP */
@@ -422,6 +476,20 @@ h2 {
   #contact {
     padding-bottom: 0px !important;
     background: linear-gradient(to top, #fff 25%, #fff 25%);
+  }
+}
+
+#show-email .btn,
+#show-address .btn,
+#show-telephone .btn {
+  width: 150px !important;
+}
+@media screen and (max-width: 768px) {
+  #show-email .btn,
+  #show-address .btn,
+  #show-telephone .btn {
+    width: 90% !important;
+    margin-left: 5%;
   }
 }
 
@@ -453,7 +521,7 @@ h2 {
       rgba(255, 255, 255, 0.35),
       rgba(255, 255, 255, 0.35)
     ),
-    url('../images/bg-border.webp');
+    url("../images/bg-border.webp");
 
   background-position: center;
   background-size: cover;
@@ -464,7 +532,7 @@ h2 {
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
     ),
-    url('../images/sofia-border.webp');
+    url("../images/sofia-border.webp");
 
   background-position: center;
   background-size: cover;
@@ -476,7 +544,7 @@ h2 {
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
     ),
-    url('../images/kurdzhali-border.webp');
+    url("../images/kurdzhali-border.webp");
 
   background-position: center;
   background-size: cover;
@@ -532,7 +600,7 @@ h2 {
   opacity: 1;
 }
 
-/* MAP DROPDOWN CONTAINER */
+/* MAP DROPDOWN */
 .map-dropdown-container {
   position: relative;
 }
@@ -547,14 +615,70 @@ h2 {
   display: none;
 }
 
-#map-dropdown > div {
-  max-width: 1200px;
-  width: 90%;
+/* Sofia */
+
+.map-collapse-img-sofia {
+  width: 55%;
+  background-image: url("../images/Sofia\ Office.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#map-dropdown-container .side-img,
-#map-dropdown-container .two-img-container {
-  width: 40%;
-  min-width: 225px;
-  max-width: 700px;
+.map-collapse-body-sofia {
+  position: relative;
+  left: 80%;
+  max-width: 90%;
+}
+
+/* Kurdzhali 1 */
+.map-collapse-img-kurdzhali-1 {
+  width: 100%;
+
+  background-image: url("../images/Kurdzhali\ 1.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.map-collapse-body-kurdzhali-1 {
+  max-width: 375px;
+}
+
+/* Kurdzhali 2 */
+
+.map-collapse-kurdzhali-2 {
+  width: 55%;
+  position: relative;
+  left: 23px;
+}
+
+.map-collapse-body-kurdzhali-2 {
+  position: relative;
+  left: 82%;
+  max-width: 92%;
+}
+
+.map-collapse-kurdzhali-2 .img-1,
+.map-collapse-kurdzhali-2 .img-2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.map-collapse-kurdzhali-2 .img-1 {
+  background-image: url("../images/Kurdzhali\ 2.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  bottom: 53.3%;
+}
+.map-collapse-kurdzhali-2 .img-2 {
+  background-image: url("../images/Kurdzhali\ 3.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 53.3%;
+  bottom: 0;
 }
