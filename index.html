@@ -42,6 +42,7 @@
     <script src="./js/map.js" defer></script>
     <script src="./js/counter.js" defer></script>
     <script src="./js/banners.js" defer></script>
+    <script src="./js/show-details.js" defer></script>
   </head>
 
   <body class="fs-6">
@@ -114,9 +115,9 @@
               ></a>
 
               <!-- Email -->
-              <span class="dropdown p-0 m-0">
+              <span class="email-dropdown dropdown p-0 m-0">
                 <a
-                  class="link-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
+                  class="cursor-pointer link-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
                   id="dropdownMenuPhone"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -132,17 +133,14 @@
                 >
                   <li class="mx-3 d-flex align-items-center">
                     <a
-                      class="link-primary"
+                      class="link-primary mail-link"
                       style="white-space: nowrap"
                       title="Send email"
                       data-key="contact-email-text"
-                      href="mailto:contact@trassing.com"
-                      >contact@trassing.com</a
-                    >
+                    ></a>
                     <button
                       type="button"
-                      onclick="navigator.clipboard.writeText('contact@trassing.com')"
-                      class="btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
+                      class="copy-btn btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
                       data-key="copy"
                     >
                       copy
@@ -151,9 +149,9 @@
                 </ul>
               </span>
               <!-- Telephone -->
-              <span class="dropdown p-0 m-0">
+              <span class="telephone-dropdown dropdown p-0 m-0">
                 <a
-                  class="link-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
+                  class="cursor-pointer link-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
                   id="dropdownMenuPhone"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -168,16 +166,14 @@
                 >
                   <li class="mx-3 d-flex align-items-center">
                     <a
-                      class="link-primary"
+                      class="tel-link link-primary"
                       style="white-space: nowrap"
                       title="Call"
-                      href="tel: +359 882927373"
-                      >+359 882927373</a
-                    >
+                      data-key="contact-telephone-text"
+                    ></a>
                     <button
                       type="button"
-                      onclick="navigator.clipboard.writeText('+359 882927373')"
-                      class="btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
+                      class="copy-btn btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
                       data-key="copy"
                     >
                       copy
@@ -951,31 +947,27 @@
               </h2>
               <ul class="list-group list-group-flush lead fs-6">
                 <li class="list-group-item bg-transparent">
-                  <span class="fw-bold" data-key="contact-address-title"></span>
-                  <span data-key="contact-address-text">Address</span>
-                </li>
-                <li class="list-group-item bg-transparent">
-                  <span class="fw-bold" data-key="contact-email-title"></span>
-                  <a
-                    href="mailto:contact@trassing.com"
-                    title="Send email"
-                    data-key="contact-email-text"
-                    class="link-dark"
-                    >contact@trassing.com
-                  </a>
-                </li>
-                <li class="list-group-item bg-transparent">
                   <span
-                    class="fw-bold"
-                    data-key="contact-telephone-title"
+                    class="fw-bold me-2"
+                    data-key="contact-address-title"
                   ></span>
-                  <a
-                    class="link-dark"
-                    title="Call"
-                    data-key="contact-telephone-text"
-                    href="tel: +359 882927373"
-                    >+359 882927373</a
-                  ><span data-key="contact-telephone-details"></span>
+                  <span data-key="contact-address-text"></span>
+                </li>
+                <li class="list-group-item bg-transparent">
+                  <span id="show-email">
+                    <button
+                      class="btn btn-warning btn"
+                      data-key="contact-show-email"
+                    ></button
+                  ></span>
+                </li>
+                <li class="list-group-item bg-transparent">
+                  <span id="show-telephone">
+                    <button
+                      class="btn btn-warning btn"
+                      data-key="contact-show-telephone"
+                    ></button
+                  ></span>
                 </li>
               </ul>
             </div>
@@ -1250,23 +1242,20 @@
               </a>
 
               <ul
-                class="dropdown-menu dropdown-menu-end dropdown-menu-xl-start"
+                class="email-dropdown dropdown-menu dropdown-menu-end dropdown-menu-xl-start"
                 aria-labelledby="dropdownMenuPhone"
                 style="z-index: 2000"
               >
                 <li class="mx-3 d-flex align-items-center">
                   <a
-                    class="link-primary"
+                    class="mail-link cursor-pointer link-primary"
                     style="white-space: nowrap"
                     title="Send email"
                     data-key="contact-email-text"
-                    href="mailto:contact@trassing.com"
-                    >contact@trassing.com</a
-                  >
+                  ></a>
                   <button
                     type="button"
-                    onclick="navigator.clipboard.writeText('contact@trassing.com')"
-                    class="btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
+                    class="copy-btn btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
                     data-key="copy"
                   >
                     copy
@@ -1275,7 +1264,7 @@
               </ul>
             </span>
             <!-- Telephone -->
-            <span class="dropdown p-0 m-0">
+            <span class="telephone-dropdown dropdown p-0 m-0">
               <a
                 class="link-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
                 id="dropdownMenuPhone"
@@ -1292,16 +1281,14 @@
               >
                 <li class="mx-3 d-flex align-items-center">
                   <a
-                    class=""
+                    class="tel-link cursor-pointer"
                     style="white-space: nowrap"
                     title="Call"
-                    href="tel: +359 882927373"
-                    >+359 882927373</a
-                  >
+                    data-key="contact-telephone-text"
+                  ></a>
                   <button
                     type="button"
-                    onclick="navigator.clipboard.writeText('+359 882927373')"
-                    class="btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
+                    class="copy-btn btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
                     data-key="copy"
                   >
                     copy

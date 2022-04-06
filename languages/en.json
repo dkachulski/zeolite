@@ -57,9 +57,13 @@
     "contact-container-title": "CONTACTS",
     "contact-address-title": "Address: ",
     "contact-address-text": "20А Daskal Stoyan Popandreev Str., Entrance A, 1st floor, apt. 3, Complex Edelweiss 1, Boyana district, Sofia 1616, Bulgaria",
-    "contact-email-title": "Email: ",
+
+    "contact-email-title": "Email:",
+    "contact-show-email": "Email",
     "contact-email-text": "contact@zeolite.bg",
-    "contact-telephone-title": "Telephone: ",
+
+    "contact-telephone-title": "Telephone:",
+    "contact-show-telephone": "Telephone",
     "contact-telephone-text": "+359 882 92 73",
     "contact-telephone-details": " (Viber, WhatsApp)",
 
