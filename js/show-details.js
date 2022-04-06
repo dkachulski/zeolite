@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const span2 = document.createElement("span");
     const text =
       languageController.content[languageController.currentLanguage][
-        "contact-telephone-title"
+        "contact-telephone-details"
       ];
     span2.dataset.key = "contact-telephone-details";
     span2.textContent = text;
