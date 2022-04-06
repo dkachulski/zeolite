@@ -482,7 +482,10 @@ h2 {
 #show-email .btn,
 #show-address .btn,
 #show-telephone .btn {
-  width: 150px !important;
+  width: 60% !important;
+  margin-left: 20%;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 @media screen and (max-width: 768px) {
   #show-email .btn,
