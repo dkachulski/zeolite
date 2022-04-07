@@ -6,10 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title data-key="page-title">TRASSING</title>
     <link rel="icon" href="./images/logo.webp" type="image/x-icon" />
-    <meta name="description" content="Extraction of Natural Zeolite | Pozzolan | Trass as an additive for the production of cement and concrete. || Представител на ТРАСИНЖЕНЕРИНГ - Добив на естествен Зеолит | Пуцолан | Трас като добавка за производството на цимент и бетон">
-    <meta property="og:image" content="./images/Kurdzhali.webp">
-    <meta property="og:description" content="Extraction of Natural Zeolite | Pozzolan | Trass as an additive for the production of cement and concrete || Добив на естествен Зеолит | Пуцолан | Трас като добавка за производството на цимент и бетон">
-    <meta property="og:title" content="Representatives of TRASSINGENEERING || Представител на ТРАСИНЖЕНЕРИНГ">
+    <meta
+      name="description"
+      content="Extraction of Natural Zeolite | Pozzolan | Trass as an additive for the production of cement and concrete. || Представител на ТРАСИНЖЕНЕРИНГ - Добив на естествен Зеолит | Пуцолан | Трас като добавка за производството на цимент и бетон"
+    />
+    <meta property="og:image" content="./images/Kurdzhali.webp" />
+    <meta
+      property="og:description"
+      content="Extraction of Natural Zeolite | Pozzolan | Trass as an additive for the production of cement and concrete || Добив на естествен Зеолит | Пуцолан | Трас като добавка за производството на цимент и бетон"
+    />
+    <meta
+      property="og:title"
+      content="Representatives of TRASSINGENEERING || Представител на ТРАСИНЖЕНЕРИНГ"
+    />
 
     <!-- Bootstrap -->
 
@@ -40,7 +49,6 @@
     <link rel="stylesheet" href="./css/footer.css" />
     <!-- Language Scrips -->
     <script src="./js/language-controller.js"></script>
-
   </head>
 
   <body class="fs-6">
@@ -113,9 +121,9 @@
               ></a>
 
               <!-- Email -->
-              <span class="email-dropdown dropdown p-0 m-0">
+              <span class="email-dropdown dropdown p-0 m-0 bg-light border-0">
                 <a
-                  class="cursor-pointer link-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
+                  class="cursor-pointer bg-light border-0 link-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
                   id="dropdownMenuPhone"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -125,7 +133,7 @@
                 </a>
 
                 <ul
-                  class="dropdown-menu dropdown-menu-end dropdown-menu-xl-start"
+                  class="dropdown-menu dropdown-menu-end bg-light dropdown-menu-xl-start"
                   aria-labelledby="dropdownMenuPhone"
                   style="z-index: 2000"
                 >
@@ -147,9 +155,11 @@
                 </ul>
               </span>
               <!-- Telephone -->
-              <span class="telephone-dropdown dropdown p-0 m-0">
+              <span
+                class="telephone-dropdown dropdown bg-light p-0 m-0 border-0"
+              >
                 <a
-                  class="cursor-pointer link-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
+                  class="cursor-pointer link-secondary border-0 bg-light p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
                   id="dropdownMenuPhone"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -158,7 +168,7 @@
                   <i class="bi bi-telephone"></i>
                 </a>
                 <ul
-                  class="dropdown-menu dropdown-menu-end dropdown-menu-xl-start"
+                  class="dropdown-menu dropdown-menu-end bg-light dropdown-menu-xl-start"
                   aria-labelledby="dropdownMenuPhone"
                   style="z-index: 2000"
                 >
@@ -290,12 +300,12 @@
             data-key="video-text-1"
           ></p>
           <p class="text-white fs-4 text-center" data-key="video-text-2"></p>
-          <a
-            href="#offer"
+          <button
             type="button"
-            class="btn btn-warning mt-4 shadow"
+            class="btn btn-warning mt-4"
             data-key="video-button"
-          ></a>
+            onclick="window.location.href ='#offer' "
+          ></button>
         </div>
       </section>
 
@@ -337,14 +347,12 @@
                   class="col mx-0 d-flex flex-column text-light fs-4 align-items-center justify-content-center py-5 px-3 px-md-5 stats-half-small"
                 >
                   <p class="fs-bold px-3" data-key="information-text-long"></p>
-
-                  <a
-                    href="#statistics"
+                  <button
                     type="button"
-                    class="btn btn-warning mt-3 shadow"
+                    class="btn btn-warning mt-4"
                     data-key="information-button"
-                    >More</a
-                  >
+                    onclick="window.location.href ='#statistics' "
+                  ></button>
                 </div>
               </div>
             </div>
@@ -391,13 +399,12 @@
                       ></li>
                     </ul>
 
-                    <a
-                      href="#products"
+                    <button
                       type="button"
-                      class="btn btn-warning mt-3 shadow"
+                      class="btn btn-warning mt-4"
                       data-key="statistics-buttton"
-                      >More</a
-                    >
+                      onclick="window.location.href ='#products' "
+                    ></button>
                   </div>
                   <div
                     class="d-flex flex-column stats-half h-100"
@@ -430,15 +437,14 @@
                 data-key="products-container-title"
                 class="text-decoration-none link-dark"
                 href="#products"
-                ></a
-              >
+              ></a>
             </h2>
           </div>
           <div class="row text-center g-4">
             <!-- Card 1 -->
             <div class="col-md-4 individual-card-container">
               <div
-                class="card w-100 shadow"
+                class="card border-0 shadow"
                 data-cardnumber="card1"
                 aria-expanded="false"
                 aria-controls="products"
@@ -460,8 +466,10 @@
                       type="button"
                       class="fs-2 text-warning px-3 card-button"
                     >
-                      <i class="bi bi-arrow-down-square"></i>
-                      <i class="bi bi-arrow-down-square-fill"></i>
+                      <i class="bi bi-arrow-down-square bg-transparent"></i>
+                      <i
+                        class="bi bi-arrow-down-square-fill bg-transparent"
+                      ></i>
                     </span>
                   </div>
                 </div>
@@ -470,7 +478,7 @@
             <!-- Card 2 -->
             <div class="col-md-4 individual-card-container">
               <div
-                class="card w-100 shadow"
+                class="card border-0 shadow"
                 data-cardnumber="card2"
                 aria-expanded="false"
                 aria-controls="products"
@@ -492,8 +500,10 @@
                       type="button"
                       class="fs-2 text-warning px-3 card-button"
                     >
-                      <i class="bi bi-arrow-down-square"></i>
-                      <i class="bi bi-arrow-down-square-fill"></i>
+                      <i class="bi bi-arrow-down-square bg-transparent"></i>
+                      <i
+                        class="bi bi-arrow-down-square-fill bg-transparent"
+                      ></i>
                     </span>
                   </div>
                 </div>
@@ -503,7 +513,7 @@
 
             <div class="col-md-4 individual-card-container">
               <div
-                class="card w-100 shadow"
+                class="card border-0 shadow"
                 data-cardnumber="card3"
                 aria-expanded="false"
                 aria-controls="products"
@@ -525,8 +535,10 @@
                       type="button"
                       class="fs-2 text-warning px-3 card-button"
                     >
-                      <i class="bi bi-arrow-down-square"></i>
-                      <i class="bi bi-arrow-down-square-fill"></i>
+                      <i class="bi bi-arrow-down-square bg-transparent"></i>
+                      <i
+                        class="bi bi-arrow-down-square-fill bg-transparent"
+                      ></i>
                     </span>
                   </div>
                 </div>
@@ -542,9 +554,7 @@
             class="visually-hidden"
             data-bs-toggle="collapse"
             data-bs-target="#products-content"
-          >
-           
-          </button>
+          ></button>
 
           <!-- Expand Container -->
           <div class="container-lg cards-content-container py-5 px-3">
@@ -612,32 +622,36 @@
 
         <!-- -------- PRODUCTS MOBILE VIEW -------- -->
         <!-- Cards Heading -->
-        <div class="px-4 container-lg" id="products-container-mobile">
-          <div>
+        <div class="container-lg" id="products-container-mobile">
+          <div class="">
             <h2 class="text-dark text-center mb-5">
               <a
                 data-key="products-container-title"
                 class="text-decoration-none link-dark"
                 href="#products"
-                ></a
-              >
+              ></a>
             </h2>
           </div>
-          <div class="accordion accordion-flush" id="cardAccordionFlush">
+          <div
+            class="accordion accordion-flush d-flex flex-column"
+            id="cardAccordionFlush"
+          >
             <!-- Card 1 Mobile -->
             <div class="accordion-item mb-4">
-              <div class="individual-card-container text-center overflow-hidden rounded">
+              <div
+                class="individual-card-container shadow text-center overflow-hidden rounded"
+              >
                 <div
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#card-flush-collapseOne"
                   aria-expanded="false"
                   aria-controls="card-flush-collapseOne"
-                  class="card w-100 shadow rounded overflow-hidden"
+                  class="card border-0 rounded overflow-hidden"
                   role="button"
                 >
                   <!-- image -->
-                  <div class="card-img-container rounded overflow-hidden" >
+                  <div class="card-img-container rounded overflow-hidden">
                     <img
                       src="./images/Composition.webp"
                       class="card-img-top w-100 rounded"
@@ -652,8 +666,10 @@
                         type="button"
                         class="fs-2 text-warning px-3 card-button"
                       >
-                        <i class="bi bi-arrow-down-square"></i>
-                        <i class="bi bi-arrow-down-square-fill"></i>
+                        <i class="bi bi-arrow-down-square bg-transparent"></i>
+                        <i
+                          class="bi bi-arrow-down-square-fill bg-transparent"
+                        ></i>
                       </span>
                     </div>
                   </div>
@@ -666,9 +682,9 @@
                 data-bs-parent="#cardAccordionFlush"
               >
                 <div
-                  class="p-4 my-3 accordion-body bg-light shadow border rounded"
+                  class="p-4 p-sm-5 my-3 accordion-body bg-light shadow border rounded"
                 >
-                  <h3 class="" data-key="product-1-title"></h3>
+                  <h3 class="mb-3 mb-sm-4" data-key="product-1-title"></h3>
                   <p class="" data-key="product-1-text"></p>
                 </div>
               </div>
@@ -676,18 +692,20 @@
 
             <!-- Card 2 Mobile -->
             <div class="accordion-item mb-4">
-              <div class="individual-card-container text-center">
-                <d overflow-hidden roundediv
+              <div
+                class="individual-card-container shadow text-center overflow-hidden rounded"
+              >
+                <div
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#card-flush-collapseTwo"
                   aria-expanded="false"
                   aria-controls="card-flush-collapseTwo"
-                  class="card w-100 shadow rounded overflow-hidden"
+                  class="card w-100rounded overflow-hidden"
                   role="button"
                 >
                   <!-- image -->
-                  <div class="card-img-container rounded overflow-hidden" >
+                  <div class="card-img-container rounded overflow-hidden">
                     <img
                       src="./images/Production Capacity.webp"
                       class="card-img-top w-100 rounded"
@@ -696,16 +714,16 @@
                   </div>
                   <!-- body -->
                   <div class="card-body text-white">
-                    <h5 class="card-title" data-key="product-2-title">
-                    
-                    </h5>
+                    <h5 class="card-title" data-key="product-2-title"></h5>
                     <div class="container card-button">
                       <span
                         type="button"
                         class="fs-2 text-warning px-3 card-button"
                       >
-                        <i class="bi bi-arrow-down-square"></i>
-                        <i class="bi bi-arrow-down-square-fill"></i>
+                        <i class="bi bi-arrow-down-square bg-transparent"></i>
+                        <i
+                          class="bi bi-arrow-down-square-fill bg-transparent"
+                        ></i>
                       </span>
                     </div>
                   </div>
@@ -718,11 +736,9 @@
                 data-bs-parent="#cardAccordionFlush"
               >
                 <div
-                  class="p-4 my-3 accordion-body bg-light shadow border rounded"
+                  class="p-4 p-sm-5 my-3 accordion-body bg-light shadow border rounded"
                 >
-                  <h3 class="" data-key="product-2-title">
-                 
-                  </h3>
+                  <h3 class="mb-3 mb-sm-4" data-key="product-2-title"></h3>
                   <p class="" data-key="product-2-text"></p>
                 </div>
               </div>
@@ -730,18 +746,20 @@
 
             <!-- Card 3 Mobile -->
             <div class="accordion-item mb-4">
-              <div class="individual-card-container text-center">
-                <d overflow-hidden roundediv
+              <div
+                class="individual-card-container shadow text-center overflow-hidden rounded"
+              >
+                <div
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#card-flush-collapseThree"
                   aria-expanded="false"
                   aria-controls="card-flush-collapseThree"
-                  class="card w-100 shadow rounded overflow-hidden"
+                  class="card w-100rounded overflow-hidden"
                   role="button"
                 >
                   <!-- image -->
-                  <div class="card-img-container rounded overflow-hidden" >
+                  <div class="card-img-container rounded overflow-hidden">
                     <img
                       src="./images/Delivery.webp"
                       class="card-img-top w-100 rounded"
@@ -750,16 +768,16 @@
                   </div>
                   <!-- body -->
                   <div class="card-body text-white">
-                    <h5 class="card-title" data-key="product-3-title">
-                   
-                    </h5>
+                    <h5 class="card-title" data-key="product-3-title"></h5>
                     <div class="container card-button">
                       <span
                         type="button"
                         class="fs-2 text-warning px-3 card-button"
                       >
-                        <i class="bi bi-arrow-down-square"></i>
-                        <i class="bi bi-arrow-down-square-fill"></i>
+                        <i class="bi bi-arrow-down-square bg-transparent"></i>
+                        <i
+                          class="bi bi-arrow-down-square-fill bg-transparent"
+                        ></i>
                       </span>
                     </div>
                   </div>
@@ -772,11 +790,9 @@
                 data-bs-parent="#cardAccordionFlush"
               >
                 <div
-                  class="p-4 my-3 accordion-body bg-light shadow border rounded"
+                  class="p-4 p-sm-5 my-3 accordion-body bg-light shadow border rounded"
                 >
-                  <h3 class="" data-key="product-3-title">
-                    
-                  </h3>
+                  <h3 class="mb-3 mb-sm-4" data-key="product-3-title"></h3>
                   <p class="" data-key="product-3-text"></p>
                 </div>
               </div>
@@ -793,8 +809,7 @@
               data-key="faq-container-title"
               class="text-decoration-none link-dark"
               href="#FAQ"
-              ></a
-            >
+            ></a>
           </h2>
         </div>
         <div
@@ -940,8 +955,7 @@
                   data-key="contact-container-title"
                   class="text-decoration-none link-dark"
                   href="#contact"
-                  ></a
-                >
+                ></a>
               </h2>
               <ul class="list-group list-group-flush lead fs-6">
                 <li class="list-group-item bg-transparent py-3">
@@ -1123,7 +1137,6 @@
       class="px-3 px-md-5 pt-5 pb-3 bg-dark text-white text-center position-relative"
     >
       <div class="container">
-
         <!-- Paragraph -->
         <div
           class="footer-text container-lg mb-4 mb-lg-5 opacity-75 text-start text-md-center"
@@ -1234,9 +1247,9 @@
               ><i class="bi bi-linkedin"></i
             ></a>
             <!-- Email -->
-            <span class="dropdown p-0 m-0">
+            <span class="dropdown p-0 m-0 bg-dark">
               <a
-                class="link-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
+                class="link-secondary bg-dark p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
                 id="dropdownMenuPhone"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -1246,13 +1259,13 @@
               </a>
 
               <ul
-                class="email-dropdown dropdown-menu dropdown-menu-end dropdown-menu-xl-start"
+                class="email-dropdown dropdown-menu bg-light border-0 dropdown-menu-end dropdown-menu-xl-start"
                 aria-labelledby="dropdownMenuPhone"
                 style="z-index: 2000"
               >
-                <li class="mx-3 d-flex align-items-center">
+                <li class="mx-3 d-flex align-items-center bg-light border-0">
                   <a
-                    class="mail-link cursor-pointer link-primary"
+                    class="mail-link cursor-pointer link-primary border-0"
                     style="white-space: nowrap"
                     title="Send email"
                     data-key="contact-email-text"
@@ -1268,9 +1281,9 @@
               </ul>
             </span>
             <!-- Telephone -->
-            <span class="telephone-dropdown dropdown p-0 m-0">
+            <span class="telephone-dropdown bg-dark border-0 dropdown p-0 m-0">
               <a
-                class="link-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
+                class="link-secondary bg-dark border-0 p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
                 id="dropdownMenuPhone"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -1279,11 +1292,11 @@
                 <i class="bi bi-telephone"></i>
               </a>
               <ul
-                class="dropdown-menu dropdown-menu-end dropdown-menu-xl-start"
+                class="dropdown-menu dropdown-menu-end dropdown-menu-xl-start bg-light"
                 aria-labelledby="dropdownMenuPhone"
                 style="z-index: 2000"
               >
-                <li class="mx-3 d-flex align-items-center">
+                <li class="mx-3 d-flex align-items-center bg-light">
                   <a
                     class="tel-link cursor-pointer"
                     style="white-space: nowrap"
