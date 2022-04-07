@@ -415,6 +415,26 @@ h2 {
     margin: auto;
   }
 }
+
+.mb-img-1 {
+  background-image: url('../images/Composition.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mb-img-2 {
+  background-image: url('../images/Production\ Capacity.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mb-img-3 {
+  background-image: url('../images/Delivery.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media screen and (max-width: 768px) {
   .individual-card-container {
     max-width: 550px;
