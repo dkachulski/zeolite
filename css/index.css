@@ -381,13 +381,32 @@ h2 {
   display: none;
 }
 
-.card.card-opened .card-body {
+.card.card-opened .cb-1 {
   background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.15),
-      rgba(0, 0, 0, 0.7)
-    ),
-    url('../images/bg-border.webp');
+    to bottom,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.7)
+  );
+
+  background-position: center;
+  background-size: cover;
+}
+.card.card-opened .cb-2 {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.7)
+  );
+
+  background-position: center;
+  background-size: cover;
+}
+.card.card-opened .cb-3 {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.7)
+  );
 
   background-position: center;
   background-size: cover;
