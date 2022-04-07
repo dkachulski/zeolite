@@ -243,6 +243,12 @@ h2 {
 
 #products {
   min-height: 400px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 1)
+  );
+
   background-position: center;
   background-size: cover;
 }
@@ -375,33 +381,35 @@ h2 {
   display: none;
 }
 
-.card.card-opened .card-body,
-#products-container-mobile .card:not(.collapsed) .card-body {
-  background: -moz-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0.15),
-    rgba(0, 0, 0, 0.7)
-  ); /* FF3.6+ */
-  background: -webkit-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0.15),
-    rgba(0, 0, 0, 0.7)
-  ); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0.15),
-    rgba(0, 0, 0, 0.7)
-  ); /* Opera 11.10+ */
-  background: -ms-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0.15),
-    rgba(0, 0, 0, 0.7)
-  ); /* IE10+ */
-  background: linear-gradient(
+.card.card-opened .cb-1 {
+  background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.15),
     rgba(0, 0, 0, 0.7)
-  ); /* W3C */
+  );
+
+  background-position: center;
+  background-size: cover;
+}
+.card.card-opened .cb-2 {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.7)
+  );
+
+  background-position: center;
+  background-size: cover;
+}
+.card.card-opened .cb-3 {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.7)
+  );
+
+  background-position: center;
+  background-size: cover;
 }
 
 .card.card-opened img,
@@ -464,6 +472,40 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
 }
+/* Collapesed */
+#products-container-mobile .mb-img-1:not(.collapsed) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url('../images/Composition.webp');
+
+  background-position: center;
+  background-size: cover;
+}
+#products-container-mobile .mb-img-2:not(.collapsed) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url('../images/Production\ Capacity.webp');
+
+  background-position: center;
+  background-size: cover;
+}
+#products-container-mobile .mb-img-3:not(.collapsed) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url('../images/Delivery.webp');
+
+  background-position: center;
+  background-size: cover;
+}
 
 @media screen and (max-width: 768px) {
   .individual-card-container {
@@ -504,7 +546,12 @@ h2 {
 
 /* -------- FAQs -------- */
 #FAQ {
-  background-image: url('../images/QandA.webp');
+  background-image: linear-gradient(
+      to bottom,
+      rgba(248, 249, 250, 0),
+      rgba(248, 249, 250, 0)
+    ),
+    url('../images/QandA.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
