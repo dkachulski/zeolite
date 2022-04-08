@@ -23,6 +23,30 @@ class ContactController {
       details: langData["contact-telephone-details-2"],
     };
   }
+  update(langData) {
+    this["address-1"] = {
+      title: langData["contact-address-title"],
+      button: langData["contact-address-button"],
+      text: langData["contact-address-text-1"],
+    };
+    this["email-1"] = {
+      title: langData["contact-email-title"],
+      button: langData["contact-email-button"],
+      text: langData["contact-email-text-1"],
+    };
+    this["tel-1"] = {
+      title: langData["contact-telephone-title"],
+      button: langData["contact-telephone-button"],
+      text: langData["contact-telephone-text-1"],
+      details: langData["contact-telephone-details-1"],
+    };
+    this["tel-2"] = {
+      title: langData["contact-telephone-title"],
+      button: langData["contact-telephone-button"],
+      text: langData["contact-telephone-text-2"],
+      details: langData["contact-telephone-details-2"],
+    };
+  }
 
   // Add event listeners to populate the fields
   init() {
@@ -67,6 +91,7 @@ class ContactController {
     });
   }
 
+  // Populate contect details functions
   populateCopyBtn(elem) {
     elem.onclick = ev =>
       navigator.clipboard.writeText(
@@ -86,14 +111,14 @@ class ContactController {
     elem.href = `tel: ${this[elem.dataset.contact].text}`;
   }
   // Contact section functions
-  populateContactAddress(elem) {
+  async populateContactAddress(elem) {
     elem.style.position = "static";
     elem.querySelectorAll("[data-contact]").forEach(e => {
       e.textContent = this[e.dataset.contact].text;
       e.dataset.key = e.dataset.keyCopy;
     });
   }
-  populateContactEmail(elem) {
+  async populateContactEmail(elem) {
     elem.style.position = "static";
     elem.querySelectorAll("[data-contact]").forEach(e => {
       e.textContent = this[e.dataset.contact].text;
@@ -101,7 +126,7 @@ class ContactController {
       e.href = `mailto:${this[e.dataset.contact].text}`;
     });
   }
-  populateContactTelephone(elem) {
+  async populateContactTelephone(elem) {
     elem.style.position = "static";
     elem.querySelectorAll("[data-contact]").forEach(e => {
       e.textContent = this[e.dataset.contact].text;
@@ -133,4 +158,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Creates an object with contact details
   const contactController = new ContactController(await getLangData());
   contactController.init();
+  // Update contactController on changing the language
+  languageController.subscribeChangeLangCallback(
+    contactController.update.bind(contactController)
+  );
 });
