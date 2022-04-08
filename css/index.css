@@ -1,7 +1,7 @@
 /* -------- GLOBAL -------- */
 html,
 body {
-  font-family: 'Roboto', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica Neue, Helvetica, Arial, sans-serif;
   position: relative;
   height: 100%;
 }
@@ -71,7 +71,7 @@ h2 {
 }
 
 #video-video {
-  background-image: url('../images/Quarry.webp');
+  background-image: url("../images/Quarry.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -133,7 +133,7 @@ h2 {
       rgba(0, 0, 0, 0.1),
       rgba(0, 0, 0, 0.1)
     ),
-    url('../images/Kurdzhali.webp');
+    url("../images/Kurdzhali.webp");
 
   background-attachment: fixed;
   background-position: center;
@@ -422,19 +422,19 @@ h2 {
 }
 
 .products-desktop-collapse-img.img-1 {
-  background-image: url('../images/Composition 2.webp');
+  background-image: url("../images/Composition 2.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .products-desktop-collapse-img.img-2 {
-  background-image: url('../images/Production\ Capacity\ 2.webp');
+  background-image: url("../images/Production\ Capacity\ 2.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .products-desktop-collapse-img.img-3 {
-  background-image: url('../images/Delivery\ 2.webp');
+  background-image: url("../images/Delivery\ 2.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -455,19 +455,19 @@ h2 {
 }
 
 .mb-img-1 .card-body {
-  background-image: url('../images/Composition.webp');
+  background-image: url("../images/Composition.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .mb-img-2 .card-body {
-  background-image: url('../images/Production\ Capacity.webp');
+  background-image: url("../images/Production\ Capacity.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .mb-img-3 .card-body {
-  background-image: url('../images/Delivery.webp');
+  background-image: url("../images/Delivery.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -479,7 +479,7 @@ h2 {
       rgba(0, 0, 0, 0.15),
       rgba(0, 0, 0, 0.7)
     ),
-    url('../images/Composition.webp');
+    url("../images/Composition.webp");
 
   background-position: center;
   background-size: cover;
@@ -490,7 +490,7 @@ h2 {
       rgba(0, 0, 0, 0.15),
       rgba(0, 0, 0, 0.7)
     ),
-    url('../images/Production\ Capacity.webp');
+    url("../images/Production\ Capacity.webp");
 
   background-position: center;
   background-size: cover;
@@ -501,7 +501,7 @@ h2 {
       rgba(0, 0, 0, 0.15),
       rgba(0, 0, 0, 0.7)
     ),
-    url('../images/Delivery.webp');
+    url("../images/Delivery.webp");
 
   background-position: center;
   background-size: cover;
@@ -551,7 +551,7 @@ h2 {
       rgba(248, 249, 250, 0),
       rgba(248, 249, 250, 0)
     ),
-    url('../images/QandA.webp');
+    url("../images/QandA.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -590,8 +590,9 @@ h2 {
 #show-tel .btn {
   width: 60% !important;
   margin-left: 20%;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  top: -5000px;
 }
 @media screen and (max-width: 768px) {
   #show-email .btn,
@@ -605,6 +606,11 @@ h2 {
 /* Contact */
 #contact-container {
   z-index: 100;
+}
+
+#contact-container address {
+  position: absolute;
+  top: -5000px;
 }
 
 /* Map */
@@ -630,7 +636,7 @@ h2 {
       rgba(255, 255, 255, 0.35),
       rgba(255, 255, 255, 0.35)
     ),
-    url('../images/bg-border.webp');
+    url("../images/bg-border.webp");
 
   background-position: center;
   background-size: cover;
@@ -641,7 +647,7 @@ h2 {
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
     ),
-    url('../images/sofia-border.webp');
+    url("../images/sofia-border.webp");
 
   background-position: center;
   background-size: cover;
@@ -653,7 +659,7 @@ h2 {
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
     ),
-    url('../images/kurdzhali-border.webp');
+    url("../images/kurdzhali-border.webp");
 
   background-position: center;
   background-size: cover;
@@ -728,7 +734,7 @@ h2 {
 
 .map-collapse-img-sofia {
   width: 55%;
-  background-image: url('../images/Sofia\ Office.webp');
+  background-image: url("../images/Sofia\ Office.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -744,7 +750,7 @@ h2 {
 .map-collapse-img-kurdzhali-1 {
   width: 100%;
 
-  background-image: url('../images/Kurdzhali\ 1.webp');
+  background-image: url("../images/Kurdzhali\ 1.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -776,7 +782,7 @@ h2 {
 }
 
 .map-collapse-kurdzhali-2 .img-1 {
-  background-image: url('../images/Kurdzhali\ 2.webp');
+  background-image: url("../images/Kurdzhali\ 2.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -784,7 +790,7 @@ h2 {
   bottom: 53.3%;
 }
 .map-collapse-kurdzhali-2 .img-2 {
-  background-image: url('../images/Kurdzhali\ 3.webp');
+  background-image: url("../images/Kurdzhali\ 3.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -1165,7 +1165,7 @@
                 >
                   <span id="show-address">
                     <button
-                      class="btn btn-warning"
+                      class="btn btn-warning my-2 mt-3"
                       data-key="contact-address-button"
                     >
                       Address
@@ -1184,8 +1184,9 @@
                         <div class="mt-1">
                           <a
                             target="_blank"
-                            href="https://www.google.co.uk/maps/place/%D0%9A%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81+%E2%80%9E%D0%95%D0%B4%D0%B5%D0%BB%D0%B2%D0%B0%D0%B9%D1%81%E2%80%9D/@42.6484886,23.2711303,17z/data=!3m1!4b1!4m5!3m4!1s0x40aa849fa7a0b72b:0x7fbd0b8c307eb2f0!8m2!3d42.6485599!4d23.2734894"
+                            href="https://maps.app.goo.gl/NixiuWpgHhWzHy3h6"
                             data-key="map"
+                            title="Google Maps"
                             >Google Maps</a
                           >
                         </div>
@@ -1198,7 +1199,7 @@
                 >
                   <span id="show-email">
                     <button
-                      class="btn btn-warning"
+                      class="btn btn-warning my-2"
                       data-key="contact-email-button"
                     >
                       Email
@@ -1214,6 +1215,7 @@
                           href=""
                           data-contact="email-1"
                           data-key-copy="contact-email-text-1"
+                          title="Send email"
                         ></a>
                       </div>
                     </span>
@@ -1224,7 +1226,7 @@
                 >
                   <span id="show-tel">
                     <button
-                      class="btn btn-warning"
+                      class="btn btn-warning my-2"
                       data-key="contact-telephone-button"
                     >
                       Telephone
@@ -1242,6 +1244,7 @@
                           href=""
                           data-contact="tel-1"
                           data-key="contact-telephone-text-1"
+                          title="Call"
                         ></a
                         ><span
                           class="ms-3"
@@ -1253,6 +1256,7 @@
                           href=""
                           data-contact="tel-2"
                           data-key-copy="contact-telephone-text-2"
+                          title="Call"
                         ></a
                         ><span
                           class="ms-3"
@@ -1716,37 +1720,6 @@
       </div>
     </footer>
 
-    <!-- -------- TEMPLATES -------- -->
-
-    <!-- Span for address in contact-->
-    <template id="contact-address-template"
-      ><span data-key="contact-address-title">Address</span>
-      <address class="d-flex flex-column">
-        <div><span data-key="contact-address-text-1"></span></div>
-      </address>
-    </template>
-    <!-- Span for email in contact-->
-    <template id="contact-email-template"
-      ><span data-key="contact-email-title">Email</span>
-      <address class="d-flex flex-column">
-        <div><span data-key="contact-email-text-1"></span></div>
-        <div><span data-key="contact-email-text-2"></span></div>
-      </address>
-    </template>
-    <!-- Span for telephone in contact-->
-    <template id="contact-telephone-template"
-      ><span data-key="contact-telephone-title">Telephone</span>
-      <address class="d-flex flex-column">
-        <div>
-          <span data-key="contact-telephone-text-1"></span
-          ><span data-key="contact-telephone-details-1"></span>
-        </div>
-        <div>
-          <span data-key="contact-telephone-text-2"></span
-          ><span data-key="contact-telephone-details-2"></span>
-        </div>
-      </address>
-    </template>
     <!-- -------- SCRIPTS -------- -->
     <script src="./js/cards-expand-box.js" defer></script>
     <script src="./js/header.js" defer></script>
