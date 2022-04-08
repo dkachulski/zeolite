@@ -32,12 +32,7 @@ class ContactController {
       btn.addEventListener("click", () => {
         btn.parentElement.querySelectorAll("a").forEach(a => {
           this.populateDropdownEmail(a);
-        });
-      });
-      // add onclick listeners on buttons to copy the email
-      btn.addEventListener("click", () => {
-        btn.parentElement.querySelectorAll("li button").forEach(btn => {
-          this.populateCopyBth(btn);
+          this.populateCopyBtn(a.parentElement.querySelector("button"));
         });
       });
     });
@@ -47,12 +42,8 @@ class ContactController {
       btn.addEventListener("click", () => {
         btn.parentElement.querySelectorAll("a").forEach(a => {
           this.populateDropdownTelephone(a);
-        });
-      });
-      // add onclick listeners on buttons to copy the email
-      btn.addEventListener("click", () => {
-        btn.parentElement.querySelectorAll("li button").forEach(btn => {
-          this.populateCopyBth(btn);
+          // console.log(a.parentElement.querySelector("button"));
+          this.populateCopyBtn(a.parentElement.querySelector("button"));
         });
       });
     });
@@ -76,10 +67,11 @@ class ContactController {
     });
   }
 
-  populateCopyBth(elem) {
-    elem.onclick = navigator.clipboard.writeText(
-      this[elem.dataset.contact].text
-    );
+  populateCopyBtn(elem) {
+    elem.onclick = ev =>
+      navigator.clipboard.writeText(
+        this[ev.currentTarget.dataset.contact].text
+      );
   }
   // Dropdown functions
   populateDropdownAddress(elem) {
