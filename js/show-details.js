@@ -1,149 +1,138 @@
-// Creates and appends contact details elements whenever needed (not on page by default to protect from spam)
-// Adds contact details to the copy buttons
-document.addEventListener("DOMContentLoaded", () => {
-  showAddress();
-  showEmail();
-  showTelephone();
-
-  // Dropdown
-  document
-    .querySelectorAll(".telephone-dropdown")
-    .forEach(elem => elem.addEventListener("click", telephoneToHref));
-  document
-    .querySelectorAll(".email-dropdown")
-    .forEach(elem => elem.addEventListener("click", emailToHref));
-  // Copy button
-  document.querySelectorAll(".copy-btn").forEach(btn => {
-    btn.addEventListener("click", copyInfo);
-  });
-  // Show address in contact sectio
-  function showAddress(ev) {
-    document.querySelector("#show-address button ").onclick = function (ev) {
-      ev.preventDefault();
-      ev.target.style.position = "absolute";
-      ev.target.style.top = "-4000px";
-
-      const title =
-        languageController.content[languageController.currentLanguage][
-          "contact-address-title"
-        ];
-      const address =
-        languageController.content[languageController.currentLanguage][
-          "contact-address-text"
-        ];
-      // Description
-      const span = document.createElement("span");
-      span.classList.add("fw-bold", "me-2");
-      span.dataset.key = "contact-address-title";
-      span.textContent = title;
-
-      // Span
-      const span2 = document.createElement("span");
-      const text =
-        languageController.content[languageController.currentLanguage][
-          "contact-address-text"
-        ];
-      span2.dataset.key = "contact-address-text";
-      span2.textContent = text;
-      ev.target.parentElement.appendChild(span);
-      ev.target.parentElement.appendChild(span2);
+class ContactController {
+  constructor(langData) {
+    this['address-1'] = {
+      title: langData['contact-address-title'],
+      button: langData['contact-address-button'],
+      text: langData['contact-address-text-1'],
+    };
+    this['email-1'] = {
+      title: langData['contact-email-title'],
+      button: langData['contact-email-button'],
+      text: langData['contact-email-text-1'],
+    };
+    this['tel-1'] = {
+      title: langData['contact-telephone-title'],
+      button: langData['contact-telephone-button'],
+      text: langData['contact-telephone-text-1'],
+      details: langData['contact-telephone-details-1'],
+    };
+    this['tel-2'] = {
+      title: langData['contact-telephone-title'],
+      button: langData['contact-telephone-button'],
+      text: langData['contact-telephone-text-2'],
+      details: langData['contact-telephone-details-2'],
     };
   }
 
-  // Show telephone in contact section
-  function showEmail(ev) {
-    document.querySelector("#show-telephone button ").onclick = function (ev) {
-      ev.preventDefault();
-      ev.target.style.position = "absolute";
-      ev.target.style.top = "-4000px";
-
-      const title =
-        languageController.content[languageController.currentLanguage][
-          "contact-telephone-title"
-        ];
-      const tel =
-        languageController.content[languageController.currentLanguage][
-          "contact-telephone-text"
-        ];
-      // Description
-      const span = document.createElement("span");
-      span.classList.add("fw-bold", "me-2");
-      span.dataset.key = "contact-telephone-title";
-      span.textContent = title;
-
-      // Link
-      const a = document.createElement("a");
-
-      a.classList.add("link-dark");
-      a.title = "Call";
-      a.dataset.key = "contact-telephone-text";
-      a.href = `tel: ${tel}`;
-      a.textContent = tel;
-
-      // Span
-      const span2 = document.createElement("span");
-      const text =
-        languageController.content[languageController.currentLanguage][
-          "contact-telephone-details"
-        ];
-      span2.dataset.key = "contact-telephone-details";
-      span2.textContent = text;
-      ev.target.parentElement.appendChild(span);
-      ev.target.parentElement.appendChild(a);
-      ev.target.parentElement.appendChild(span2);
-    };
-  }
-
-  // Show email in contact section
-  function showTelephone(ev) {
-    document.querySelector("#show-email button ").onclick = function (ev) {
-      ev.preventDefault();
-      ev.target.style.position = "absolute";
-      ev.target.style.top = "-4000px";
-
-      const email =
-        languageController.content[languageController.currentLanguage][
-          "contact-email-text"
-        ];
-      const title =
-        languageController.content[languageController.currentLanguage][
-          "contact-email-title"
-        ];
-      // Description
-      const span = document.createElement("span");
-      span.classList.add("fw-bold", "me-2");
-      span.dataset.key = "contact-email-title";
-      span.textContent = title;
-
-      // Link
-      const a = document.createElement("a");
-      a.classList.add("link-dark");
-      a.title = "Call";
-      a.dataset.key = "contact-email-text";
-      a.href = `mailto:${email}`;
-      a.textContent = email;
-      ev.target.parentElement.appendChild(span);
-      ev.target.parentElement.appendChild(a);
-    };
-  }
-
-  // attach href phone to header and footer
-  function telephoneToHref(ev) {
-    ev.currentTarget
-      .querySelectorAll([".tel-link"])
-      .forEach(a => (a.href = `tel: ${a.textContent}`));
-  }
-
-  // attach href email to header and footer
-  function emailToHref(ev) {
-    ev.currentTarget.querySelectorAll([".mail-link"]).forEach(a => {
-      a.href = `mailto:${a.textContent}`;
+  // Add event listeners to populate the fields
+  init() {
+    // Add listener on email dropdown button
+    document.querySelectorAll('.dropdown-email-btn').forEach(btn => {
+      // populate email text content
+      btn.addEventListener('click', () => {
+        btn.parentElement.querySelectorAll('a').forEach(a => {
+          this.populateDropdownEmail(a);
+        });
+      });
+      // add onclick listeners on buttons to copy the email
+      btn.addEventListener('click', () => {
+        btn.parentElement.querySelectorAll('li button').forEach(btn => {
+          this.populateCopyBth(btn);
+        });
+      });
+    });
+    // Add listener on email dropdown button
+    document.querySelectorAll('.dropdown-tel-btn').forEach(btn => {
+      // populate email text content
+      btn.addEventListener('click', () => {
+        btn.parentElement.querySelectorAll('a').forEach(a => {
+          this.populateDropdownTelephone(a);
+        });
+      });
+      // add onclick listeners on buttons to copy the email
+      btn.addEventListener('click', () => {
+        btn.parentElement.querySelectorAll('li button').forEach(btn => {
+          this.populateCopyBth(btn);
+        });
+      });
+    });
+    // Add listener on address dropdown button
+    document.getElementById('show-address').addEventListener('click', ev => {
+      ev.currentTarget.style.position = 'absolute';
+      const elem = ev.currentTarget.parentElement.querySelector('address');
+      this.populateContactAddress(elem);
+    });
+    // Add listener on email dropdown button
+    document.getElementById('show-email').addEventListener('click', ev => {
+      ev.currentTarget.style.position = 'absolute';
+      const elem = ev.currentTarget.parentElement.querySelector('address');
+      this.populateContactEmail(elem);
+    });
+    // Add listener on telephone dropdown button
+    document.getElementById('show-tel').addEventListener('click', ev => {
+      ev.currentTarget.style.position = 'absolute';
+      const elem = ev.currentTarget.parentElement.querySelector('address');
+      this.populateContactTelephone(elem);
     });
   }
 
-  // Copy buttons for emails and phones
-  function copyInfo(ev) {
-    const text = ev.currentTarget.parentElement.querySelector("a").textContent;
-    navigator.clipboard.writeText(text);
+  populateCopyBth(elem) {
+    elem.onclick = navigator.clipboard.writeText(
+      this[elem.dataset.contact].text
+    );
   }
+  // Dropdown functions
+  populateDropdownAddress(elem) {
+    elem.textContent = this[elem.dataset.contact].text;
+  }
+  populateDropdownEmail(elem) {
+    elem.textContent = this[elem.dataset.contact].text;
+    elem.href = `mailto:${this[elem.dataset.contact].text}`;
+  }
+  populateDropdownTelephone(elem) {
+    elem.textContent = this[elem.dataset.contact].text;
+    elem.href = `tel: ${this[elem.dataset.contact].text}`;
+  }
+  // Contact section functions
+  populateContactAddress(elem) {
+    elem.textContent = this[elem.dataset.contact].text;
+    elem.dataset.key = elem.dataset.keyCopy;
+    elem.style.position = 'static';
+  }
+  populateContactEmail(elem) {
+    elem.textContent = this[elem.dataset.contact].text;
+    elem.dataset.key = elem.dataset.keyCopy;
+    elem.href = `mailto:${this[elem.dataset.contact].text}`;
+    elem.style.position = 'static';
+  }
+  populateContactTelephone(elem) {
+    elem.textContent = this[elem.dataset.contact].text;
+    elem.dataset.key = elem.dataset.keyCopy;
+    elem.href = `tel: ${this[elem.dataset.contact].text}`;
+    elem.style.position = 'static';
+  }
+}
+
+// Creates and appends contact details elements whenever needed (not on page by default to protect from spam)
+// Adds contact details to the copy buttons
+document.addEventListener('DOMContentLoaded', async () => {
+  // Gets the content if fetched or keeps checking until fetched
+  async function getLangData() {
+    if (languageController.content)
+      return languageController.content[languageController.currentLanguage];
+    else
+      return new Promise(res => {
+        (function returnLangData() {
+          if (!languageController.content) {
+            setTimeout(returnLangData, 1000); //wait and then recheck
+            return;
+          }
+          res(languageController.content[languageController.currentLanguage]);
+        })();
+      });
+  }
+
+  // Creates an object with contact details
+  const contactController = new ContactController(await getLangData());
+  contactController.init();
 });

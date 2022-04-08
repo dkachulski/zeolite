@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     infoP2.style.paddingBottom = '0px';
 
     if (window.innerWidth >= 768 && window.innerWidth < 975) {
-      console.log(window.innerWidth);
       const height = Number(
         document.getElementById('information-container').offsetHeight
       );

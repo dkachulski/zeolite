@@ -55,19 +55,21 @@
     "faq-answer-5": "Depending on your purchase and your location, our customer support team will send you a quote with the best price per ton and delivery options. You can find our email and phone numbers in the 'Contacts' section.",
 
     "contact-container-title": "CONTACTS",
-    "contact-address-title": "Address: ",
+    "contact-address-title": "ADDRESS:",
     "contact-address-button": "Address",
-    "contact-address-text": "20А Daskal Stoyan Popandreev Str., Entrance A, 1st floor, apt. 3, Complex Edelweiss 1, Boyana district, Sofia 1616, Bulgaria",
+    "contact-address-text-1": "20А Daskal Stoyan Popandreev Str., Entrance A, 1st floor, apt. 3, Complex Edelweiss 1, Boyana district, Sofia 1616, Bulgaria",
+    "map": "Google Maps",
 
-    "contact-email-title": "Email:",
+    "contact-email-title": "EMAIL:",
     "contact-email-button": "Email",
-    "contact-email-text": "info@trassing.com",
+    "contact-email-text-1": "info@trassing.com",
 
-    "contact-telephone-title": "Telephone:",
+    "contact-telephone-title": "TELEPHONE:",
     "contact-telephone-button": "Telephone",
     "contact-telephone-text-1": "+359 882 92 7373",
     "contact-telephone-text-2": "+359 885 04 8845",
-    "contact-telephone-details": " (Viber, WhatsApp)",
+    "contact-telephone-details-1": "(Viber, WhatsApp)",
+    "contact-telephone-details-2": "(Viber, WhatsApp)",
 
     "customer-support-title": "Customer Support",
     "customer-support-text": "Our office is located in Boyana, Sofia in Bulgaira. It is in constant contact with our production site in Kardzhali and our customers from around the world. Apart from being our Headquarters, the Sofia office also serves our customers directly. Our customer service team and Trassengineering representatives are highly qualified specialists educated in the United Kingdom. They are in constant contact with our customers from the moment of placing the order, through arranging their transport needs, up to delivery. We accept your orders via email or phone as to better understand your needs and meet your transportation requirements. We are ready to send you a sample of the product for your own assessment.",

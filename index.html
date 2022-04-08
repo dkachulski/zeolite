@@ -126,10 +126,10 @@
 
               <!-- Email -->
               <span
-                class="email-dropdown dropdown p-0 m-0 bg-transparent border-0 rounded-none"
+                class="dropdown p-0 m-0 bg-transparent border-0 rounded-none"
               >
                 <button
-                  class="cursor-pointer bg-transparent border-0 text-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none rounded-none"
+                  class="dropdown-email-btn cursor-pointer bg-transparent border-0 text-secondary p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none rounded-none"
                   id="dropdownMenuPhone"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -148,12 +148,13 @@
                       class="link-primary mail-link"
                       style="white-space: nowrap"
                       title="Send email"
-                      data-key="contact-email-text"
+                      data-contact="email-1"
                     ></a>
                     <button
                       type="button"
                       class="copy-btn btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
                       data-key="copy"
+                      data-contact="email-1"
                     >
                       copy
                     </button>
@@ -162,10 +163,10 @@
               </span>
               <!-- Telephone -->
               <span
-                class="telephone-dropdown dropdown bg-transparent p-0 m-0 border-0 rounded-none"
+                class="dropdown bg-transparent p-0 m-0 border-0 rounded-none"
               >
                 <button
-                  class="cursor-pointer text-secondary border-0 bg-transparent p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
+                  class="cursor-pointer dropdown-tel-btn text-secondary border-0 bg-transparent p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
                   id="dropdownMenuPhone"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -183,12 +184,29 @@
                       class="tel-link link-primary"
                       style="white-space: nowrap"
                       title="Call"
-                      data-key="contact-telephone-text"
+                      data-contact="tel-1"
                     ></a>
                     <button
                       type="button"
                       class="copy-btn btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
                       data-key="copy"
+                      data-contact="tel-1"
+                    >
+                      copy
+                    </button>
+                  </li>
+                  <li class="mx-3 d-flex align-items-center">
+                    <a
+                      class="tel-link link-primary"
+                      style="white-space: nowrap"
+                      title="Call"
+                      data-contact="tel-2"
+                    ></a>
+                    <button
+                      type="button"
+                      class="copy-btn btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
+                      data-key="copy"
+                      data-contact="tel-2"
                     >
                       copy
                     </button>
@@ -1129,7 +1147,7 @@
       </section>
 
       <!-- -------- CONTACT -------- -->
-      <section class="pt-5 px-3" id="contact">
+      <section class="pt-5 pb-4 px-3" id="contact">
         <div class="container-lg">
           <div class="row">
             <div class="col-lg-5 mb-5 mb-lg-1" id="contact-container">
@@ -1138,32 +1156,111 @@
                   data-key="contact-container-title"
                   class="text-decoration-none link-dark"
                   href="#contact"
-                ></a>
+                  >CONTACTS</a
+                >
               </h2>
               <ul class="list-group list-group-flush lead fs-6">
-                <li class="list-group-item bg-transparent py-3">
+                <li
+                  class="list-group-item bg-transparent py-2 d-flex flex-column"
+                >
                   <span id="show-address">
                     <button
-                      class="btn btn-warning btn"
+                      class="btn btn-warning"
                       data-key="contact-address-button"
-                    ></button
-                  ></span>
+                    >
+                      Address
+                    </button></span
+                  >
+                  <address>
+                    <span class="fw-bold mb-1" data-key="contact-address-title"
+                      >Address:</span
+                    >
+                    <span class="">
+                      <div class="">
+                        <span
+                          data-contact="address-1"
+                          data-key-copy="contact-address-text-1"
+                        ></span>
+                        <div class="mt-1">
+                          <a
+                            target="_blank"
+                            href="https://www.google.co.uk/maps/place/%D0%9A%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81+%E2%80%9E%D0%95%D0%B4%D0%B5%D0%BB%D0%B2%D0%B0%D0%B9%D1%81%E2%80%9D/@42.6484886,23.2711303,17z/data=!3m1!4b1!4m5!3m4!1s0x40aa849fa7a0b72b:0x7fbd0b8c307eb2f0!8m2!3d42.6485599!4d23.2734894"
+                            data-key="map"
+                            >Google Maps</a
+                          >
+                        </div>
+                      </div>
+                    </span>
+                  </address>
                 </li>
-                <li class="list-group-item bg-transparent py-3">
+                <li
+                  class="list-group-item bg-transparent py-2 d-flex flex-column"
+                >
                   <span id="show-email">
                     <button
-                      class="btn btn-warning btn"
+                      class="btn btn-warning"
                       data-key="contact-email-button"
-                    ></button
-                  ></span>
+                    >
+                      Email
+                    </button></span
+                  >
+                  <address>
+                    <span class="fw-bold mb-1" data-key="contact-email-title"
+                      >Email:</span
+                    >
+                    <span class="">
+                      <div class="">
+                        <a
+                          href=""
+                          data-contact="email-1"
+                          data-key-copy="contact-email-text-1"
+                        ></a>
+                      </div>
+                    </span>
+                  </address>
                 </li>
-                <li class="list-group-item bg-transparent py-3">
-                  <span id="show-telephone">
+                <li
+                  class="list-group-item bg-transparent py-2 d-flex flex-column"
+                >
+                  <span id="show-tel">
                     <button
-                      class="btn btn-warning btn"
+                      class="btn btn-warning"
                       data-key="contact-telephone-button"
-                    ></button
-                  ></span>
+                    >
+                      Telephone
+                    </button></span
+                  >
+                  <address>
+                    <span
+                      class="fw-bold mb-1"
+                      data-key="contact-telephone-title"
+                      >Telephone:</span
+                    >
+                    <span class="d-flex flex-column">
+                      <div class="mb-1">
+                        <a
+                          href=""
+                          data-contact="tel-1"
+                          data-key="contact-telephone-text-1"
+                        ></a
+                        ><span
+                          class="ms-3"
+                          data-key-copy="contact-telephone-details-1"
+                        ></span>
+                      </div>
+                      <div class="mb-1">
+                        <a
+                          href=""
+                          data-contact="tel-2"
+                          data-key-copy="contact-telephone-text-2"
+                        ></a
+                        ><span
+                          class="ms-3"
+                          data-key="contact-telephone-details-2"
+                        ></span>
+                      </div>
+                    </span>
+                  </address>
                 </li>
               </ul>
             </div>
@@ -1202,7 +1299,7 @@
       </section>
 
       <!-- -------- MAP DROPDOWN -------- -->
-      <section id="map-dropdown-container px-0">
+      <section id="map-dropdown-container  px-0">
         <div class="container-fluid pb-5 px-0">
           <p>
             <button
@@ -1527,11 +1624,9 @@
               ><i class="bi bi-linkedin"></i
             ></a>
             <!-- Email -->
-            <span
-              class="telephone-dropdown bg-transparent border-0 dropdown p-0 m-0"
-            >
+            <span class="bg-transparent border-0 dropdown p-0 m-0">
               <button
-                class="text-secondary bg-dark border-0 p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
+                class="dropdown-email-btn text-secondary bg-dark border-0 p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
                 id="dropdownMenuPhone"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -1541,7 +1636,7 @@
               </button>
 
               <ul
-                class="email-dropdown dropdown-menu bg-light border-0 dropdown-menu-end dropdown-menu-xl-start"
+                class="dropdown-menu bg-light border-0 dropdown-menu-end dropdown-menu-xl-start"
                 aria-labelledby="dropdownMenuPhone"
                 style="z-index: 2000"
               >
@@ -1550,12 +1645,13 @@
                     class="mail-link cursor-pointer link-primary border-0"
                     style="white-space: nowrap"
                     title="Send email"
-                    data-key="contact-email-text"
+                    data-contact="email-1"
                   ></a>
                   <button
                     type="button"
                     class="copy-btn btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
                     data-key="copy"
+                    data-contact="email-1"
                   >
                     copy
                   </button>
@@ -1563,11 +1659,9 @@
               </ul>
             </span>
             <!-- Telephone -->
-            <span
-              class="telephone-dropdown bg-transparent border-0 dropdown p-0 m-0"
-            >
+            <span class="bg-transparent border-0 dropdown p-0 m-0">
               <button
-                class="text-secondary bg-dark border-0 p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
+                class="dropdown-tel-btn text-secondary bg-dark border-0 p-2 px-xxl-2 m-2 mx-xxl-2 cursor-pointer text-decoration-none"
                 id="dropdownMenuPhone"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -1585,12 +1679,29 @@
                     class="tel-link cursor-pointer"
                     style="white-space: nowrap"
                     title="Call"
-                    data-key="contact-telephone-text"
+                    data-contact="tel-1"
                   ></a>
                   <button
                     type="button"
                     class="copy-btn btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
                     data-key="copy"
+                    data-contact="tel-1"
+                  >
+                    copy
+                  </button>
+                </li>
+                <li class="mx-3 d-flex align-items-center bg-light">
+                  <a
+                    class="tel-link cursor-pointer"
+                    style="white-space: nowrap"
+                    title="Call"
+                    data-contact="tel-2"
+                  ></a>
+                  <button
+                    type="button"
+                    class="copy-btn btn btn-white ms-3 p-0 text-secondary btn-small border-secondary rounded px-1"
+                    data-key="copy"
+                    data-contact="tel-2"
                   >
                     copy
                   </button>
@@ -1605,6 +1716,37 @@
       </div>
     </footer>
 
+    <!-- -------- TEMPLATES -------- -->
+
+    <!-- Span for address in contact-->
+    <template id="contact-address-template"
+      ><span data-key="contact-address-title">Address</span>
+      <address class="d-flex flex-column">
+        <div><span data-key="contact-address-text-1"></span></div>
+      </address>
+    </template>
+    <!-- Span for email in contact-->
+    <template id="contact-email-template"
+      ><span data-key="contact-email-title">Email</span>
+      <address class="d-flex flex-column">
+        <div><span data-key="contact-email-text-1"></span></div>
+        <div><span data-key="contact-email-text-2"></span></div>
+      </address>
+    </template>
+    <!-- Span for telephone in contact-->
+    <template id="contact-telephone-template"
+      ><span data-key="contact-telephone-title">Telephone</span>
+      <address class="d-flex flex-column">
+        <div>
+          <span data-key="contact-telephone-text-1"></span
+          ><span data-key="contact-telephone-details-1"></span>
+        </div>
+        <div>
+          <span data-key="contact-telephone-text-2"></span
+          ><span data-key="contact-telephone-details-2"></span>
+        </div>
+      </address>
+    </template>
     <!-- -------- SCRIPTS -------- -->
     <script src="./js/cards-expand-box.js" defer></script>
     <script src="./js/header.js" defer></script>

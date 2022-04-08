@@ -5,12 +5,12 @@ class LanguageController {
   constructor() {
     this.langElements = [];
     this.currentLanguage =
-      localStorage.getItem("preferred-language") ||
+      localStorage.getItem('preferred-language') ||
       navigator.language.substring(0, 2);
-    this.content;
+    this.content = null;
 
     // applyLangToPage page upon loading all elements
-    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener('DOMContentLoaded', () => {
       this.applyLangToPage();
     });
   }
@@ -23,12 +23,12 @@ class LanguageController {
       this.content = await fetch(`./languages/${language}.json`).then(resp =>
         resp.json()
       );
-      document.querySelectorAll("[data-key]").forEach(container => {
+      document.querySelectorAll('[data-key]').forEach(container => {
         container.textContent = this.content[language][container.dataset.key];
       });
     } catch {
       content = await fetch(`./languages/en.json`).then(resp => resp.json());
-      document.querySelectorAll("[data-key]").forEach(container => {
+      document.querySelectorAll('[data-key]').forEach(container => {
         container.textContent = this.content.en[container.dataset.key];
       });
     }
@@ -37,21 +37,21 @@ class LanguageController {
   subscribeElement(selector) {
     const element = document.querySelector(selector);
     element
-      .querySelectorAll("li")
+      .querySelectorAll('li')
       .forEach(li =>
-        li.addEventListener("click", ev => this.changeLanguage(ev))
+        li.addEventListener('click', ev => this.changeLanguage(ev))
       );
     // add spans inside button
-    const btn = element.querySelector(".lang-select-button");
+    const btn = element.querySelector('.lang-select-button');
     // Set the inner HTML of the button to match the dropdown button (corresponding to the default language)
-    btn.textContent = "";
+    btn.textContent = '';
     btn.innerHTML = element.querySelector(
       `[data-lang="${this.currentLanguage}"]`
     ).innerHTML;
     this.langElements.push(element);
   }
   changeLanguage(ev) {
-    localStorage.setItem("preferred-language", ev.currentTarget.dataset.lang);
+    localStorage.setItem('preferred-language', ev.currentTarget.dataset.lang);
     this.currentLanguage = ev.currentTarget.dataset.lang;
     this.applyLangToPage();
     this.syncElements(ev);
@@ -61,10 +61,25 @@ class LanguageController {
 
     this.langElements.forEach(
       elem =>
-        (elem.querySelector(".lang-select-button").innerHTML =
+        (elem.querySelector('.lang-select-button').innerHTML =
           ev.currentTarget.innerHTML)
     );
   }
 }
 
 const languageController = new LanguageController();
+
+// In case JSON content is not fetched on initial load (this occured in a few browsers)
+
+// Wait 3.5s and try to fetch
+setTimeout(() => {
+  if (!languageController.content) languageController.applyLangToPage();
+}, 3500);
+// Wait 7s and try to fetch
+setTimeout(() => {
+  if (!languageController.content) languageController.applyLangToPage();
+}, 7000);
+// Wait 15s and refresh
+setTimeout(() => {
+  if (!languageController.content) window.location.reload();
+}, 15000);
