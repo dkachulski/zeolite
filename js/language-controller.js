@@ -4,9 +4,7 @@
 class LanguageController {
   constructor() {
     this.langElements = [];
-    this.currentLanguage =
-      localStorage.getItem("preferred-language") ||
-      navigator.language.substring(0, 2);
+    this.currentLanguage = localStorage.getItem("preferred-language") || navigator.language.substring(0, 2);
     this.content = null;
     this.changeLangCallbacks = [];
 
@@ -21,9 +19,7 @@ class LanguageController {
     const language = this.currentLanguage;
     // in preferred language does not exist in our database - fetch english
     try {
-      this.content = await fetch(`./languages/${language}.json`).then(resp =>
-        resp.json()
-      );
+      this.content = await fetch(`./languages/${language}.json`).then(resp => resp.json());
       document.querySelectorAll("[data-key]").forEach(container => {
         container.textContent = this.content[language][container.dataset.key];
       });
@@ -41,18 +37,12 @@ class LanguageController {
 
   subscribeElement(selector) {
     const element = document.querySelector(selector);
-    element
-      .querySelectorAll("li")
-      .forEach(li =>
-        li.addEventListener("click", ev => this.changeLanguage(ev))
-      );
+    element.querySelectorAll("li").forEach(li => li.addEventListener("click", ev => this.changeLanguage(ev)));
     // add spans inside button
     const btn = element.querySelector(".lang-select-button");
     // Set the inner HTML of the button to match the dropdown button (corresponding to the default language)
     btn.textContent = "";
-    btn.innerHTML = element.querySelector(
-      `[data-lang="${this.currentLanguage}"]`
-    ).innerHTML;
+    btn.innerHTML = element.querySelector(`[data-lang="${this.currentLanguage}"]`).innerHTML;
     this.langElements.push(element);
   }
   async changeLanguage(ev) {
@@ -68,9 +58,7 @@ class LanguageController {
     ev.preventDefault();
 
     this.langElements.forEach(
-      elem =>
-        (elem.querySelector(".lang-select-button").innerHTML =
-          ev.currentTarget.innerHTML)
+      elem => (elem.querySelector(".lang-select-button").innerHTML = ev.currentTarget.innerHTML)
     );
   }
 }
