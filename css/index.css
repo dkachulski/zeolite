@@ -497,6 +497,9 @@ h2 {
   font-weight: 950;
   font-size: 45px;
 }
+.blue-overlay {
+  color: rgba(83, 168, 203, 0.75);
+}
 
 @media screen and (max-width: 992px) {
   .acticvity-photo {
@@ -513,7 +516,7 @@ h2 {
 .activity-headings {
   background-color: rgba(248, 249, 250, 0.88);
   /* mix-blend-mode: hard-light; */
-  mix-blend-mode: lighten;
+  /* mix-blend-mode: lighten; */
   width: 100%;
 }
 
