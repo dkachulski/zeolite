@@ -128,12 +128,7 @@ h2 {
 
 /* -------- INFORMATION AND STATISTICS -------- */
 #fixed-photo-wrapper {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.1),
-      rgba(0, 0, 0, 0.1)
-    ),
-    url("../images/Kurdzhali.webp");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/Kurdzhali.webp");
 
   background-attachment: fixed;
   background-position: center;
@@ -152,11 +147,7 @@ h2 {
 
 /* -------- INFORMATION -------- */
 #information {
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0)
-  );
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -243,11 +234,7 @@ h2 {
 
 #products {
   min-height: 400px;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 1)
-  );
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
 
   background-position: center;
   background-size: cover;
@@ -290,31 +277,11 @@ h2 {
   align-items: center;
   justify-content: end;
 
-  background: -moz-linear-gradient(
-    top,
-    rgba(255, 255, 255, 0),
-    rgba(0, 0, 0, 0.35)
-  ); /* FF3.6+ */
-  background: -webkit-linear-gradient(
-    top,
-    rgba(255, 255, 255, 0),
-    rgba(0, 0, 0, 0.35)
-  ); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(
-    top,
-    rgba(255, 255, 255, 0),
-    rgba(0, 0, 0, 0.35)
-  ); /* Opera 11.10+ */
-  background: -ms-linear-gradient(
-    top,
-    rgba(255, 255, 255, 0),
-    rgba(0, 0, 0, 0.35)
-  ); /* IE10+ */
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0),
-    rgba(0, 0, 0, 0.35)
-  ); /* W3C */
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.35)); /* FF3.6+ */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.35)); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.35)); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.35)); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.35)); /* W3C */
 }
 
 .card-img-container {
@@ -382,31 +349,19 @@ h2 {
 }
 
 .card.card-opened .cb-1 {
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.15),
-    rgba(0, 0, 0, 0.7)
-  );
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7));
 
   background-position: center;
   background-size: cover;
 }
 .card.card-opened .cb-2 {
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.15),
-    rgba(0, 0, 0, 0.7)
-  );
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7));
 
   background-position: center;
   background-size: cover;
 }
 .card.card-opened .cb-3 {
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.15),
-    rgba(0, 0, 0, 0.7)
-  );
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7));
 
   background-position: center;
   background-size: cover;
@@ -474,34 +429,21 @@ h2 {
 }
 /* Collapesed */
 #products-container-mobile .mb-img-1:not(.collapsed) .card-body {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.15),
-      rgba(0, 0, 0, 0.7)
-    ),
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)),
     url("../images/Composition.webp");
 
   background-position: center;
   background-size: cover;
 }
 #products-container-mobile .mb-img-2:not(.collapsed) .card-body {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.15),
-      rgba(0, 0, 0, 0.7)
-    ),
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)),
     url("../images/Production\ Capacity.webp");
 
   background-position: center;
   background-size: cover;
 }
 #products-container-mobile .mb-img-3:not(.collapsed) .card-body {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.15),
-      rgba(0, 0, 0, 0.7)
-    ),
-    url("../images/Delivery.webp");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url("../images/Delivery.webp");
 
   background-position: center;
   background-size: cover;
@@ -544,13 +486,50 @@ h2 {
   transform: scale(1);
 }
 
+/* -------- ACTIVITY -------- */
+
+.acticvity-photo {
+  background: url("../images/Reactions\ and\ Activity.webp");
+  min-height: 350px;
+  background-size: cover;
+  background-position: center;
+  /* font-size: 30px; */
+  font-weight: 950;
+  font-size: 45px;
+}
+
+@media screen and (max-width: 992px) {
+  .acticvity-photo {
+    font-size: px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .acticvity-photo {
+    min-height: 300px;
+    font-size: 40px;
+  }
+}
+
+.activity-headings {
+  background-color: rgba(248, 249, 250, 0.88);
+  /* mix-blend-mode: hard-light; */
+  mix-blend-mode: lighten;
+  width: 100%;
+}
+
+.activity-button-container {
+  background-color: rgba(248, 249, 250, 0.88);
+  height: 100%;
+}
+/* Table */
+table.table-hover tbody tr:hover {
+  background-color: rgba(255, 193, 5, 0.15);
+  /* background-color: hsl(210, 17%, 95%); */
+}
+
 /* -------- FAQs -------- */
 #FAQ {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(248, 249, 250, 0),
-      rgba(248, 249, 250, 0)
-    ),
+  background-image: linear-gradient(to bottom, rgba(248, 249, 250, 0), rgba(248, 249, 250, 0)),
     url("../images/QandA.webp");
   background-position: center;
   background-repeat: no-repeat;
@@ -631,22 +610,14 @@ h2 {
   transition: all 0.5s ease;
 }
 .map-whole {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.35),
-      rgba(255, 255, 255, 0.35)
-    ),
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)),
     url("../images/bg-border.webp");
 
   background-position: center;
   background-size: cover;
 }
 .map-part1 {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0)
-    ),
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
     url("../images/sofia-border.webp");
 
   background-position: center;
@@ -654,11 +625,7 @@ h2 {
   opacity: 0;
 }
 .map-part2 {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0)
-    ),
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
     url("../images/kurdzhali-border.webp");
 
   background-position: center;

@@ -20,7 +20,7 @@
 
     <!-- Bootstrap -->
 
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <!-- Country Icons -->
     <link
@@ -135,12 +135,11 @@
                   </svg>
                 </button>
                 <div
-                  class="dropdown-menu dropdown-menu-end bg-white dropdown-menu-xl-start "
+                  class="dropdown-menu dropdown-menu-end bg-white dropdown-menu-xl-start"
                   aria-labelledby="dropdownMenuWeChat"
                   style="z-index: 2000"
                 >
-                <img src="./images/qr.webp" width="160" height="160" alt="WeChat">
-                  </li>
+                  <img src="./images/qr.webp" width="160" height="160" alt="WeChat" />
                 </div>
               </span>
               <!-- Telephone -->
@@ -432,7 +431,7 @@
       </div>
 
       <!-- -------- PRODUCTS -------- -->
-      <section class="py-5 px-3 bg-white" id="products">
+      <section class="pt-5 pb-4 pb-md-0 pt-md-5 px-3 bg-white" id="products">
         <!-- -------- PRODUCTS DESKTOP VIEW ---------->
         <div class="container-lg" id="products-container-desktop">
           <!-- Cards heading -->
@@ -443,7 +442,7 @@
               >
             </h2>
           </div>
-          <div class="row text-center g-4">
+          <div class="row text-center g-4 pb-5">
             <!-- Card 1 -->
             <div class="col-md-4 individual-card-container d-flex flex-column align-items-center justify-content-end">
               <div
@@ -542,7 +541,7 @@
           ></button>
 
           <!-- Expand Container -->
-          <div class="container-lg cards-content-container py-5 px-3">
+          <div class="container-lg cards-content-container px-3">
             <div class="product-desktop-collapse collapse w-100 clearfix mt-3" id="products-content">
               <!-- Expand Content 1 -->
               <div class="card1-content-body card-content-body">
@@ -766,6 +765,135 @@
                     best delivery option.
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------- ACTIVITY -------- -->
+      <section class="container-fluid px-0 pt-1 pb-5 py-md-5" id="activity">
+        <h2 class="text-dark text-center bg-white mb-0 mx-3">
+          <a class="text-decoration-none link-dark fw-bold pt-md-3" href="#activity" data-key="activity-container-title"
+            >DETAILED COMPOSITION</a
+          >
+        </h2>
+        <!-- Photo -->
+        <div class="acticvity-photo row px-0 my-5">
+          <div
+            class="text-center h-100 col-12 col-md-6 px-0 d-flex flex-column justify-content-start align-items-center"
+          >
+            <div class="activity-headings pt-5 pt-5 px-3">
+              <p class="px-5 pt-4" data-key="activity-clinoptilolite">56-65% clinoptilolite</p>
+
+              <p class="px-5" data-key="activity-strength">Compressive strength 120-230 kg/cm2</p>
+            </div>
+            <div class="activity-button-container w-max w-100 pb-5 pt-3">
+              <button
+                class="btn btn-warning mb-3"
+                type="button"
+                data-key="information-button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseActivity"
+                aria-expanded="false"
+                aria-controls="collapseActivity"
+              >
+                More
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="collapse pb-10 pt-3 px-3" id="collapseActivity">
+          <!-- Tables -->
+          <div class="container-lg">
+            <div class="row gx-5">
+              <div class="col-12 col-md-6">
+                <!-- Table 1 -->
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th colspan="2" data-key="table-composition-heading" scope="col" class="text-center">
+                        Chemical Composition
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>SiO<sub>2</sub></td>
+                      <td class="text-center">69.21<span class="ms-4"></span>0.50%</td>
+                    </tr>
+                    <tr>
+                      <td>Al<sub>2</sub>O<sub>3</sub></td>
+                      <td class="text-center">11.25<span class="ms-4"></span>0.50%</td>
+                    </tr>
+                    <tr>
+                      <td>Fe<sub>2</sub>O<sub>3</sub></td>
+                      <td class="text-center">2.11<span class="ms-4"></span>0.20%</td>
+                    </tr>
+                    <tr>
+                      <td>TiO<sub>2</sub></td>
+                      <td class="text-center">0.14<span class="ms-4"></span>0.05%</td>
+                    </tr>
+                    <tr>
+                      <td>CaO</td>
+                      <td class="text-center">3.61<span class="ms-4"></span>0.25%</td>
+                    </tr>
+                    <tr>
+                      <td>MgO</td>
+                      <td class="text-center">0.80<span class="ms-4"></span>0.20%</td>
+                    </tr>
+                    <tr>
+                      <td>K<sub>2</sub>O + Na<sub>2</sub>O</td>
+                      <td class="text-center">4.64<span class="ms-4"></span>0.15%</td>
+                    </tr>
+                    <tr>
+                      <td data-key="table-composition-loss">Loses at heating over 900º C</td>
+                      <td class="text-center">7.88 <span class="ms-4"></span>0.50%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-12 col-md-6">
+                <!-- Table 2 -->
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th colspan="2" data-key="table-activity-heading" scope="col" class="text-center">Activity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span data-key="table-activity-1a1">Activity (by absorbing CaO) after 30</span
+                        ><sup data-key="table-activity-1a2">th</sup>
+                        <span data-key="table-activity-1a3">day</span>
+                      </td>
+                      <td data-key="table-activity-1b" class="text-center">Min. 150 mg/g</td>
+                    </tr>
+                    <tr>
+                      <td data-key="table-activity-2a">
+                        <span data-key="table-activity-content">Content of </span>SO<sub>3</sub>
+                      </td>
+                      <td data-key="table-activity-2b" class="text-center">Max 3%</td>
+                    </tr>
+                    <tr>
+                      <td data-key="table-activity-3a">Volumetric mass</td>
+                      <td data-key="table-activity-3b" class="text-center">1.54 g/cm3</td>
+                    </tr>
+                    <tr>
+                      <td data-key="table-activity-4a">Compressive strength</td>
+                      <td data-key="table-activity-4b" class="text-center">120-230 kg/cm2</td>
+                    </tr>
+                    <tr>
+                      <td data-key="table-activity-5a">Porosity</td>
+                      <td data-key="table-activity-5b" class="text-center">38.3%</td>
+                    </tr>
+                    <tr>
+                      <td data-key="table-activity-6a">Wearing (by Deval)</td>
+                      <td data-key="table-activity-6b" class="text-center">29-40%</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
@@ -1311,46 +1439,47 @@
               </ul>
             </span>
 
-              <!-- WeChat -->
-              <span class="dropdown text-secondary bg-dark border-0 px-2 px-xxl-1 my-2 mx-1 mx-xxl-1  cursor-pointer text-decoration-none">
-                <button
-                  class="cursor-pointer dropdown-tel-btn text-secondary border-0 bg-transparent px-2 px-xxl-1 cursor-pointer text-dcoration-none"
-                  id="dropdownMenuWeChat"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  type="button"
+            <!-- WeChat -->
+            <span
+              class="dropdown text-secondary bg-dark border-0 px-2 px-xxl-0 my-2 mx-1 mx-xxl-1 cursor-pointer text-decoration-none"
+            >
+              <button
+                class="cursor-pointer dropdown-tel-btn text-secondary border-0 bg-transparent px-2 px-xxl-1 cursor-pointer text-dcoration-none"
+                id="dropdownMenuWeChat"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                type="button"
+              >
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 24 24"
-                    height="1em"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g>
-                      <path fill="none" d="M0 0h24v24H0z"></path>
-                      <path
-                        d="M5.457 18.185C3.358 16.677 2 14.4 2 11.908 2 7.323 6.475 3.6 12 3.6s10 3.723 10 8.308c0 4.584-4.475 8.307-10 8.307a11.36 11.36 0 0 1-3.272-.461c-.092-.03-.216-.03-.308-.03-.185 0-.37.06-.525.153l-2.191 1.261a.44.44 0 0 1-.185.062.342.342 0 0 1-.34-.338c0-.093.03-.154.062-.247.03-.03.308-1.046.463-1.661 0-.062.03-.154.03-.216 0-.246-.092-.43-.277-.553zm3.21-7.674c.717 0 1.285-.568 1.285-1.285 0-.718-.568-1.286-1.285-1.286-.718 0-1.285.568-1.285 1.286 0 .717.567 1.285 1.285 1.285zm6.666 0c.718 0 1.285-.568 1.285-1.285 0-.718-.567-1.286-1.285-1.286-.717 0-1.285.568-1.285 1.286 0 .717.568 1.285 1.285 1.285z"
-                      ></path>
-                    </g>
-                  </svg>
-                </button>
-                <div
-                  class="dropdown-menu dropdown-menu-end bg-white dropdown-menu-xl-start "
-                  aria-labelledby="dropdownMenuWeChat"
-                  style="z-index: 2000"
-                >
-                <img src="./images/qr.webp" width="160" height="160" alt="WeChat">
-                  </li>
-                </div>
-              </span>
+                  <g>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path
+                      d="M5.457 18.185C3.358 16.677 2 14.4 2 11.908 2 7.323 6.475 3.6 12 3.6s10 3.723 10 8.308c0 4.584-4.475 8.307-10 8.307a11.36 11.36 0 0 1-3.272-.461c-.092-.03-.216-.03-.308-.03-.185 0-.37.06-.525.153l-2.191 1.261a.44.44 0 0 1-.185.062.342.342 0 0 1-.34-.338c0-.093.03-.154.062-.247.03-.03.308-1.046.463-1.661 0-.062.03-.154.03-.216 0-.246-.092-.43-.277-.553zm3.21-7.674c.717 0 1.285-.568 1.285-1.285 0-.718-.568-1.286-1.285-1.286-.718 0-1.285.568-1.285 1.286 0 .717.567 1.285 1.285 1.285zm6.666 0c.718 0 1.285-.568 1.285-1.285 0-.718-.567-1.286-1.285-1.286-.717 0-1.285.568-1.285 1.286 0 .717.568 1.285 1.285 1.285z"
+                    ></path>
+                  </g>
+                </svg>
+              </button>
+              <div
+                class="dropdown-menu dropdown-menu-end bg-white dropdown-menu-xl-start"
+                aria-labelledby="dropdownMenuWeChat"
+                style="z-index: 2000"
+              >
+                <img src="./images/qr.webp" width="160" height="160" alt="WeChat" />
+              </div>
+            </span>
 
             <!-- Telephone -->
             <span class="bg-transparent border-0 dropdown p-0 pe-2 m-0">
               <button
-                class="dropdown-tel-btn text-secondary bg-dark border-0 px-3  px-xxl-2 my-2 mx-1 mx-xxl-2 cursor-pointer text-decoration-none"
+                class="dropdown-tel-btn text-secondary bg-dark border-0 px-3 px-xxl-2 my-2 mx-1 mx-xxl-2 cursor-pointer text-decoration-none"
                 id="dropdownMenuPhone"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
