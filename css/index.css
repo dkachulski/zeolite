@@ -498,18 +498,18 @@ h2 {
   font-size: 45px;
 }
 .blue-overlay {
-  color: rgba(83, 168, 203, 0.75);
+  color: rgba(83, 168, 203, 0.7);
 }
 
 @media screen and (max-width: 992px) {
   .acticvity-photo {
-    font-size: px;
+    font-size: 40px;
   }
 }
 @media screen and (max-width: 768px) {
   .acticvity-photo {
     min-height: 300px;
-    font-size: 40px;
+    font-size: 35px;
   }
 }
 
