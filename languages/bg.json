@@ -47,7 +47,43 @@
     "activity-strength": "Якост на натиск 120-230 кг/см2",
 
     "table-composition-heading": "ХИМИЧЕН СЪСТАВ",
-    "table-composition-loss": "Загуби при накаляване над 900ºC",
+
+    "table-composition-1a": "SiO",
+    "table-composition-1b": "2",
+    "table-composition-1c": "69.21 ± 0.50%",
+
+    "table-composition-2a": "Al",
+    "table-composition-2b": "2",
+    "table-composition-2c": "O",
+    "table-composition-2d": "3",
+    "table-composition-2e": "11.25 ± 0.50%",
+
+    "table-composition-3a": "Fe",
+    "table-composition-3b": "2",
+    "table-composition-3c": "O",
+    "table-composition-3d": "3",
+    "table-composition-3e": "2.11 ± 0.20%",
+
+    "table-composition-4a": "SO",
+    "table-composition-4b": "3",
+    "table-composition-4c": "0.14 ± 0.05%",
+
+    "table-composition-5a": "CaO",
+    "table-composition-5b": "3.61 ± 0.25%",
+
+    "table-composition-6a": "MgO",
+    "table-composition-6b": "0.80 ± 0.20%",
+
+    "table-composition-7a": "K",
+    "table-composition-7b": "2",
+    "table-composition-7c": "O + Na",
+    "table-composition-7d": "2",
+    "table-composition-7e": "O",
+    "table-composition-7f": "4.64 ± 0.15%",
+
+    "table-composition-8a": "Загуби при накаляване над 900ºC",
+    "table-composition-8b": "7.88 ± 0.50%",
+
     "table-activity-content": "Съдържание на ",
 
     "table-activity-heading": "ХИДРАВЛИЧНА АКТИВНОСТ",
@@ -65,6 +101,9 @@
     "table-activity-5b": "38.3%",
     "table-activity-6a": "Износване (по Девал)",
     "table-activity-6b": "29-40%",
+
+    "table-activity-note": "Забележка:",
+    "table-activity-note-text": "Резултати от 400 проби, направени на база на сондажи в кариерата.",
 
     "faq-container-title": "ЧЕСТО ЗАДАВАНИ ВЪПРОСИ",
     "faq-question-1": "Какво е Зеолит?",
