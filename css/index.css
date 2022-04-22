@@ -532,6 +532,16 @@ table.table-hover tbody tr:hover {
   /* background-color: hsl(210, 17%, 95%); */
 }
 
+tbody td:first-child {
+  width: 60%;
+}
+
+@media screen and (min-width: 1200px) {
+  tbody td:first-child {
+    width: unset;
+  }
+}
+
 /* -------- FAQs -------- */
 #FAQ {
   background-image: linear-gradient(to bottom, rgba(248, 249, 250, 0), rgba(248, 249, 250, 0)),

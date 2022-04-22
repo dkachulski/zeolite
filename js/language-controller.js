@@ -21,12 +21,12 @@ class LanguageController {
     try {
       this.content = await fetch(`./languages/${language}.json`).then(resp => resp.json());
       document.querySelectorAll("[data-key]").forEach(container => {
-        container.textContent = this.content[language][container.dataset.key];
+        container.innerHTML = this.content[language][container.dataset.key];
       });
     } catch {
       content = await fetch(`./languages/en.json`).then(resp => resp.json());
       document.querySelectorAll("[data-key]").forEach(container => {
-        container.textContent = this.content.en[container.dataset.key];
+        container.innerHTML = this.content.en[container.dataset.key];
       });
     }
   }
@@ -41,7 +41,7 @@ class LanguageController {
     // add spans inside button
     const btn = element.querySelector(".lang-select-button");
     // Set the inner HTML of the button to match the dropdown button (corresponding to the default language)
-    btn.textContent = "";
+    btn.innerHTML = "";
     btn.innerHTML = element.querySelector(`[data-lang="${this.currentLanguage}"]`).innerHTML;
     this.langElements.push(element);
   }

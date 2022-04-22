@@ -47,50 +47,27 @@
     "activity-strength": "Compressive strength 120-230 kg/cm2",
 
     "table-composition-heading": "CHEMICAL COMPOSITION",
-    "table-composition-1a": "SiO",
-    "table-composition-1b": "2",
-    "table-composition-1c": "69.21 ± 0.50%",
-
-    "table-composition-2a": "Al",
-    "table-composition-2b": "2",
-    "table-composition-2c": "O",
-    "table-composition-2d": "3",
-    "table-composition-2e": "11.25 ± 0.50%",
-
-    "table-composition-3a": "Fe",
-    "table-composition-3b": "2",
-    "table-composition-3c": "O",
-    "table-composition-3d": "3",
-    "table-composition-3e": "2.11 ± 0.20%",
-
-    "table-composition-4a": "SO",
-    "table-composition-4b": "3",
-    "table-composition-4c": "0.14 ± 0.05%",
-
+    "table-composition-1a": "SiO<sub>2</sub>",
+    "table-composition-1b": "69.21 ± 0.50%",
+    "table-composition-2a": "Al<sub>2</sub>O<sub>3</sub>",
+    "table-composition-2b": "11.25 ± 0.50%",
+    "table-composition-3a": "Fe<sub>2</sub>O<sub>3</sub>",
+    "table-composition-3b": "2.11 ± 0.20%",
+    "table-composition-4a": "SO<sub>3</sub>",
+    "table-composition-4b": "0.14 ± 0.05%",
     "table-composition-5a": "CaO",
     "table-composition-5b": "3.61 ± 0.25%",
-
     "table-composition-6a": "MgO",
     "table-composition-6b": "0.80 ± 0.20%",
-
-    "table-composition-7a": "K",
-    "table-composition-7b": "2",
-    "table-composition-7c": "O + Na",
-    "table-composition-7d": "2",
-    "table-composition-7e": "O",
-    "table-composition-7f": "4.64 ± 0.15%",
-
+    "table-composition-7a": "K<sub>2</sub>O + Na<sub>2</sub>O",
+    "table-composition-7b": "4.64 ± 0.15%",
     "table-composition-8a": "Loses at heating over 900ºC",
     "table-composition-8b": "7.88 ± 0.50%",
 
-    "table-activity-content": "Content of ",
-
     "table-activity-heading": "HYDRAULIC ACTIVITY",
-    "table-activity-1a1": "Activity (by absorbing CaO) after 30",
-    "table-activity-1a2": "th",
-    "table-activity-1a3": " day",
+    "table-activity-1a": "Activity (by absorbing CaO) after 30<sup>th</sup> day",
     "table-activity-1b": "208-234 mg/g",
-    "table-activity-2a": "Content of ",
+    "table-activity-2a": "Content of SO<sub>3</sub>",
     "table-activity-2b": "0.14 ± 0.05%",
     "table-activity-3a": "Volumetric mass",
     "table-activity-3b": "1.54 g/cm3",
@@ -100,7 +77,6 @@
     "table-activity-5b": "38.3%",
     "table-activity-6a": "Wearing (by Deval)",
     "table-activity-6b": "29-40%",
-
     "table-activity-note": "Note:",
     "table-activity-note-text": "Based on 400 samples throughout the quarry.",
 
