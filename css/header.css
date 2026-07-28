@@ -25,49 +25,32 @@ header .lang-select li {
 }
 
 .site-navigation-backdrop {
+  display: none;
   position: fixed;
   inset: 0;
   z-index: 1040;
   background: rgba(0, 0, 0, 0.45);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition:
-    opacity 200ms ease,
-    visibility 200ms ease;
 }
 
 .site-navigation-panel {
+  display: none;
   position: fixed;
-  top: 0;
-  right: 0;
+  inset: 0;
   z-index: 1045;
-  width: min(425px, 100vw);
+  width: 100%;
   height: 100vh;
   height: 100dvh;
   overflow-y: auto;
   overscroll-behavior: contain;
   background: var(--bs-light);
-  visibility: hidden;
-  transform: translate3d(100%, 0, 0);
-  transition:
-    transform 250ms ease,
-    visibility 250ms ease;
-  will-change: transform;
-}
-
-.site-navigation-backdrop.is-open,
-.site-navigation-panel.is-open {
-  visibility: visible;
 }
 
 .site-navigation-backdrop.is-open {
-  opacity: 1;
-  pointer-events: auto;
+  display: block;
 }
 
 .site-navigation-panel.is-open {
-  transform: translate3d(0, 0, 0);
+  display: block;
 }
 
 .site-navigation-header {
@@ -85,13 +68,6 @@ body.site-navigation-open {
   overflow: hidden;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .site-navigation-backdrop,
-  .site-navigation-panel {
-    transition: none;
-  }
-}
-
 @media screen and (max-width: 767.98px) {
   #logo-container,
   #logo-container > div:first-child {
@@ -101,13 +77,6 @@ body.site-navigation-open {
 
   .site-navigation-toggle {
     flex: 0 0 auto;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .site-navigation-panel {
-    width: 100%;
-    min-width: 250px;
   }
 }
 
@@ -126,9 +95,6 @@ body.site-navigation-open {
     width: auto;
     height: auto;
     overflow: visible;
-    visibility: visible;
-    transform: none;
-    transition: none;
     background: transparent;
   }
 

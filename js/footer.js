@@ -1,9 +1,4 @@
-// Subscribes language button
-
 document.addEventListener("DOMContentLoaded", () => {
-  // connect <select> element to language controller
-  languageController.subscribeElement("footer .lang-select");
-
   // Connect map to navigation links in footer
   document.querySelectorAll("footer .link-to-map").forEach(link =>
     link.addEventListener("click", ev => {

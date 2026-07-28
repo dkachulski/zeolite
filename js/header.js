@@ -1,14 +1,16 @@
 // Controls the responsive header navigation and language selector.
 
 document.addEventListener("DOMContentLoaded", () => {
-  languageController.subscribeElement("header .lang-select");
-
   const mobileNavigation = window.matchMedia("(max-width: 767.98px)");
   const menu = document.getElementById("navmenu");
   const menuToggle = document.getElementById("site-navigation-button");
   const menuClose = document.getElementById("site-navigation-close-button");
   const backdrop = document.getElementById("site-navigation-backdrop");
   let returnFocusTo = null;
+
+  if (!menu || !menuToggle || !menuClose || !backdrop) {
+    return;
+  }
 
   const focusableSelector = [
     "a[href]",
@@ -35,22 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
       String(mobileNavigation.matches && !shouldOpen)
     );
 
-    if ("inert" in menu) menu.inert = mobileNavigation.matches && !shouldOpen;
-
     if (shouldOpen) {
       returnFocusTo = menuToggle;
-      const focusCloseButton = () => {
+      window.setTimeout(() => {
         if (isMenuOpen()) menuClose.focus({ preventScroll: true });
-      };
-
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches)
-        window.setTimeout(focusCloseButton, 0);
-      else {
-        menu.addEventListener("transitionend", focusCloseButton, {
-          once: true,
-        });
-        window.setTimeout(focusCloseButton, 300);
-      }
+      }, 0);
     } else {
       const focusTarget = returnFocusTo;
       returnFocusTo = null;
@@ -62,9 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       )
         window.setTimeout(
           () => focusTarget.focus({ preventScroll: true }),
-          window.matchMedia("(prefers-reduced-motion: reduce)").matches
-            ? 0
-            : 250
+          0
         );
     }
   };
@@ -74,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!mobileNavigation.matches) {
       menu.removeAttribute("aria-hidden");
-      if ("inert" in menu) menu.inert = false;
     }
   };
 
