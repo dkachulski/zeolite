@@ -83,7 +83,8 @@ for (const page of pages) {
       )
         continue;
 
-      const resolvedPath = path.resolve(path.dirname(page.file), value);
+      const assetPath = value.split(/[?#]/, 1)[0];
+      const resolvedPath = path.resolve(path.dirname(page.file), assetPath);
       try {
         await access(resolvedPath);
       } catch {

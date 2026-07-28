@@ -2,6 +2,16 @@ header .lang-select li {
   cursor: pointer;
 }
 
+header {
+  position: relative;
+  z-index: 1030;
+}
+
+header .lang-select .dropdown-menu {
+  z-index: 1060;
+  max-width: calc(100vw - 2rem);
+}
+
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
@@ -108,9 +118,7 @@ body.site-navigation-open {
   header .lang-select button span:nth-child(2) {
     display: none;
   }
-}
 
-@media screen and (min-width: 993px) and (max-width: 1919.98px) {
   header .lang-select .dropdown-menu[data-bs-popper] {
     right: 0;
     left: auto;
