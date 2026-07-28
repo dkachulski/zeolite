@@ -63,9 +63,10 @@
               <!-- Menu Toggle Button -->
               <div id="nav-button-container-small-mobile">
                 <button
-                  class="navbar-toggler mx-2 mx-sm-2 mt-2 mt-sm-2"
-                  id="offcanvas-navigation-button"
+                  class="navbar-toggler site-navigation-toggle mx-2 mx-sm-2 mt-2 mt-sm-2"
+                  id="site-navigation-button"
                   type="button"
+                  aria-controls="navmenu"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
                 >
@@ -219,26 +220,30 @@
               </span>
             </div>
           </div>
-          <!-- Navigation Button -->
-          <div id="nav-button-container-above-small-mobile"></div>
           <!-- Navigation Links -->
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="navmenu" data-bs-scroll="true">
-            <div class="offcanvas-header">
-              <h4 class="offcanvas-title" id="offcanvasNavbarLabel">
+          <div class="site-navigation-backdrop" id="site-navigation-backdrop"></div>
+          <div
+            class="site-navigation-panel"
+            tabindex="-1"
+            id="navmenu"
+            aria-labelledby="site-navigation-label"
+            aria-hidden="true"
+          >
+            <div class="site-navigation-header">
+              <h4 class="site-navigation-title" id="site-navigation-label">
                 <a href="" class="navbar-brand ms-3 fw-bold"
                   ><span class="font-shadow text-warning">TRASSING.</span
                   ><span class="text-secondary font-shadow">COM</span></a
                 >
               </h4>
               <button
-                id="offcanvas-navigation-close-button"
+                id="site-navigation-close-button"
                 type="button"
                 class="btn-close text-reset"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
+                aria-label="Close navigation"
               ></button>
             </div>
-            <div class="offcanvas-body justify-content-end">
+            <div class="site-navigation-body">
               <!-- Navigation -->
               <ul class="navbar-nav ms-3">
                 <li class="nav-item my-2 me-md-3 text-nowrap">

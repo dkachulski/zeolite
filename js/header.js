@@ -1,73 +1,130 @@
-// Controls header sizing and positioning for better appearance
-// Subscribes language button
+// Controls the responsive header navigation and language selector.
 
 document.addEventListener("DOMContentLoaded", () => {
-  // connect <select> element to language controller
   languageController.subscribeElement("header .lang-select");
 
-  // change position of dropdown depending on width of screen (so it looks nice, but it does not come off screen)
-  const resizeObserver = new ResizeObserver(entries => {
-    for (let entry of entries) {
-      const width = entry.contentBoxSize[0].inlineSize;
-      if (width > 992 && width < 1920)
-        document
-          .querySelector("header .lang-select .dropdown-menu")
-          .classList.add("dropdown-menu-end");
-      else
-        document
-          .querySelector("header .lang-select .dropdown-menu")
-          .classList.remove("dropdown-menu-end");
+  const mobileNavigation = window.matchMedia("(max-width: 767.98px)");
+  const menu = document.getElementById("navmenu");
+  const menuToggle = document.getElementById("site-navigation-button");
+  const menuClose = document.getElementById("site-navigation-close-button");
+  const backdrop = document.getElementById("site-navigation-backdrop");
+  let returnFocusTo = null;
 
-      // move navigation button on mobile in a different position not to clash with social buttons
-      const button = document.getElementById("offcanvas-navigation-button");
-      if (width <= 576) {
-        const smParent = document.getElementById(
-          "nav-button-container-small-mobile"
-        );
-        if (button.parentElement !== smParent) smParent.appendChild(button);
-        document.getElementById("logo-container").style.width = "100%";
-      } else {
-        const lgParent = document.getElementById(
-          "nav-button-container-above-small-mobile"
-        );
-        if (button.parentElement !== lgParent) lgParent.appendChild(button);
-        document.getElementById("logo-container").style.width = "unset";
+  const focusableSelector = [
+    "a[href]",
+    "button:not([disabled])",
+    "[tabindex]:not([tabindex='-1'])",
+  ].join(",");
+
+  const getVisibleFocusableElements = () =>
+    [...menu.querySelectorAll(focusableSelector)].filter(
+      element => element.getClientRects().length > 0
+    );
+
+  const isMenuOpen = () => menu.classList.contains("is-open");
+
+  const setMenuState = (open, restoreFocus = true) => {
+    const shouldOpen = open && mobileNavigation.matches;
+
+    menu.classList.toggle("is-open", shouldOpen);
+    backdrop.classList.toggle("is-open", shouldOpen);
+    document.body.classList.toggle("site-navigation-open", shouldOpen);
+    menuToggle.setAttribute("aria-expanded", String(shouldOpen));
+    menu.setAttribute(
+      "aria-hidden",
+      String(mobileNavigation.matches && !shouldOpen)
+    );
+
+    if ("inert" in menu) menu.inert = mobileNavigation.matches && !shouldOpen;
+
+    if (shouldOpen) {
+      returnFocusTo = menuToggle;
+      const focusCloseButton = () => {
+        if (isMenuOpen()) menuClose.focus({ preventScroll: true });
+      };
+
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+        window.setTimeout(focusCloseButton, 0);
+      else {
+        menu.addEventListener("transitionend", focusCloseButton, {
+          once: true,
+        });
+        window.setTimeout(focusCloseButton, 300);
       }
+    } else {
+      const focusTarget = returnFocusTo;
+      returnFocusTo = null;
+
+      if (
+        restoreFocus &&
+        focusTarget &&
+        document.contains(focusTarget)
+      )
+        window.setTimeout(
+          () => focusTarget.focus({ preventScroll: true }),
+          window.matchMedia("(prefers-reduced-motion: reduce)").matches
+            ? 0
+            : 250
+        );
+    }
+  };
+
+  const syncNavigationMode = () => {
+    setMenuState(false, false);
+
+    if (!mobileNavigation.matches) {
+      menu.removeAttribute("aria-hidden");
+      if ("inert" in menu) menu.inert = false;
+    }
+  };
+
+  menuToggle.addEventListener("click", () => setMenuState(!isMenuOpen()));
+  menuClose.addEventListener("click", () => setMenuState(false));
+  backdrop.addEventListener("click", () => setMenuState(false));
+
+  document.addEventListener("keydown", event => {
+    if (!isMenuOpen()) return;
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+      setMenuState(false);
+      return;
+    }
+
+    if (event.key !== "Tab") return;
+
+    const focusableElements = getVisibleFocusableElements();
+    if (!focusableElements.length) return;
+
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+
+    if (event.shiftKey && document.activeElement === firstElement) {
+      event.preventDefault();
+      lastElement.focus();
+    } else if (!event.shiftKey && document.activeElement === lastElement) {
+      event.preventDefault();
+      firstElement.focus();
     }
   });
-  resizeObserver.observe(document.querySelector("header"));
 
-  // Connect map to navigation links in header
-  document.querySelectorAll("header .link-to-map").forEach(link =>
-    link.addEventListener("click", ev => {
-      const mapArea = ev.target.dataset.mapArea;
-      // click on map if not clicked
-      document
-        .querySelector(`.map-pin.fill.map-pin${mapArea}:not(.clicked)`)
-        ?.click();
-    })
-  );
-  // Close OffCanvas Button to be clicked on mobile when clicked to navigation to scroll down
-  let timer;
   document.querySelectorAll("header .nav-link").forEach(link => {
-    link.addEventListener("click", () => {
-      clearTimeout(timer);
-      timer = setTimeout(() => {
-        document.getElementById("offcanvas-navigation-close-button").click();
-      }, 600);
-      timer();
+    link.addEventListener("click", event => {
+      const mapArea = event.currentTarget.dataset.mapArea;
+
+      if (mapArea) {
+        document
+          .querySelector(`.map-pin.fill.map-pin${mapArea}:not(.clicked)`)
+          ?.click();
+      }
+
+      setMenuState(false, false);
     });
   });
 
-  // Navigation menu prevent scrolling up
-  const myOffcanvas = document.getElementById("navmenu");
-  const bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);
-  const offCanvasButton = document.querySelector(
-    "#offcanvas-navigation-button"
-  );
-  offCanvasButton.addEventListener("click", function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    bsOffcanvas.toggle();
-  });
+  if (typeof mobileNavigation.addEventListener === "function")
+    mobileNavigation.addEventListener("change", syncNavigationMode);
+  else mobileNavigation.addListener(syncNavigationMode);
+
+  syncNavigationMode();
 });
