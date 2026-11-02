@@ -57,8 +57,14 @@ npm run icons    # favicons, home-screen icon and og-image.jpg, after changing
   browsers without AV1), favicons, `og-image.jpg`, `robots.txt`,
   `site.webmanifest` and `CNAME`.
 
-## Deploying
+## Branches and deploying
 
-Pushing to `main` builds the site and publishes `dist/` to GitHub Pages
-(`.github/workflows/deploy.yml`). In the repository settings, Pages must use
-**GitHub Actions** as its source.
+- `source` — this code. Work here (or in branches merged into it).
+- `main` — the built site only, which GitHub Pages serves as plain files on
+  trassing.com. It is generated; never edit it.
+
+Every push to `source` runs `.github/workflows/deploy.yml`: it builds the site
+and commits `dist/` to `main` (with `.nojekyll`, so Pages serves it as is),
+and Pages publishes it within a minute or two. To redeploy without changes,
+run the workflow from the Actions tab. To roll back, revert the bad commit on
+`source`, or revert the last deploy commit on `main`.

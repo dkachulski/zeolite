@@ -1,32 +1,58 @@
-name: Deploy to GitHub Pages
+# Builds the site from this branch (the Astro source) and commits the output
+# to main, which GitHub Pages serves as plain files (trassing.com). Main
+# holds only the build; never edit it by hand, push to this branch instead.
+name: Build and deploy to main
 
 on:
   push:
-    branches: [main]
+    branches: [source]
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
+  group: deploy
   cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: withastro/action@v4
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Commit the build to main
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          git fetch --depth=1 origin main
+          git worktree add --detach ../site FETCH_HEAD
+          cd ../site
+          git rm -rq --ignore-unmatch .
+          cp -a "$GITHUB_WORKSPACE/dist/." .
+          cat > README.md <<README
+          # trassing.com (built site)
+
+          This branch is generated: GitHub Pages serves it as the site. The
+          source is on the [\`source\`](https://github.com/dkachulski/zeolite/tree/source) branch; every push
+          there rebuilds the site and commits it here. Do not edit this branch.
+
+          Built from source@${SOURCE_SHA::7}.
+          README
+          git add -A
+          if git diff --cached --quiet; then
+            echo "The build is unchanged; nothing to deploy."
+            exit 0
+          fi
+          git -c user.name="github-actions[bot]" \
+              -c user.email="41898299+github-actions[bot]@users.noreply.github.com" \
+              commit -q -m "Deploy source@${SOURCE_SHA::7}"
+          git push origin HEAD:main
