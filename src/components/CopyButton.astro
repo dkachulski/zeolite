@@ -1,0 +1,31 @@
+---
+/**
+ * Copy control in the contact dropdowns: just the icon, no button frame. A tooltip says "Copy" on
+ * hover and keyboard focus; after a copy the icon becomes a green check and
+ * the tooltip says "Copied!" for two seconds (also on touch screens). The
+ * button is a fixed square and the tooltip floats above it, so nothing
+ * moves. Screen readers get "Copy <value>" and hear "Copied!" (site.ts).
+ */
+import Icon from "./Icon.astro";
+import { useTranslations, type Locale } from "../i18n";
+
+interface Props {
+  locale: Locale;
+  value: string;
+}
+
+const { locale, value } = Astro.props;
+const t = useTranslations(locale);
+---
+
+<button
+  type="button"
+  class="copy-btn ms-3 text-secondary"
+  data-copy={value}
+  data-copied-message={t("copied")}
+  aria-label={`${t("copy")} ${value}`}
+  ><Icon name="copy" class="copy-icon" /><Icon name="check-lg" class="copied-icon" /><span
+    class="copy-tip"
+    aria-hidden="true"><span class="tip-copy">{t("copy")}</span><span class="tip-copied">{t("copied")}</span></span
+  ></button
+>

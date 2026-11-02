@@ -1,0 +1,138 @@
+---
+/**
+ * The WeChat, telephone and email dropdowns shown with the social links in
+ * the header and the footer. Markup and spacing follow each original.
+ */
+import Icon from "./Icon.astro";
+import WeChatIcon from "./WeChatIcon.astro";
+import QrCode from "./QrCode.astro";
+import CopyButton from "./CopyButton.astro";
+import { useTranslations, type Locale } from "../i18n";
+
+interface Props {
+  locale: Locale;
+  variant: "header" | "footer";
+}
+
+const { locale, variant } = Astro.props;
+const t = useTranslations(locale);
+const header = variant === "header";
+const tel1 = t("contact-telephone-text-1");
+const tel2 = t("contact-telephone-text-2");
+const email = t("contact-email-text-1");
+const telHref = (value: string) => `tel:${value.replace(/\s+/g, "")}`;
+const menuPosition = header ? { "data-static": "" } : {};
+const footerButton = "text-secondary bg-dark border-0 px-4 2xl:px-2 my-2 mx-1 2xl:mx-2";
+---
+
+{
+  header ? (
+    <>
+      <span class="dropdown p-0 me-1 my-2 sm:ms-2 sm:me-1" data-dropdown>
+        <button
+          class="text-secondary border-0 bg-transparent px-1 py-2 2xl:ps-2 mx-0"
+          data-dropdown-toggle
+          aria-expanded="false"
+          aria-label="WeChat"
+          type="button"
+        >
+          <WeChatIcon />
+        </button>
+        <div class="dropdown-menu dropdown-menu-end dropdown-menu-xl-start bg-white z-[2000]" {...menuPosition}>
+          <QrCode />
+        </div>
+      </span>
+      <span class="dropdown p-0 mx-1 my-2 sm:mx-2" data-dropdown>
+        <button
+          class="text-secondary border-0 bg-transparent p-2 me-1 2xl:mx-2"
+          data-dropdown-toggle
+          aria-expanded="false"
+          aria-label={t("contact-telephone-title").replace(/:$/, "")}
+          type="button"
+        >
+          <Icon name="telephone" />
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-xl-start bg-light py-2 z-[2000]" {...menuPosition}>
+          <li class="mx-4 flex items-center mb-4">
+            <a class="tel-link link-primary whitespace-nowrap" title="Call" href={telHref(tel1)}>{tel1}</a>
+            <CopyButton locale={locale} value={tel1} />
+          </li>
+          <li class="mx-4 flex items-center">
+            <a class="tel-link link-primary whitespace-nowrap" title="Call" href={telHref(tel2)}>{tel2}</a>
+            <CopyButton locale={locale} value={tel2} />
+          </li>
+        </ul>
+      </span>
+      <span class="dropdown p-0 m-0" data-dropdown>
+        <button
+          class="bg-transparent border-0 text-secondary p-2 mx-1 my-2 sm:mx-2"
+          data-dropdown-toggle
+          aria-expanded="false"
+          aria-label={t("contact-email-title").replace(/:$/, "")}
+          type="button"
+        >
+          <Icon name="envelope" />
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-xl-start bg-light z-[2000]" {...menuPosition}>
+          <li class="mx-4 flex items-center">
+            <a class="link-primary mail-link whitespace-nowrap" title="Send email" href={`mailto:${email}`}>{email}</a>
+            <CopyButton locale={locale} value={email} />
+          </li>
+        </ul>
+      </span>
+    </>
+  ) : (
+    <>
+      <span class="dropdown p-0 m-0" data-dropdown>
+        <button
+          class={footerButton}
+          data-dropdown-toggle
+          aria-expanded="false"
+          aria-label={t("contact-email-title").replace(/:$/, "")}
+          type="button"
+        >
+          <Icon name="envelope" />
+        </button>
+        <ul class="dropdown-menu bg-light border-0 dropdown-menu-end dropdown-menu-xl-start z-[2000]">
+          <li class="mx-4 flex items-center bg-light border-0">
+            <a class="mail-link link-primary border-0 whitespace-nowrap" title="Send email" href={`mailto:${email}`}>{email}</a>
+            <CopyButton locale={locale} value={email} />
+          </li>
+        </ul>
+      </span>
+      <span class="dropdown text-secondary bg-dark px-2 2xl:px-0 my-2 mx-1" data-dropdown>
+        <button
+          class="text-secondary border-0 bg-transparent px-2 2xl:px-1"
+          data-dropdown-toggle
+          aria-expanded="false"
+          aria-label="WeChat"
+          type="button"
+        >
+          <WeChatIcon />
+        </button>
+        <div class="dropdown-menu dropdown-menu-end bg-white dropdown-menu-xl-start z-[2000]"><QrCode /></div>
+      </span>
+      <span class="dropdown p-0 pe-2 m-0" data-dropdown>
+        <button
+          class={footerButton}
+          data-dropdown-toggle
+          aria-expanded="false"
+          aria-label={t("contact-telephone-title").replace(/:$/, "")}
+          type="button"
+        >
+          <Icon name="telephone" />
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-xl-start bg-light py-2 z-[2000]">
+          <li class="mx-4 flex items-center bg-light mb-4">
+            <a class="tel-link whitespace-nowrap" title="Call" href={telHref(tel1)}>{tel1}</a>
+            <CopyButton locale={locale} value={tel1} />
+          </li>
+          <li class="mx-4 flex items-center bg-light">
+            <a class="tel-link whitespace-nowrap" title="Call" href={telHref(tel2)}>{tel2}</a>
+            <CopyButton locale={locale} value={tel2} />
+          </li>
+        </ul>
+      </span>
+    </>
+  )
+}

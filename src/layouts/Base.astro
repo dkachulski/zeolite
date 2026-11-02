@@ -1,0 +1,83 @@
+---
+import "../styles/global.css";
+import { locales, useTranslations, type Locale } from "../i18n";
+import { SITE, structuredData } from "../seo/structured-data";
+import { FAQ_ITEMS } from "../i18n/faq";
+import { HERO_SIZES, heroImages } from "../components/hero-image";
+import deferredFonts from "../styles/fonts-deferred.css?inline";
+import latin400 from "../assets/fonts/roboto-latin-400-normal.woff2?url";
+import latin700 from "../assets/fonts/roboto-latin-700-normal.woff2?url";
+import cyrillic400 from "../assets/fonts/roboto-cyrillic-400-normal.woff2?url";
+import cyrillic700 from "../assets/fonts/roboto-cyrillic-700-normal.woff2?url";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const site = SITE;
+const config = locales[locale];
+const other = locale === "en" ? locales.bg : locales.en;
+const url = `${site}${config.route}`;
+const ogImage = `${site}/og-image.jpg`;
+const hero = await heroImages();
+const jsonLd = JSON.stringify(structuredData({ locale, url, t, faqCount: FAQ_ITEMS.length }));
+// The fonts of the first screen. The English page needs Cyrillic regular
+// too, for "Български" in the language menu.
+const fonts = locale === "bg" ? [latin400, latin700, cyrillic400, cyrillic700] : [latin400, latin700, cyrillic400];
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script is:inline>document.documentElement.classList.add("js")</script>
+    <title>{t("page-title")}</title>
+    <meta name="description" content={t("meta-description")} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href={url} />
+    <link rel="alternate" hreflang="en" href={`${site}/`} />
+    <link rel="alternate" hreflang="bg" href={`${site}/bg/`} />
+    <link rel="alternate" hreflang="x-default" href={`${site}/`} />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#f8f9fa" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="TRASSING.COM" />
+    <meta property="og:title" content={t("meta-og-title")} />
+    <meta property="og:description" content={t("meta-description")} />
+    <meta property="og:url" content={url} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={t("meta-og-image-alt")} />
+    <meta property="og:locale" content={config.ogLocale} />
+    <meta property="og:locale:alternate" content={other.ogLocale} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@trassingcom" />
+    <meta name="twitter:title" content={t("meta-og-title")} />
+    <meta name="twitter:description" content={t("meta-description")} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={t("meta-og-image-alt")} />
+    <meta name="msvalidate.01" content="B65B561E595E70A5F97DA6B72A0266B7" />
+    <script type="application/ld+json" set:html={jsonLd} />
+    <link rel="preload" as="image" type="image/avif" imagesrcset={hero.avif} imagesizes={HERO_SIZES} fetchpriority="high" />
+    {fonts.map(href => <link rel="preload" as="font" type="font/woff2" href={href} crossorigin />)}
+    <!-- site.ts adds the other font weights after load; without JavaScript, here. -->
+    <noscript><style set:html={deferredFonts}></style></noscript>
+  </head>
+  <body class="fs-6" data-page-language={locale}>
+    <slot />
+    <script>
+      import "../scripts/site.ts";
+    </script>
+  </body>
+</html>

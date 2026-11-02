@@ -1,0 +1,28 @@
+---
+/**
+ * A brand mark ("TRASSING.COM" or the footer's "@ trassing.com") as SVG text
+ * in the page's own Roboto, sized from brand-glyphs.json (made by
+ * scripts/build-logo.mjs) and sitting on the text baseline, so it takes the
+ * place of the HTML text it replaces exactly. It inherits the font size,
+ * weight and colour; each part can take its own classes (colour, shadow).
+ */
+import glyphs from "./brand-glyphs.json";
+
+interface Props {
+  name: keyof typeof glyphs;
+  /** Classes for each part, in order. */
+  parts?: string[];
+  class?: string;
+}
+
+const { name, parts = [], class: className } = Astro.props;
+const glyph = glyphs[name];
+const em = (units: number) => `${Math.round((units / glyph.unitsPerEm) * 10000) / 10000}em`;
+const style = `width:${em(glyph.width)};height:${em(glyph.ascent + glyph.descent)};vertical-align:-${em(glyph.descent)}`;
+---
+
+<svg class:list={["brand-text", className]} role="img" aria-label={glyph.parts.join("")} style={style}
+  ><text y={em(glyph.ascent)}
+    >{glyph.parts.map((part, index) => <tspan class={parts[index]}>{part}</tspan>)}</text
+  ></svg
+>

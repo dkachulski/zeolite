@@ -1,0 +1,68 @@
+---
+import { useTranslations, type Locale } from "../i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const t = useTranslations(Astro.props.locale);
+const facts = ["statistics-text-3", "statistics-text-4", "statistics-text-5", "statistics-text-6", "statistics-text-7"];
+---
+
+<div class="m-0" id="fixed-photo-wrapper" data-lazy-bg>
+  <!-- -------- INFORMATION -------- -->
+  <section class="text-center overflow-hidden" id="information">
+    <h2 class="text-dark text-center pb-12 pt-2 bg-white mb-0">
+      <a class="no-underline link-dark font-bold pt-4" href="#information" set:html={t("information-container-title")} />
+    </h2>
+    <div class="container-fluid m-0 p-0 h-full" id="information-container">
+      <div class="flex flex-wrap -mx-3 h-full">
+        <div class="w-full max-w-full shrink-0 md:flex-[0_0_auto] md:w-1/2 mx-0 px-0 flex flex-col h-full" id="information-text-container">
+          <p class="w-full m-0" set:html={t("information-text-1")} />
+          <p class="w-full m-0" set:html={t("information-text-2")} />
+          <p class="w-full m-0" set:html={t("information-text-3")} />
+        </div>
+        <div class="flex-[1_0_0%] w-full max-w-full shrink-0 flex flex-col items-center justify-center mx-0 p-12 px-0" id="information-text-container-2">
+          <div class="flex-[1_0_0%] mx-0 flex flex-col text-light fs-4 items-center justify-center py-2 px-4 md:px-12 stats-half-small">
+            <p class="px-4" set:html={t("information-text-long")} />
+            <a href="#statistics" class="btn btn-warning mt-6" set:html={t("information-button")} />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- -------- STATISTICS -------- -->
+  <section id="statistics">
+    <h2 class="text-dark text-center py-12 bg-white mb-0">
+      <a class="no-underline link-dark font-bold pt-4" href="#statistics" set:html={t("statistics-container-title")} />
+    </h2>
+    <div class="container-fluid mt-0" id="statistics-container">
+      <div class="flex flex-wrap -mx-3 text-center">
+        <div class="w-full m-0 p-0">
+          <div class="flex flex-col-reverse md:flex-row">
+            <div
+              class="mx-0 flex flex-col stats-half stats-half-small text-light fs-4 items-center justify-center px-4 py-12"
+              id="statistics-text-container-2"
+            >
+              <ul>
+                {facts.map(key => <li class="my-1" set:html={t(key)} />)}
+              </ul>
+              <a href="#products" class="btn btn-warning mt-6" set:html={t("statistics-buttton")} />
+            </div>
+            <div class="flex flex-col stats-half h-full" id="statistics-text-container">
+              <p class="m-0 px-4">
+                <span class="m-0 p-0" id="counter-1" data-counter="375000" data-duration="2000">375000</span>
+                <span class="m-0 p-0" set:html={t("statistics-text-1")} />
+              </p>
+              <p class="m-0 px-4">
+                <span class="m-0 p-0" id="counter-2" data-counter="1200" data-duration="1000">1200</span>
+                <span class="m-0 p-0" set:html={t("statistics-text-2")} />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

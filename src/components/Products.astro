@@ -1,0 +1,138 @@
+---
+import { Picture } from "astro:assets";
+import Icon from "./Icon.astro";
+import composition from "../assets/composition.webp";
+import capacity from "../assets/production-capacity.webp";
+import delivery from "../assets/delivery.webp";
+import { useTranslations, type Locale } from "../i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const t = useTranslations(Astro.props.locale);
+const products = [
+  { n: 1, image: composition, id: "card-flush-collapseOne", detailPadding: "py-6" },
+  { n: 2, image: capacity, id: "card-flush-collapseTwo", detailPadding: "py-12" },
+  { n: 3, image: delivery, id: "card-flush-collapseThree", detailPadding: "py-12" },
+];
+const arrowButton = "fs-2 text-warning px-4 card-button bg-transparent border-0";
+---
+
+<section class="pt-12 pb-6 md:pb-0 px-4 bg-white" id="products" data-lazy-bg>
+  <!-- -------- DESKTOP -------- -->
+  <div class="container-lg" id="products-container-desktop">
+    <div class="flex flex-wrap -mx-3 text-center pb-12">
+      <h2 class="w-full shrink-0 px-3 text-dark mb-0 fs-1">
+        <a class="no-underline link-dark" href="#products" set:html={t("products-container-title")} />
+      </h2>
+    </div>
+    <div class="flex flex-wrap -mx-3 -mt-6 text-center pb-12">
+      {
+        products.map(product => (
+          <div class="w-full max-w-full shrink-0 px-3 mt-6 md:flex-[0_0_auto] md:w-1/3 individual-card-container flex flex-col items-center justify-end">
+            <div
+              class="card shadow-bs flex flex-col items-center justify-end"
+              data-cardnumber={`card${product.n}`}
+              aria-expanded="false"
+              aria-controls="products-content"
+              role="button"
+            >
+              <div class="card-img-container">
+                <Picture
+                  src={product.image}
+                  formats={["avif"]}
+                  fallbackFormat="webp"
+                  widths={[480, product.image.width]}
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  class="card-img-top"
+                  alt={t(`product-${product.n}-alt`)}
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body text-white">
+                <h3 class="card-title fs-5" set:html={t(`product-${product.n}-title`)} />
+                <div class="container-bs card-button">
+                  <button type="button" class={arrowButton} aria-label={t(`product-${product.n}-title`)}>
+                    <Icon name="arrow-down-square" class="icon-closed" />
+                    <Icon name="arrow-down-square-fill" class="icon-opened" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <!-- -------- DESKTOP DETAILS PANEL -------- -->
+  <div id="products-container-desktop-dropdown">
+    <div class="container-lg cards-content-container px-4">
+      <div class="collapse w-full mt-4" id="products-content">
+        {
+          products.map(product => (
+            <div class={`card${product.n}-content-body card-content-body`}>
+              <div class="flex items-center justify-start">
+                <div class={`products-desktop-collapse-img img-${product.n} ${product.detailPadding} rounded-bs border border-line`}>
+                  <div class="products-desktop-collapse-body bg-light rounded-bs shadow-bs border border-line p-12 my-4">
+                    <h4 class="mb-6" set:html={t(`product-${product.n}-title`)} />
+                    <p set:html={t(`product-${product.n}-text`)} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- -------- MOBILE -------- -->
+  <div class="container-lg" id="products-container-mobile">
+    <div>
+      <h2 class="text-dark text-center mb-12">
+        <a class="no-underline link-dark" href="#products" set:html={t("products-container-title")} />
+      </h2>
+    </div>
+    <div class="accordion-flush flex flex-col" id="cardAccordionFlush">
+      {
+        products.map(product => (
+          <div class="accordion-item mb-6">
+            {/* The third card's wrapper also carries the image class, as in the original. */}
+            <div
+              class:list={[
+                "individual-card-container shadow-bs text-center overflow-hidden rounded-bs",
+                product.n === 3 && "mb-img mb-img-3",
+              ]}
+            >
+              <div
+                data-collapse-target={`#${product.id}`}
+                aria-expanded="false"
+                aria-controls={product.id}
+                class={`card mb-img mb-img-${product.n} shadow-none rounded-none bg-transparent`}
+                role="button"
+              >
+                <div class="card-body text-white flex flex-col justify-end pb-4 sm:pb-6 text-center">
+                  <h3 class="card-title fs-5 bg-transparent" set:html={t(`product-${product.n}-title`)} />
+                  <div class="container-bs card-button text-center">
+                    <button class={arrowButton} type="button" aria-label={t(`product-${product.n}-title`)}>
+                      <Icon name="arrow-down-square" class="icon-closed" />
+                      <Icon name="arrow-down-square-fill" class="icon-opened" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id={product.id} class="accordion-collapse collapse" data-parent="#cardAccordionFlush">
+              <div class="accordion-body p-6 sm:p-12 my-4 bg-light shadow-bs border border-line rounded-bs">
+                <h3 class="mb-4 sm:mb-6" set:html={t(`product-${product.n}-title`)} />
+                <p set:html={t(`product-${product.n}-text`)} />
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

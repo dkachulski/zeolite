@@ -1,0 +1,51 @@
+---
+import { locales, useTranslations, type Locale } from "../i18n";
+
+interface Props {
+  locale: Locale;
+  /** "header" menus sit in the navbar and are positioned by CSS. */
+  variant: "header" | "footer";
+}
+
+const { locale, variant } = Astro.props;
+const t = useTranslations(locale);
+const current = locales[locale];
+const footer = variant === "footer";
+---
+
+<div
+  class:list={["lang-select relative inline-flex align-middle", footer ? "text-warning mt-2 mx-4" : "my-2"]}
+  data-dropdown
+>
+  <button
+    aria-label={`${t("language-select-label")}: ${current.name}`}
+    type="button"
+    class:list={["btn dropdown-toggle lang-select-button relative flex-auto", { "btn-dark": footer }]}
+    data-dropdown-toggle
+    aria-expanded="false"
+  >
+    <span class={`flag-icon flag-icon-${current.flag}`}></span><span> {current.name}</span>{" "}
+  </button>
+  <ul
+    class:list={["dropdown-menu lang-select-ul", { "dropdown-menu-dark": footer }]}
+    data-static={footer ? undefined : ""}
+    data-offset="8"
+  >
+    {
+      (Object.keys(locales) as Locale[]).map(code => (
+        <li class:list={{ active: code === locale }}>
+          <a
+            class="dropdown-item"
+            href={locales[code].route}
+            hreflang={code}
+            lang={code}
+            data-language-link={code}
+            aria-current={code === locale ? "page" : undefined}
+          >
+            <span class={`flag-icon flag-icon-${locales[code].flag}`} /><span> {locales[code].name}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

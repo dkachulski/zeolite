@@ -1,0 +1,118 @@
+---
+import Icon from "./Icon.astro";
+import BrandText from "./BrandText.astro";
+import ContactMenus from "./ContactMenus.astro";
+import LangSelect from "./LangSelect.astro";
+import { locales, useTranslations, type Locale } from "../i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const home = locales[locale].route;
+
+const navigation = [
+  { href: "#products", key: "navigation-products" },
+  { href: "#customer-support", key: "navigation-customer-support", mapArea: "1" },
+  { href: "#quarry", key: "navigation-quarry-site", mapArea: "2" },
+  { href: "#contact", key: "navigation-contact" },
+];
+---
+
+<header class="bg-light shadow-bs">
+  <nav
+    class="relative flex flex-wrap md:flex-nowrap items-center justify-between md:justify-start py-2 bg-light"
+    id="header-navigation"
+  >
+    <div
+      class="container-fluid flex flex-wrap md:flex-nowrap items-center justify-between min-w-0 py-2 md:flex-col xl:flex-row 2xl:px-12"
+    >
+      <!-- Logo -->
+      <div class="flex self-stretch md:justify-between flex-col md:flex-row md:items-center" id="logo-container">
+        <div class="flex justify-between">
+          <a href={home} id="site-logo" class="navbar-brand ms-4 xl:ms-2 md:me-0 xl:me-2 text-warning font-bold"
+            ><BrandText name="logo" parts={["font-shadow", "text-secondary font-shadow"]} /></a
+          >
+          <div id="nav-button-container-small-mobile">
+            <button
+              class="navbar-toggler site-navigation-toggle mx-2 mt-2"
+              id="site-navigation-button"
+              type="button"
+              aria-controls="navmenu"
+              aria-expanded="false"
+              aria-label={t("navigation-open-label")}
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+        <!-- Social Links -->
+        <div
+          class="header-text text-secondary flex justify-evenly items-center ms-1 lg:ms-0 2xl:ms-2 mb-0 fs-6"
+          id="header-social-desktop"
+        >
+          <a
+            href="https://www.instagram.com/trassingcom/"
+            title="Instagram"
+            target="_blank"
+            rel="noopener"
+            class="link-secondary py-2 px-0 2xl:px-2 me-1 my-2 sm:mx-2 xl:mx-1 2xl:mx-2"><Icon name="instagram" /></a
+          >
+          <a
+            href="https://www.twitter.com/trassingcom/"
+            title="Twitter"
+            target="_blank"
+            rel="noopener"
+            class="link-secondary p-2 mx-1 my-2 sm:mx-2 xl:mx-1 2xl:mx-2"><Icon name="twitter" /></a
+          >
+          <a
+            href="https://www.facebook.com/trassingcom/"
+            title="Facebook"
+            target="_blank"
+            rel="noopener"
+            class="link-secondary p-2 mx-1 my-2 sm:mx-2"><Icon name="facebook" /></a
+          >
+          <a
+            href="https://www.linkedin.com/company/trassingcom"
+            title="LinkedIn"
+            target="_blank"
+            rel="noopener"
+            class="link-secondary p-2 mx-1 my-2 sm:mx-2"><Icon name="linkedin" /></a
+          >
+          <ContactMenus locale={locale} variant="header" />
+        </div>
+      </div>
+      <!-- Navigation Links -->
+      <div class="site-navigation-backdrop" id="site-navigation-backdrop"></div>
+      <div class="site-navigation-panel" tabindex="-1" id="navmenu" aria-labelledby="site-navigation-label">
+        <div class="site-navigation-header">
+          <h4 class="site-navigation-title" id="site-navigation-label">
+            <a href={home} class="navbar-brand ms-4 font-bold text-[rgba(0,0,0,0.9)]"
+              ><BrandText name="logo" parts={["font-shadow text-warning", "text-secondary font-shadow"]} /></a
+            >
+          </h4>
+          <button
+            id="site-navigation-close-button"
+            type="button"
+            class="btn-close text-inherit"
+            aria-label={t("navigation-close-label")}></button>
+        </div>
+        <div class="site-navigation-body">
+          <ul class="navbar-nav flex flex-col md:flex-row ps-0 mb-0 list-none ms-4">
+            {
+              navigation.map(item => (
+                <li class="my-2 md:me-4 whitespace-nowrap">
+                  <a href={item.href} class="nav-link fs-6" data-map-area={item.mapArea} set:html={t(item.key)} />
+                </li>
+              ))
+            }
+          </ul>
+          <hr />
+          <LangSelect locale={locale} variant="header" />
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

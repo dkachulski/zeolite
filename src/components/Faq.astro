@@ -1,0 +1,47 @@
+---
+import { useTranslations, type Locale } from "../i18n";
+import { FAQ_ITEMS } from "../i18n/faq";
+
+interface Props {
+  locale: Locale;
+}
+
+const t = useTranslations(Astro.props.locale);
+const items = FAQ_ITEMS;
+---
+
+<section id="FAQ" data-lazy-bg class="container-fluid mx-0 px-0 bg-light-2 py-12">
+  <div class="pb-12 px-4">
+    <h2 class="text-dark text-center">
+      <a class="no-underline link-dark" href="#FAQ" set:html={t("faq-container-title")} />
+    </h2>
+  </div>
+  <div class="accordion-flush px-4 md:px-6 py-6 m-auto shadow-bs border border-line rounded-bs" id="FAQAccordionFlush">
+    {
+      items.map((name, index) => (
+        <div class="accordion-item bg-light-2">
+          <h3 class="accordion-header bg-light-2" id={`flush-heading${name}`}>
+            <button
+              class="accordion-button collapsed bg-light-2 font-bold"
+              type="button"
+              data-collapse-target={`#flush-collapse${name}`}
+              aria-expanded="false"
+              aria-controls={`flush-collapse${name}`}
+              set:html={t(`faq-question-${index + 1}`)}
+            />
+          </h3>
+          <div
+            id={`flush-collapse${name}`}
+            class="accordion-collapse collapse bg-light-2"
+            aria-labelledby={`flush-heading${name}`}
+            data-parent="#FAQAccordionFlush"
+          >
+            <div class:list={["accordion-body", index >= 3 && "bg-light-2"]}>
+              <p set:html={t(`faq-answer-${index + 1}`)} />
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,6 @@
+---
+import { Picture } from "astro:assets";
+import qr from "../assets/qr.webp";
+---
+
+<Picture src={qr} formats={["avif"]} fallbackFormat="webp" width={160} height={160} densities={[1, 2]} alt="WeChat" loading="lazy" />

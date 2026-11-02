@@ -1,0 +1,65 @@
+---
+import BrandText from "./BrandText.astro";
+import Icon from "./Icon.astro";
+import ContactMenus from "./ContactMenus.astro";
+import LangSelect from "./LangSelect.astro";
+import { useTranslations, type Locale } from "../i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const navigation = [
+  { href: "#products", key: "navigation-products" },
+  { href: "#customer-support", key: "navigation-customer-support", mapArea: "1" },
+  { href: "#quarry", key: "navigation-quarry-site", mapArea: "2" },
+  { href: "#contact", key: "navigation-contact" },
+];
+const socials = [
+  { href: "https://www.instagram.com/trassingcom/", title: "Instagram", icon: "instagram" },
+  { href: "https://www.twitter.com/trassingcom/", title: "Twitter", icon: "twitter" },
+  { href: "https://www.facebook.com/trassingcom/", title: "Facebook", icon: "facebook" },
+  { href: "https://www.linkedin.com/company/trassingcom", title: "LinkedIn", icon: "linkedin" },
+];
+---
+
+<footer class="px-4 md:px-12 pt-12 pb-4 bg-dark text-white text-center relative">
+  <div class="container-bs">
+    <div class="footer-text container-lg mb-6 lg:mb-12 opacity-75 text-start md:text-center">
+      <p set:html={t("footer-text")} />
+    </div>
+    <hr class="bg-warning mb-4" />
+
+    <ul class="flex flex-wrap ps-0 mb-0 list-none fs-6 justify-around flex-col md:flex-row items-start lg:items-center">
+      {
+        navigation.map(item => (
+          <li>
+            <a href={item.href} class="nav-link text-light" data-map-area={item.mapArea} set:html={t(item.key)} />
+          </li>
+        ))
+      }
+      <li>
+        <LangSelect locale={locale} variant="footer" />
+      </li>
+    </ul>
+
+    <div class="flex justify-start md:justify-center lg:justify-between mt-12 mx-0 md:mx-2 items-end">
+      <p class="font-light text-warning opacity-25 company-name mb-1"><BrandText name="footer" /></p>
+      <div class="header-text flex flex-wrap justify-start text-light fs-5 mb-1 items-center" id="footer-social">
+        {
+          socials.map(social => (
+            <a href={social.href} title={social.title} target="_blank" rel="noopener" class="link-secondary px-4 my-2 mx-1 sm:p-2 sm:m-2">
+              <Icon name={social.icon} />
+            </a>
+          ))
+        }
+        <ContactMenus locale={locale} variant="footer" />
+      </div>
+    </div>
+    <a href="#" class="absolute bottom-0 end-0 p-6" aria-label="Back to top">
+      <Icon name="arrow-up-square" class="fs-2 leading-[1.2] font-medium text-warning" />
+    </a>
+  </div>
+</footer>

@@ -1,0 +1,24 @@
+---
+/**
+ * A Bootstrap Icons glyph as inline SVG, wrapped in <i> like the icon font
+ * markup it replaces (so font-size, colour and spacing classes still apply).
+ */
+interface Props {
+  name: string;
+  class?: string;
+}
+
+const icons = import.meta.glob<string>(
+  "/node_modules/bootstrap-icons/icons/{instagram,twitter,facebook,linkedin,telephone,envelope,arrow-down-square,arrow-down-square-fill,arrow-up-square,geo-alt,geo-alt-fill,copy,check-lg}.svg",
+  { query: "?raw", import: "default", eager: true },
+);
+
+const { name, class: className } = Astro.props;
+const svg = icons[`/node_modules/bootstrap-icons/icons/${name}.svg`];
+if (!svg) throw new Error(`Unknown icon "${name}"`);
+const body = svg.replace(/^[\s\S]*?<svg[^>]*>/, "").replace(/<\/svg>\s*$/, "");
+---
+
+<i class={className} aria-hidden="true"
+  ><svg class={`bi bi-${name}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" set:html={body} /></i
+>

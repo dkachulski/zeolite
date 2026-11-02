@@ -1,0 +1,92 @@
+---
+import { useTranslations, type Locale } from "../i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const t = useTranslations(Astro.props.locale);
+const composition = [1, 2, 3, 4, 5, 6, 7, 8];
+const activity = [1, 2, 3, 4, 5, 6];
+const col = "w-full max-w-full shrink-0 px-6 md:flex-[0_0_auto] md:w-1/2";
+---
+
+<section class="container-fluid px-0 pt-1 pb-12 md:py-12" id="activity" data-lazy-bg>
+  <h2 class="text-dark text-center bg-white mb-0 mx-4">
+    <a class="no-underline link-dark font-bold md:pt-4" href="#activity" set:html={t("activity-container-title")} />
+  </h2>
+  <div class="activity-photo flex flex-wrap -mx-3 p-4 my-12">
+    <div
+      class="w-full max-w-full shrink-0 md:flex-[0_0_auto] md:w-1/2 text-center h-full p-12 md:pe-0 flex flex-col justify-start items-center"
+    >
+      <div class="activity-headings rounded-bs shadow-bs p-6 md:py-12 blue-overlay">
+        <p set:html={t("activity-clinoptilolite")} />
+        <p set:html={t("activity-strength")} />
+        <button
+          class="btn btn-warning"
+          type="button"
+          data-collapse-target="#collapseActivity"
+          aria-expanded="false"
+          aria-controls="collapseActivity"
+          data-scroll-into-view
+          set:html={t("information-button")}
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="collapse px-4" id="collapseActivity">
+    <div class="container-lg">
+      <div class="flex flex-wrap -mx-6">
+        <div class={col}>
+          <table class="table">
+            <thead>
+              <tr>
+                <th colspan="2" scope="col" class="text-center" set:html={t("table-composition-heading")} />
+              </tr>
+            </thead>
+            <tbody>
+              {
+                composition.map(n => (
+                  <tr>
+                    <td set:html={t(`table-composition-${n}a`)} />
+                    <td class="text-center" set:html={t(`table-composition-${n}b`)} />
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+        <div class={col}>
+          <table class="table mt-4 md:mt-0">
+            <thead>
+              <tr>
+                <th colspan="2" scope="col" class="text-center" set:html={t("table-activity-heading")} />
+              </tr>
+            </thead>
+            <tbody>
+              {
+                activity.map(n => (
+                  <tr>
+                    <td set:html={t(`table-activity-${n}a`)} />
+                    <td class="text-center" set:html={t(`table-activity-${n}b`)} />
+                  </tr>
+                ))
+              }
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="2">
+                  <em>
+                    <strong class="me-1" set:html={t("table-activity-note")} />
+                    <span set:html={t("table-activity-note-text")} />
+                  </em>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

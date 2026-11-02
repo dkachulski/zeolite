@@ -1,0 +1,31 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "./Header.astro";
+import Hero from "./Hero.astro";
+import Banners from "./Banners.astro";
+import Products from "./Products.astro";
+import Activity from "./Activity.astro";
+import Faq from "./Faq.astro";
+import Contact from "./Contact.astro";
+import Footer from "./Footer.astro";
+import type { Locale } from "../i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<Base locale={locale}>
+  <Header locale={locale} />
+  <main>
+    <Hero locale={locale} />
+    <Banners locale={locale} />
+    <Products locale={locale} />
+    <Activity locale={locale} />
+    <Faq locale={locale} />
+    <Contact locale={locale} />
+  </main>
+  <Footer locale={locale} />
+</Base>

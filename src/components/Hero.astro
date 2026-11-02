@@ -1,0 +1,49 @@
+---
+import { useTranslations, type Locale } from "../i18n";
+import { HERO_SIZES, heroImages } from "./hero-image";
+
+interface Props {
+  locale: Locale;
+}
+
+const t = useTranslations(Astro.props.locale);
+const hero = await heroImages();
+---
+
+<section class="container-fluid m-0 p-0" id="video-container">
+  <!-- The still shows until the video, downloaded after page load, starts playing.
+       The browser plays the first source it supports: AV1 (smallest), else H.264. -->
+  <picture>
+    <source type="image/avif" srcset={hero.avif} sizes={HERO_SIZES} />
+    <img
+      src={hero.src}
+      srcset={hero.webp}
+      sizes={HERO_SIZES}
+      alt=""
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+      id="video-poster"
+      width={hero.width}
+      height={hero.height}
+    />
+  </picture>
+  <video muted loop playsinline autoplay preload="none" id="video-video" aria-hidden="true">
+    <source data-src="/videos/quarry-av1.mp4" type='video/mp4; codecs="av01.0.04M.08"' />
+    <source data-src="/videos/quarry-h264.mp4" type='video/mp4; codecs="avc1.64001E"' />
+  </video>
+  <div id="video-overlay"></div>
+  <div class="p-12" id="video-info-container">
+    <h1 class="text-white font-bolder mb-4" set:html={t("video-title")} />
+    <p class="text-warning fs-4 text-center font-bolder" set:html={t("video-text-1")} />
+    <p class="text-white fs-4 text-center" set:html={t("video-text-2")} />
+    <a href="#offer" class="btn btn-warning mt-6" set:html={t("video-button")} />
+  </div>
+</section>
+
+<section class="text-center px-6 py-12 sm:p-12 shadow-bs" id="offer">
+  <div class="container-lg bg-warning p-6 rounded-bs">
+    <span><strong class="text-dark" set:html={t("ribbon-bold")} /></span>
+    <span class="text-dark" set:html={t("ribbon-text")} />
+  </div>
+</section>

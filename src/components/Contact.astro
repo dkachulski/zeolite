@@ -1,0 +1,148 @@
+---
+import Icon from "./Icon.astro";
+import { useTranslations, type Locale } from "../i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const t = useTranslations(Astro.props.locale);
+const email = t("contact-email-text-1");
+const phones = [1, 2].map(n => ({
+  number: t(`contact-telephone-text-${n}`),
+  details: t(`contact-telephone-details-${n}`),
+}));
+const revealButton = "btn btn-warning my-2";
+---
+
+<section class="pt-12 pb-6 px-4" id="contact" data-lazy-bg>
+  <div class="container-lg">
+    <div class="flex flex-wrap -mx-3">
+      <div class="w-full max-w-full shrink-0 px-3 lg:flex-[0_0_auto] lg:w-5/12 mb-12 lg:mb-1" id="contact-container">
+        <h2 class="text-center mb-6 pb-4">
+          <a class="no-underline link-dark" href="#contact" set:html={t("contact-container-title")} />
+        </h2>
+        <ul class="flex flex-col ps-0 mb-0 lead font-light fs-6">
+          <li class="list-group-item contact-item bg-transparent py-2 flex flex-col">
+            <span class="contact-reveal">
+              <button type="button" class={`${revealButton} mt-4`} set:html={t("contact-address-button")} />
+            </span>
+            <address>
+              <span class="font-bold mb-1" set:html={t("contact-address-title")} />
+              <span>
+                <div>
+                  <span set:html={t("contact-address-text-1")} />
+                  <div class="mt-1">
+                    <a target="_blank" rel="noopener" href="https://goo.gl/maps/oHDZR2jMqKWhUUTt6" title="Google Maps" set:html={t("map")} />
+                  </div>
+                </div>
+              </span>
+            </address>
+          </li>
+          <li class="list-group-item contact-item bg-transparent py-2 flex flex-col">
+            <span class="contact-reveal">
+              <button type="button" class={revealButton} set:html={t("contact-email-button")} />
+            </span>
+            <address>
+              <span class="font-bold mb-1" set:html={t("contact-email-title")} />
+              <span>
+                <div><a href={`mailto:${email}`} title="Send email">{email}</a></div>
+              </span>
+            </address>
+          </li>
+          <li class="list-group-item contact-item bg-transparent py-2 flex flex-col">
+            <span class="contact-reveal">
+              <button type="button" class={revealButton} set:html={t("contact-telephone-button")} />
+            </span>
+            <address>
+              <span class="font-bold mb-1" set:html={t("contact-telephone-title")} />
+              <span class="flex flex-col">
+                {
+                  phones.map(phone => (
+                    <div class="mb-1">
+                      <a href={`tel:${phone.number.replace(/\s+/g, "")}`} title="Call">{phone.number}</a><span class="ms-4">{phone.details}</span>
+                    </div>
+                  ))
+                }
+              </span>
+            </address>
+          </li>
+        </ul>
+      </div>
+      <!-- -------- MAP -------- -->
+      <div class="w-full max-w-full shrink-0 px-3 lg:flex-[0_0_auto] lg:w-7/12 map-container">
+        <div class="map-ratio">
+          <div class="map map-whole"></div>
+          <div class="map map-part1"></div>
+          <div class="map map-part2"></div>
+          <span class="map-pin map-pin1"><Icon name="geo-alt" class="pin-icon fs-3 text-warning" /></span>
+          <span class="map-pin map-pin1 fill" data-map="map-part1" data-hash="customer-support">
+            <Icon name="geo-alt-fill" class="pin-icon fs-3 text-warning" />
+          </span>
+          <span class="map-pin map-pin2"><Icon name="geo-alt" class="pin-icon fs-3 text-warning" /></span>
+          <span class="map-pin map-pin2 fill" data-map="map-part2" data-hash="quarry">
+            <Icon name="geo-alt-fill" class="pin-icon fs-3 text-warning" />
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- -------- MAP DETAILS -------- -->
+<section data-lazy-bg>
+  <div class="container-fluid pb-12 px-0">
+    <div class="h-4"></div>
+    <div class="collapse map-content-body" id="map-dropdown">
+      <!-- -------- SOFIA -------- -->
+      <div class="container-lg map-content map-content-hidden content-map-part1" id="customer-support">
+        <div class="map-collapse-img-sofia py-6 rounded-bs border border-line hidden-on-tablet mx-6 mb-6">
+          <div class="map-collapse-body-sofia bg-light rounded-bs shadow-bs border border-line p-12 my-4">
+            <h4 class="mb-6">
+              <a href="#customer-support" class="no-underline link-dark" set:html={t("customer-support-title")} />
+            </h4>
+            <p set:html={t("customer-support-text")} />
+          </div>
+        </div>
+        <div class="mx-6 sm:mx-12 p-6 sm:p-12 hidden-above-tablet bg-light rounded-bs border border-line">
+          <h4 class="mb-6 fs-3 font-bold">
+            <a href="#customer-support" class="no-underline link-dark" set:html={t("customer-support-title")} />
+          </h4>
+          <p set:html={t("customer-support-text")} />
+        </div>
+      </div>
+
+      <!-- -------- KURDZHALI -------- -->
+      <div class="map-content map-content-hidden content-map-part2" id="quarry">
+        <div class="map-collapse-img-kurdzhali-1 mb-12 hidden-on-tablet">
+          <div class="container-lg p-12">
+            <div class="map-collapse-body-kurdzhali-1 bg-light p-12 rounded-bs shadow-bs">
+              <h4 class="mb-6">
+                <a href="#quarry" class="no-underline link-dark" set:html={t("quarry-site-title")} />
+              </h4>
+              <p set:html={t("quarry-site-text-1")} />
+            </div>
+          </div>
+        </div>
+        <div class="container-lg m-auto mb-6 pt-6 hidden-on-tablet">
+          <div class="flex flex-row px-4">
+            <div class="map-collapse-kurdzhali-2 py-12">
+              <div class="img-1 rounded-bs"></div>
+              <div class="img-2 rounded-bs"></div>
+              <div class="map-collapse-body-kurdzhali-2 bg-light shadow-bs border border-line rounded-bs">
+                <p class="p-12" set:html={t("quarry-site-text-2")} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mx-6 sm:mx-12 p-6 sm:p-12 hidden-above-tablet bg-light rounded-bs border border-line">
+          <h4 class="mb-6 fs-3 font-bold">
+            <a href="#quarry" class="no-underline link-dark" set:html={t("quarry-site-title")} />
+          </h4>
+          <p set:html={t("quarry-site-text-1")} />
+          <p set:html={t("quarry-site-text-2")} />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

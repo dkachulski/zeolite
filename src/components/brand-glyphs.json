@@ -1,0 +1,23 @@
+{
+  "logo": {
+    "text": "TRASSING.COM",
+    "parts": [
+      "TRASSING.",
+      "COM"
+    ],
+    "unitsPerEm": 2048,
+    "width": 15058,
+    "ascent": 1517,
+    "descent": 60
+  },
+  "footer": {
+    "text": "@ trassing.com",
+    "parts": [
+      "@ trassing.com"
+    ],
+    "unitsPerEm": 2048,
+    "width": 14086,
+    "ascent": 1516,
+    "descent": 493
+  }
+}
