@@ -1,21 +1,7 @@
-# Trassing website
+# trassing.com (built site)
 
-The site is generated as two static language routes:
+This branch is generated: GitHub Pages serves it as the site. The
+source is on the [`source`](https://github.com/dkachulski/zeolite/tree/source) branch; every push
+there rebuilds the site and commits it here. Do not edit this branch.
 
-- `/` — English and the default route
-- `/bg/` — Bulgarian
-
-## Editing the site
-
-1. Edit shared markup in `templates/index.html`.
-2. Edit localized content in `languages/en.json` or `languages/bg.json`.
-3. Run `npm install` once, then `npm run build`.
-4. Run `npm test` before committing.
-
-The build writes the deployable `index.html` and `bg/index.html` files. Both
-generated files are committed because GitHub Pages serves the repository as a
-static site.
-
-The language selector uses normal links, so each route works without
-JavaScript. Canonical URLs, `hreflang` links, Open Graph locale metadata, and
-localized descriptions are generated for both pages.
+Built from source@2c7a399.
