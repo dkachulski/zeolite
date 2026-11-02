@@ -19,9 +19,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
@@ -32,6 +32,7 @@ jobs:
       - name: Commit the build to main
         env:
           SOURCE_SHA: ${{ github.sha }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           git fetch --depth=1 origin main
           git worktree add --detach ../site FETCH_HEAD
@@ -55,4 +56,6 @@ jobs:
           git -c user.name="github-actions[bot]" \
               -c user.email="41898299+github-actions[bot]@users.noreply.github.com" \
               commit -q -m "Deploy source@${SOURCE_SHA::7}"
-          git push origin HEAD:main
+          # The token is given here, not through checkout's stored
+          # credentials, which a worktree may not see.
+          git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main

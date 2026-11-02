@@ -559,6 +559,9 @@ header .lang-select .dropdown-menu {
   }
 }
 
+/* The WebP fallbacks come from public/images/cards/: copies of the desktop
+   cards' photos, because Astro leaves out the original of an image that a
+   <Picture> uses (and merges identical files), which would break them. */
 .mb-img .card-body {
   background-image: var(--card-image);
   background-position: center;
@@ -566,16 +569,16 @@ header .lang-select .dropdown-menu {
   background-size: cover;
 }
 .mb-img-1 {
-  --card-image: url("../assets/composition.webp");
-  --card-image: image-set(url("../assets/composition.avif") type("image/avif"), url("../assets/composition.webp") type("image/webp"));
+  --card-image: url("/images/cards/composition.webp");
+  --card-image: image-set(url("../assets/composition.avif") type("image/avif"), url("/images/cards/composition.webp") type("image/webp"));
 }
 .mb-img-2 {
-  --card-image: url("../assets/production-capacity.webp");
-  --card-image: image-set(url("../assets/production-capacity.avif") type("image/avif"), url("../assets/production-capacity.webp") type("image/webp"));
+  --card-image: url("/images/cards/production-capacity.webp");
+  --card-image: image-set(url("../assets/production-capacity.avif") type("image/avif"), url("/images/cards/production-capacity.webp") type("image/webp"));
 }
 .mb-img-3 {
-  --card-image: url("../assets/delivery.webp");
-  --card-image: image-set(url("../assets/delivery.avif") type("image/avif"), url("../assets/delivery.webp") type("image/webp"));
+  --card-image: url("/images/cards/delivery.webp");
+  --card-image: image-set(url("../assets/delivery.avif") type("image/avif"), url("/images/cards/delivery.webp") type("image/webp"));
 }
 #products-container-mobile .mb-img:not(.collapsed) .card-body {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), var(--card-image);
